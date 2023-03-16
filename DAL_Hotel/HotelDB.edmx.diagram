@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed5bab50479c438ab3b5e1509a57092f" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelDBModel.Customer" Width="1.5" PointX="5.5" PointY="3.25" />
+        <EntityTypeShape EntityType="HotelDBModel.Floor" Width="1.5" PointX="7.75" PointY="0.5" />
+        <EntityTypeShape EntityType="HotelDBModel.Order" Width="1.5" PointX="7.75" PointY="3.125" />
+        <EntityTypeShape EntityType="HotelDBModel.Product" Width="1.5" PointX="10" PointY="7.25" />
+        <EntityTypeShape EntityType="HotelDBModel.Room" Width="1.5" PointX="10" PointY="3" />
+        <EntityTypeShape EntityType="HotelDBModel.Staff" Width="1.5" PointX="5.5" PointY="8.25" />
+        <EntityTypeShape EntityType="HotelDBModel.TypeRoom" Width="1.5" PointX="7.75" PointY="6.875" />
+        <AssociationConnector Association="HotelDBModel.FK__Orders__customer__286302EC" />
+        <AssociationConnector Association="HotelDBModel.FK__Room__floorId__31EC6D26" />
+        <AssociationConnector Association="HotelDBModel.FK__Orders__staffID__29572725" />
+        <AssociationConnector Association="HotelDBModel.FK__Room__orderID__30F848ED" />
+        <AssociationConnector Association="HotelDBModel.FK__Room__typeRoomId__32E0915F" />
+        <AssociationConnector Association="HotelDBModel.Order_Product" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

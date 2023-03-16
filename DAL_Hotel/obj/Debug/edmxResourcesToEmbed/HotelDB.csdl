@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HotelDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="HotelDBModel.Customer" />
+    <EntitySet Name="Floors" EntityType="HotelDBModel.Floor" />
+    <EntitySet Name="Orders" EntityType="HotelDBModel.Order" />
+    <EntitySet Name="Products" EntityType="HotelDBModel.Product" />
+    <EntitySet Name="Rooms" EntityType="HotelDBModel.Room" />
+    <EntitySet Name="Staffs" EntityType="HotelDBModel.Staff" />
+    <EntitySet Name="TypeRooms" EntityType="HotelDBModel.TypeRoom" />
+    <AssociationSet Name="FK__Orders__customer__286302EC" Association="HotelDBModel.FK__Orders__customer__286302EC">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Room__floorId__31EC6D26" Association="HotelDBModel.FK__Room__floorId__31EC6D26">
+      <End Role="Floor" EntitySet="Floors" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__staffID__29572725" Association="HotelDBModel.FK__Orders__staffID__29572725">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Room__orderID__30F848ED" Association="HotelDBModel.FK__Room__orderID__30F848ED">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Room__typeRoomId__32E0915F" Association="HotelDBModel.FK__Room__typeRoomId__32E0915F">
+      <End Role="TypeRoom" EntitySet="TypeRooms" />
+      <End Role="Room" EntitySet="Rooms" />
+    </AssociationSet>
+    <AssociationSet Name="Order_Product" Association="HotelDBModel.Order_Product">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="Boolean" />
+    <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="personalId" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="HotelDBModel.FK__Orders__customer__286302EC" FromRole="Customer" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Floor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__floorId__31EC6D26" FromRole="Floor" ToRole="Room" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="checkinDate" Type="DateTime" Precision="0" />
+    <Property Name="checkoutDate" Type="DateTime" Precision="0" />
+    <Property Name="customerID" Type="Int32" />
+    <Property Name="staffID" Type="Int32" />
+    <NavigationProperty Name="Customer" Relationship="HotelDBModel.FK__Orders__customer__286302EC" FromRole="Order" ToRole="Customer" />
+    <NavigationProperty Name="Staff" Relationship="HotelDBModel.FK__Orders__staffID__29572725" FromRole="Order" ToRole="Staff" />
+    <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__orderID__30F848ED" FromRole="Order" ToRole="Room" />
+    <NavigationProperty Name="Products" Relationship="HotelDBModel.Order_Product" FromRole="Order" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Double" />
+    <NavigationProperty Name="Orders" Relationship="HotelDBModel.Order_Product" FromRole="Product" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="price" Type="Double" />
+    <Property Name="orderID" Type="Int32" />
+    <Property Name="floorId" Type="Int32" />
+    <Property Name="typeRoomId" Type="Int32" />
+    <NavigationProperty Name="Floor" Relationship="HotelDBModel.FK__Room__floorId__31EC6D26" FromRole="Room" ToRole="Floor" />
+    <NavigationProperty Name="Order" Relationship="HotelDBModel.FK__Room__orderID__30F848ED" FromRole="Room" ToRole="Order" />
+    <NavigationProperty Name="TypeRoom" Relationship="HotelDBModel.FK__Room__typeRoomId__32E0915F" FromRole="Room" ToRole="TypeRoom" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="Int32" />
+    <Property Name="gender" Type="Boolean" />
+    <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="passwords" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="HotelDBModel.FK__Orders__staffID__29572725" FromRole="Staff" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="TypeRoom">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__typeRoomId__32E0915F" FromRole="TypeRoom" ToRole="Room" />
+  </EntityType>
+  <Association Name="FK__Orders__customer__286302EC">
+    <End Type="HotelDBModel.Customer" Role="Customer" Multiplicity="0..1" />
+    <End Type="HotelDBModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Room__floorId__31EC6D26">
+    <End Type="HotelDBModel.Floor" Role="Floor" Multiplicity="0..1" />
+    <End Type="HotelDBModel.Room" Role="Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Floor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="floorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__staffID__29572725">
+    <End Type="HotelDBModel.Staff" Role="Staff" Multiplicity="0..1" />
+    <End Type="HotelDBModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="staffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Room__orderID__30F848ED">
+    <End Type="HotelDBModel.Order" Role="Order" Multiplicity="0..1" />
+    <End Type="HotelDBModel.Room" Role="Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="orderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Room__typeRoomId__32E0915F">
+    <End Type="HotelDBModel.TypeRoom" Role="TypeRoom" Multiplicity="0..1" />
+    <End Type="HotelDBModel.Room" Role="Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeRoom">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="typeRoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Order_Product">
+    <End Type="HotelDBModel.Order" Role="Order" Multiplicity="*" />
+    <End Type="HotelDBModel.Product" Role="Product" Multiplicity="*" />
+  </Association>
+</Schema>

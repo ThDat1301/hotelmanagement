@@ -1,0 +1,12 @@
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\bin\Debug\DTO_Hotel.dll.config
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\bin\Debug\DTO_Hotel.dll
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\bin\Debug\DTO_Hotel.pdb
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\bin\Debug\EntityFramework.dll
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.dll
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\bin\Debug\EntityFramework.xml
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.xml
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.AssemblyReference.cache
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CoreCompileInputs.cache
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CopyComplete
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\obj\Debug\DTO_Hotel.dll
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\DTO_Hotel\obj\Debug\DTO_Hotel.pdb
