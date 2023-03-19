@@ -24,7 +24,6 @@ namespace BUS_Hotel
             RoomDAL listDisplay = new RoomDAL();
             list = listDisplay.listRoomByFloor(floorId);
             return list;
-
         }
     }
 }

@@ -92,6 +92,7 @@
     <Compile Include="TypeRoom.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="TypeRoomDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

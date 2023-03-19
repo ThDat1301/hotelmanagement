@@ -38,6 +38,7 @@ namespace GUI_Hotel
                     frmFloor frm2 = new frmFloor();
                     frm2.ShowDialog();
                     break;
+
             }
             
         }
@@ -66,7 +67,7 @@ namespace GUI_Hotel
             gControl.Gallery.ShowGroupCaption = true;
             
             foreach(var f in listFloor)
-            {
+            { 
                 var galleryItem = new GalleryItemGroup();
                 galleryItem.Caption = f.Floor_name;
                 galleryItem.CaptionAlignment = GalleryItemGroupCaptionAlignment.Stretch;
@@ -111,6 +112,11 @@ namespace GUI_Hotel
             var gc_item = new GalleryItem();
             string id = item.Value.ToString();
             MessageBox.Show(id);
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
