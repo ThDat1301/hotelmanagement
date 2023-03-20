@@ -25,7 +25,6 @@ namespace DAL_Hotel
                     room.Room_id = i.id;
                     room.Room_num = i.num.ToString();
                     room.Room_status = (bool)i.status;
-                    room.Room_price = (float)i.price;
                     room.Room_floor_id = (int)i.floorId;
                     room.Room_type_id = (int)i.typeRoomId;
                     list.Add(room);
@@ -51,7 +50,6 @@ namespace DAL_Hotel
                     room.Room_id = i.id;
                     room.Room_num = i.num.ToString();
                     room.Room_status = (bool)i.status;
-                    room.Room_price = (float)i.price;
                     room.Room_floor_id = (int)i.floorId;
                     room.Room_type_id = (int)i.typeRoomId;
                     list.Add(room);

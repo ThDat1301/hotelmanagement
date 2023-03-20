@@ -56,7 +56,6 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="num" Type="int" />
           <Property Name="status" Type="bit" />
-          <Property Name="price" Type="float" />
           <Property Name="orderID" Type="int" />
           <Property Name="floorId" Type="int" />
           <Property Name="typeRoomId" Type="int" />
@@ -79,6 +78,10 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="price" Type="float" />
+          <Property Name="maxCus" Type="int" />
+          <Property Name="surCharge" Type="float" />
+          <Property Name="qtyBed" Type="int" />
         </EntityType>
         <Association Name="FK__Order_Pro__order__37A5467C">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
@@ -289,7 +292,6 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="num" Type="Int32" />
           <Property Name="status" Type="Boolean" />
-          <Property Name="price" Type="Double" />
           <Property Name="orderID" Type="Int32" />
           <Property Name="floorId" Type="Int32" />
           <Property Name="typeRoomId" Type="Int32" />
@@ -316,6 +318,10 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Double" />
+          <Property Name="maxCus" Type="Int32" />
+          <Property Name="surCharge" Type="Double" />
+          <Property Name="qtyBed" Type="Int32" />
           <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__typeRoomId__32E0915F" FromRole="TypeRoom" ToRole="Room" />
         </EntityType>
         <Association Name="FK__Orders__customer__286302EC">
@@ -434,7 +440,6 @@
                 <ScalarProperty Name="typeRoomId" ColumnName="typeRoomId" />
                 <ScalarProperty Name="floorId" ColumnName="floorId" />
                 <ScalarProperty Name="orderID" ColumnName="orderID" />
-                <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="num" ColumnName="num" />
                 <ScalarProperty Name="id" ColumnName="id" />
@@ -457,6 +462,10 @@
           <EntitySetMapping Name="TypeRooms">
             <EntityTypeMapping TypeName="HotelDBModel.TypeRoom">
               <MappingFragment StoreEntitySet="TypeRoom">
+                <ScalarProperty Name="qtyBed" ColumnName="qtyBed" />
+                <ScalarProperty Name="surCharge" ColumnName="surCharge" />
+                <ScalarProperty Name="maxCus" ColumnName="maxCus" />
+                <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>

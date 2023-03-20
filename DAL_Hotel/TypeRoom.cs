@@ -22,6 +22,10 @@ namespace DAL_Hotel
     
         public int id { get; set; }
         public string name { get; set; }
+        public Nullable<double> price { get; set; }
+        public Nullable<int> maxCus { get; set; }
+        public Nullable<double> surCharge { get; set; }
+        public Nullable<int> qtyBed { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Rooms { get; set; }

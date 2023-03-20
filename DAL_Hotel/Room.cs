@@ -17,7 +17,6 @@ namespace DAL_Hotel
         public int id { get; set; }
         public Nullable<int> num { get; set; }
         public Nullable<bool> status { get; set; }
-        public Nullable<double> price { get; set; }
         public Nullable<int> orderID { get; set; }
         public Nullable<int> floorId { get; set; }
         public Nullable<int> typeRoomId { get; set; }
