@@ -47,7 +47,6 @@
           <ScalarProperty Name="typeRoomId" ColumnName="typeRoomId" />
           <ScalarProperty Name="floorId" ColumnName="floorId" />
           <ScalarProperty Name="orderID" ColumnName="orderID" />
-          <ScalarProperty Name="price" ColumnName="price" />
           <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="num" ColumnName="num" />
           <ScalarProperty Name="id" ColumnName="id" />
@@ -70,6 +69,10 @@
     <EntitySetMapping Name="TypeRooms">
       <EntityTypeMapping TypeName="HotelDBModel.TypeRoom">
         <MappingFragment StoreEntitySet="TypeRoom">
+          <ScalarProperty Name="qtyBed" ColumnName="qtyBed" />
+          <ScalarProperty Name="surCharge" ColumnName="surCharge" />
+          <ScalarProperty Name="maxCus" ColumnName="maxCus" />
+          <ScalarProperty Name="price" ColumnName="price" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>

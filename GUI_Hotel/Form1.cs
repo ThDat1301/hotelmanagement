@@ -118,5 +118,10 @@ namespace GUI_Hotel
         {
 
         }
+
+        private void splitContainerControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

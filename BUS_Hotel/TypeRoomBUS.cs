@@ -10,12 +10,17 @@ namespace BUS_Hotel
 {
     public class TypeRoomBUS
     {
-        public static List<DTO_TypeRoom> listTypeRoom()
+        TypeRoomDAL dalTypeRoom = new TypeRoomDAL(); 
+        public List<DTO_TypeRoom> getTypeRoom()
         {
             List<DTO_TypeRoom> list = new List<DTO_TypeRoom>();
-            TypeRoomDAL listDisplay = new TypeRoomDAL();
-            list = listDisplay.listTypeRoom();
+            list = dalTypeRoom.getTypeRoom();
             return list;
+        }
+
+        public bool addTypeRoom(DTO_TypeRoom tr)
+        {
+            return dalTypeRoom.addTypeRoom(tr);
         }
         
     }

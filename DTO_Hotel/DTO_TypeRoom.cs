@@ -11,6 +11,16 @@ namespace DTO_Hotel
         private int _TypeRoom_id;
         private string _TypeRoom_name;
 
+        public DTO_TypeRoom()
+        {
+        }
+
+        public DTO_TypeRoom (string typeRoomName)
+        {
+            _TypeRoom_name = typeRoomName;
+        }
+
+
         public int TypeRoom_id
         {
             get { return _TypeRoom_id; }

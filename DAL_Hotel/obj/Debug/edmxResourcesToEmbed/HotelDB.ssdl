@@ -51,7 +51,6 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="num" Type="int" />
     <Property Name="status" Type="bit" />
-    <Property Name="price" Type="float" />
     <Property Name="orderID" Type="int" />
     <Property Name="floorId" Type="int" />
     <Property Name="typeRoomId" Type="int" />
@@ -74,6 +73,10 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="price" Type="float" />
+    <Property Name="maxCus" Type="int" />
+    <Property Name="surCharge" Type="float" />
+    <Property Name="qtyBed" Type="int" />
   </EntityType>
   <Association Name="FK__Order_Pro__order__37A5467C">
     <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
