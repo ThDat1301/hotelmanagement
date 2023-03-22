@@ -122,3 +122,4 @@ E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\hotelmanagement\GUI_Hotel\bin\Deb
 E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\hotelmanagement\GUI_Hotel\bin\Debug\DevExpress.XtraLayout.v22.2.dll
 E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\hotelmanagement\GUI_Hotel\bin\Debug\DevExpress.XtraNavBar.v22.2.dll
 E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\hotelmanagement\GUI_Hotel\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
+E:\Study\HK2-Nam3\LapTrinhCSDL\Studing_Project\HOTELMANAGEMENT\GUI_Hotel\obj\Debug\GUI_Hotel.frmProduct.resources

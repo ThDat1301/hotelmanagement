@@ -388,7 +388,7 @@
           <End Type="HotelDBModel.Order" Role="Order" Multiplicity="*" />
           <End Type="HotelDBModel.Product" Role="Product" Multiplicity="*" />
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

@@ -39,6 +39,13 @@
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.navMain = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navItemTypeRoom = new DevExpress.XtraNavBar.NavBarItem();
+            this.navItemFloor = new DevExpress.XtraNavBar.NavBarItem();
+            this.navItemRoom = new DevExpress.XtraNavBar.NavBarItem();
+            this.navItemEmployee = new DevExpress.XtraNavBar.NavBarItem();
+            this.navItemCustomer = new DevExpress.XtraNavBar.NavBarItem();
+            this.navItemOrder = new DevExpress.XtraNavBar.NavBarItem();
+            this.navItemProduct = new DevExpress.XtraNavBar.NavBarItem();
             this.gControl = new DevExpress.XtraBars.Ribbon.GalleryControl();
             this.galleryControlClient1 = new DevExpress.XtraBars.Ribbon.GalleryControlClient();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -51,13 +58,6 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.navItemTypeRoom = new DevExpress.XtraNavBar.NavBarItem();
-            this.navItemFloor = new DevExpress.XtraNavBar.NavBarItem();
-            this.navItemRoom = new DevExpress.XtraNavBar.NavBarItem();
-            this.navItemEmployee = new DevExpress.XtraNavBar.NavBarItem();
-            this.navItemCustomer = new DevExpress.XtraNavBar.NavBarItem();
-            this.navItemOrder = new DevExpress.XtraNavBar.NavBarItem();
-            this.navItemProduct = new DevExpress.XtraNavBar.NavBarItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
@@ -84,17 +84,16 @@
             this.btnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1194, 60);
+            this.toolStrip1.Size = new System.Drawing.Size(1194, 67);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnSystem
             // 
             this.btnSystem.Image = global::GUI_Hotel.Properties.Resources.system;
             this.btnSystem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSystem.Name = "btnSystem";
-            this.btnSystem.Size = new System.Drawing.Size(78, 57);
+            this.btnSystem.Size = new System.Drawing.Size(98, 64);
             this.btnSystem.Text = "Hệ thống";
             this.btnSystem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSystem.Click += new System.EventHandler(this.btnSystem_Click);
@@ -102,14 +101,14 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 60);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 67);
             // 
             // btnReport
             // 
             this.btnReport.Image = global::GUI_Hotel.Properties.Resources.chart;
             this.btnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(68, 57);
+            this.btnReport.Size = new System.Drawing.Size(85, 64);
             this.btnReport.Text = "Báo cáo";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
@@ -117,14 +116,14 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 60);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 67);
             // 
             // btnExit
             // 
             this.btnExit.Image = global::GUI_Hotel.Properties.Resources.exit;
             this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(53, 57);
+            this.btnExit.Size = new System.Drawing.Size(66, 64);
             this.btnExit.Text = "Thoát";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -132,7 +131,7 @@
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 60);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 67);
             this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             // 
@@ -143,7 +142,7 @@
             // splitContainerControl1.Panel2
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.gControl);
-            this.splitContainerControl1.Size = new System.Drawing.Size(1194, 469);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1194, 462);
             this.splitContainerControl1.SplitterPosition = 288;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerControl1_Paint);
@@ -166,7 +165,7 @@
             this.navMain.Margin = new System.Windows.Forms.Padding(4);
             this.navMain.Name = "navMain";
             this.navMain.OptionsNavPane.ExpandedWidth = 288;
-            this.navMain.Size = new System.Drawing.Size(288, 469);
+            this.navMain.Size = new System.Drawing.Size(288, 462);
             this.navMain.TabIndex = 0;
             this.navMain.Text = "Chức năng";
             this.navMain.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navMain_LinkClicked);
@@ -185,6 +184,41 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navItemProduct)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
+            // navItemTypeRoom
+            // 
+            this.navItemTypeRoom.Caption = "Quản lý loại phòng";
+            this.navItemTypeRoom.Name = "navItemTypeRoom";
+            // 
+            // navItemFloor
+            // 
+            this.navItemFloor.Caption = "Quản lý tầng";
+            this.navItemFloor.Name = "navItemFloor";
+            // 
+            // navItemRoom
+            // 
+            this.navItemRoom.Caption = "Quản lý phòng";
+            this.navItemRoom.Name = "navItemRoom";
+            // 
+            // navItemEmployee
+            // 
+            this.navItemEmployee.Caption = "Quản lý nhân viên";
+            this.navItemEmployee.Name = "navItemEmployee";
+            // 
+            // navItemCustomer
+            // 
+            this.navItemCustomer.Caption = "Quản lý khách hàng";
+            this.navItemCustomer.Name = "navItemCustomer";
+            // 
+            // navItemOrder
+            // 
+            this.navItemOrder.Caption = "Quản lý đặt phòng";
+            this.navItemOrder.Name = "navItemOrder";
+            // 
+            // navItemProduct
+            // 
+            this.navItemProduct.Caption = "Quản lý dịch vụ";
+            this.navItemProduct.Name = "navItemProduct";
+            // 
             // gControl
             // 
             this.gControl.Controls.Add(this.galleryControlClient1);
@@ -193,7 +227,7 @@
             this.gControl.Margin = new System.Windows.Forms.Padding(4);
             this.gControl.Name = "gControl";
             this.barManager1.SetPopupContextMenu(this.gControl, this.popupMenu1);
-            this.gControl.Size = new System.Drawing.Size(896, 469);
+            this.gControl.Size = new System.Drawing.Size(894, 462);
             this.gControl.TabIndex = 0;
             this.gControl.Text = "galleryControl1";
             // 
@@ -202,7 +236,7 @@
             this.galleryControlClient1.GalleryControl = this.gControl;
             this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
             this.galleryControlClient1.Margin = new System.Windows.Forms.Padding(4);
-            this.galleryControlClient1.Size = new System.Drawing.Size(875, 465);
+            this.galleryControlClient1.Size = new System.Drawing.Size(869, 458);
             // 
             // imageList1
             // 
@@ -289,45 +323,10 @@
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 529);
             // 
-            // navItemTypeRoom
-            // 
-            this.navItemTypeRoom.Caption = "Quản lý loại phòng";
-            this.navItemTypeRoom.Name = "navItemTypeRoom";
-            // 
-            // navItemFloor
-            // 
-            this.navItemFloor.Caption = "Quản lý tầng";
-            this.navItemFloor.Name = "navItemFloor";
-            // 
-            // navItemRoom
-            // 
-            this.navItemRoom.Caption = "Quản lý phòng";
-            this.navItemRoom.Name = "navItemRoom";
-            // 
-            // navItemEmployee
-            // 
-            this.navItemEmployee.Caption = "Quản lý nhân viên";
-            this.navItemEmployee.Name = "navItemEmployee";
-            // 
-            // navItemCustomer
-            // 
-            this.navItemCustomer.Caption = "Quản lý khách hàng";
-            this.navItemCustomer.Name = "navItemCustomer";
-            // 
-            // navItemOrder
-            // 
-            this.navItemOrder.Caption = "Quản lý đặt phòng";
-            this.navItemOrder.Name = "navItemOrder";
-            // 
-            // navItemProduct
-            // 
-            this.navItemProduct.Caption = "Quản lý dịch vụ";
-            this.navItemProduct.Name = "navItemProduct";
-            // 
             // Form1
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 529);
             this.Controls.Add(this.splitContainerControl1);
