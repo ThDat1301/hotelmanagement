@@ -22,3 +22,15 @@ D:\HK2_Nam3\LapTrinhCSDL\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.Co
 D:\HK2_Nam3\LapTrinhCSDL\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CopyComplete
 D:\HK2_Nam3\LapTrinhCSDL\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.dll
 D:\HK2_Nam3\LapTrinhCSDL\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.pdb
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.dll.config
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.dll
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.pdb
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.dll
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.xml
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.AssemblyReference.cache
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CoreCompileInputs.cache
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CopyComplete
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.dll
+C:\Users\truon\Downloads\a\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.pdb

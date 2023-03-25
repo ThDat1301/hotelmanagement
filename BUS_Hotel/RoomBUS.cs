@@ -10,20 +10,33 @@ namespace BUS_Hotel
 {
     public class RoomBUS
     {
-        public static List<DTO_Room> listRoom()
+        RoomDAL dalRoom = new RoomDAL();
+        public List<DTO_Room> getRoom()
         {
             List<DTO_Room> list = new List<DTO_Room>();
-            RoomDAL listDisplay = new RoomDAL();
-            list = listDisplay.listRoom();
+            list = dalRoom.getRoom();
             return list;
         }
 
-        public static List<DTO_Room> listRoomByFloor(int floorId)
+        public List<DTO_Room> getRoomByFloor(int floorId)
         {
             List<DTO_Room> list = new List<DTO_Room>();
             RoomDAL listDisplay = new RoomDAL();
-            list = listDisplay.listRoomByFloor(floorId);
+            list = listDisplay.getRoomByFloor(floorId);
             return list;
+        }
+
+        public bool addRoom(DTO_Room r)
+        {
+            return dalRoom.addRoom(r);
+        }
+        public bool updateRoom(DTO_Room r, int id)
+        {
+            return dalRoom.updateRoom(r, id);
+        }
+        public bool removeRoom(int id)
+        {
+            return dalRoom.removeRoom(id);
         }
     }
 }
