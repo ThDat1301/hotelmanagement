@@ -36,6 +36,12 @@ namespace GUI_Hotel
                     frmFloor frm2 = new frmFloor();
                     frm2.ShowDialog();
                     break;
+                case "navItemProduct":
+                    frmProduct frm7 = new frmProduct();
+                    frm7.ShowDialog();
+                    break;
+
+
                 case "navItemRoom":
                     frmRoom frm3 = new frmRoom();
                     frm3.ShowDialog();
@@ -120,5 +126,7 @@ namespace GUI_Hotel
         {
 
         }
+
+       
     }
 }
