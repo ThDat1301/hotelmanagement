@@ -57,6 +57,8 @@
     <Compile Include="Customer.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="CustomerDAL.cs" />
+    <Compile Include="EmployeeDAL.cs" />
     <Compile Include="Floor.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>

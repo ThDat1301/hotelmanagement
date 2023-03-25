@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DAL_Hotel",
+    "\\GUI_Hotel"
   ],
+  "SelectedNode": "\\GUI_Hotel\\frmCustomer.cs",
   "PreviewInSolutionExplorer": false
 }

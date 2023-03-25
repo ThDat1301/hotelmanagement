@@ -38,6 +38,14 @@ namespace GUI_Hotel
                     frmFloor frm2 = new frmFloor();
                     frm2.ShowDialog();
                     break;
+                case "navItemEmployee":
+                    frmEmployee frm4 = new frmEmployee();
+                    frm4.ShowDialog();
+                    break;
+                case "navItemCustomer":
+                    frmCustomer frm5 = new frmCustomer();
+                    frm5.ShowDialog();
+                    break;
                 case "navItemProduct":
                     frmProduct frm7 = new frmProduct();
                     frm7.ShowDialog();

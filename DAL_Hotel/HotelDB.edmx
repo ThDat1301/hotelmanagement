@@ -65,7 +65,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="gender" Type="bit" />
           <Property Name="phone" Type="nvarchar" MaxLength="11" />
           <Property Name="email" Type="nvarchar" MaxLength="50" />
@@ -83,7 +83,7 @@
           <Property Name="surCharge" Type="float" />
           <Property Name="qtyBed" Type="int" />
         </EntityType>
-        <Association Name="FK__Order_Pro__order__37A5467C">
+        <Association Name="FK__Order_Pro__order__4AB81AF0">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
           <End Role="Order_Product" Type="Self.Order_Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -95,7 +95,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Order_Pro__produ__38996AB5">
+        <Association Name="FK__Order_Pro__produ__4BAC3F29">
           <End Role="Product" Type="Self.Product" Multiplicity="1" />
           <End Role="Order_Product" Type="Self.Order_Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -107,7 +107,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__customer__286302EC">
+        <Association Name="FK__Orders__customer__3B75D760">
           <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -119,7 +119,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__staffID__29572725">
+        <Association Name="FK__Orders__staffID__3C69FB99">
           <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Room__floorId__31EC6D26">
+        <Association Name="FK__Room__floorId__44FF419A">
           <End Role="Floor" Type="Self.Floor" Multiplicity="0..1" />
           <End Role="Room" Type="Self.Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -143,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Room__orderID__30F848ED">
+        <Association Name="FK__Room__orderID__440B1D61">
           <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
           <End Role="Room" Type="Self.Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -155,7 +155,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Room__typeRoomId__32E0915F">
+        <Association Name="FK__Room__typeRoomId__45F365D3">
           <End Role="TypeRoom" Type="Self.TypeRoom" Multiplicity="0..1" />
           <End Role="Room" Type="Self.Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -176,31 +176,31 @@
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TypeRoom" EntityType="Self.TypeRoom" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Order_Pro__order__37A5467C" Association="Self.FK__Order_Pro__order__37A5467C">
+          <AssociationSet Name="FK__Order_Pro__order__4AB81AF0" Association="Self.FK__Order_Pro__order__4AB81AF0">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Order_Product" EntitySet="Order_Product" />
           </AssociationSet>
-          <AssociationSet Name="FK__Order_Pro__produ__38996AB5" Association="Self.FK__Order_Pro__produ__38996AB5">
+          <AssociationSet Name="FK__Order_Pro__produ__4BAC3F29" Association="Self.FK__Order_Pro__produ__4BAC3F29">
             <End Role="Product" EntitySet="Product" />
             <End Role="Order_Product" EntitySet="Order_Product" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__customer__286302EC" Association="Self.FK__Orders__customer__286302EC">
+          <AssociationSet Name="FK__Orders__customer__3B75D760" Association="Self.FK__Orders__customer__3B75D760">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__staffID__29572725" Association="Self.FK__Orders__staffID__29572725">
+          <AssociationSet Name="FK__Orders__staffID__3C69FB99" Association="Self.FK__Orders__staffID__3C69FB99">
             <End Role="Staff" EntitySet="Staff" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Room__floorId__31EC6D26" Association="Self.FK__Room__floorId__31EC6D26">
+          <AssociationSet Name="FK__Room__floorId__44FF419A" Association="Self.FK__Room__floorId__44FF419A">
             <End Role="Floor" EntitySet="Floor" />
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
-          <AssociationSet Name="FK__Room__orderID__30F848ED" Association="Self.FK__Room__orderID__30F848ED">
+          <AssociationSet Name="FK__Room__orderID__440B1D61" Association="Self.FK__Room__orderID__440B1D61">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
-          <AssociationSet Name="FK__Room__typeRoomId__32E0915F" Association="Self.FK__Room__typeRoomId__32E0915F">
+          <AssociationSet Name="FK__Room__typeRoomId__45F365D3" Association="Self.FK__Room__typeRoomId__45F365D3">
             <End Role="TypeRoom" EntitySet="TypeRoom" />
             <End Role="Room" EntitySet="Room" />
           </AssociationSet>
@@ -217,23 +217,23 @@
           <EntitySet Name="Rooms" EntityType="HotelDBModel.Room" />
           <EntitySet Name="Staffs" EntityType="HotelDBModel.Staff" />
           <EntitySet Name="TypeRooms" EntityType="HotelDBModel.TypeRoom" />
-          <AssociationSet Name="FK__Orders__customer__286302EC" Association="HotelDBModel.FK__Orders__customer__286302EC">
+          <AssociationSet Name="FK__Orders__customer__3B75D760" Association="HotelDBModel.FK__Orders__customer__3B75D760">
             <End Role="Customer" EntitySet="Customers" />
             <End Role="Order" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Room__floorId__31EC6D26" Association="HotelDBModel.FK__Room__floorId__31EC6D26">
+          <AssociationSet Name="FK__Room__floorId__44FF419A" Association="HotelDBModel.FK__Room__floorId__44FF419A">
             <End Role="Floor" EntitySet="Floors" />
             <End Role="Room" EntitySet="Rooms" />
           </AssociationSet>
-          <AssociationSet Name="FK__Orders__staffID__29572725" Association="HotelDBModel.FK__Orders__staffID__29572725">
+          <AssociationSet Name="FK__Orders__staffID__3C69FB99" Association="HotelDBModel.FK__Orders__staffID__3C69FB99">
             <End Role="Staff" EntitySet="Staffs" />
             <End Role="Order" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Room__orderID__30F848ED" Association="HotelDBModel.FK__Room__orderID__30F848ED">
+          <AssociationSet Name="FK__Room__orderID__440B1D61" Association="HotelDBModel.FK__Room__orderID__440B1D61">
             <End Role="Order" EntitySet="Orders" />
             <End Role="Room" EntitySet="Rooms" />
           </AssociationSet>
-          <AssociationSet Name="FK__Room__typeRoomId__32E0915F" Association="HotelDBModel.FK__Room__typeRoomId__32E0915F">
+          <AssociationSet Name="FK__Room__typeRoomId__45F365D3" Association="HotelDBModel.FK__Room__typeRoomId__45F365D3">
             <End Role="TypeRoom" EntitySet="TypeRooms" />
             <End Role="Room" EntitySet="Rooms" />
           </AssociationSet>
@@ -252,7 +252,7 @@
           <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="personalId" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Orders" Relationship="HotelDBModel.FK__Orders__customer__286302EC" FromRole="Customer" ToRole="Order" />
+          <NavigationProperty Name="Orders" Relationship="HotelDBModel.FK__Orders__customer__3B75D760" FromRole="Customer" ToRole="Order" />
         </EntityType>
         <EntityType Name="Floor">
           <Key>
@@ -260,7 +260,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__floorId__31EC6D26" FromRole="Floor" ToRole="Room" />
+          <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__floorId__44FF419A" FromRole="Floor" ToRole="Room" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -271,9 +271,9 @@
           <Property Name="checkoutDate" Type="DateTime" Precision="0" />
           <Property Name="customerID" Type="Int32" />
           <Property Name="staffID" Type="Int32" />
-          <NavigationProperty Name="Customer" Relationship="HotelDBModel.FK__Orders__customer__286302EC" FromRole="Order" ToRole="Customer" />
-          <NavigationProperty Name="Staff" Relationship="HotelDBModel.FK__Orders__staffID__29572725" FromRole="Order" ToRole="Staff" />
-          <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__orderID__30F848ED" FromRole="Order" ToRole="Room" />
+          <NavigationProperty Name="Customer" Relationship="HotelDBModel.FK__Orders__customer__3B75D760" FromRole="Order" ToRole="Customer" />
+          <NavigationProperty Name="Staff" Relationship="HotelDBModel.FK__Orders__staffID__3C69FB99" FromRole="Order" ToRole="Staff" />
+          <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__orderID__440B1D61" FromRole="Order" ToRole="Room" />
           <NavigationProperty Name="Products" Relationship="HotelDBModel.Order_Product" FromRole="Order" ToRole="Product" />
         </EntityType>
         <EntityType Name="Product">
@@ -295,22 +295,22 @@
           <Property Name="orderID" Type="Int32" />
           <Property Name="floorId" Type="Int32" />
           <Property Name="typeRoomId" Type="Int32" />
-          <NavigationProperty Name="Floor" Relationship="HotelDBModel.FK__Room__floorId__31EC6D26" FromRole="Room" ToRole="Floor" />
-          <NavigationProperty Name="Order" Relationship="HotelDBModel.FK__Room__orderID__30F848ED" FromRole="Room" ToRole="Order" />
-          <NavigationProperty Name="TypeRoom" Relationship="HotelDBModel.FK__Room__typeRoomId__32E0915F" FromRole="Room" ToRole="TypeRoom" />
+          <NavigationProperty Name="Floor" Relationship="HotelDBModel.FK__Room__floorId__44FF419A" FromRole="Room" ToRole="Floor" />
+          <NavigationProperty Name="Order" Relationship="HotelDBModel.FK__Room__orderID__440B1D61" FromRole="Room" ToRole="Order" />
+          <NavigationProperty Name="TypeRoom" Relationship="HotelDBModel.FK__Room__typeRoomId__45F365D3" FromRole="Room" ToRole="TypeRoom" />
         </EntityType>
         <EntityType Name="Staff">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="gender" Type="Boolean" />
           <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="passwords" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Orders" Relationship="HotelDBModel.FK__Orders__staffID__29572725" FromRole="Staff" ToRole="Order" />
+          <NavigationProperty Name="Orders" Relationship="HotelDBModel.FK__Orders__staffID__3C69FB99" FromRole="Staff" ToRole="Order" />
         </EntityType>
         <EntityType Name="TypeRoom">
           <Key>
@@ -322,9 +322,9 @@
           <Property Name="maxCus" Type="Int32" />
           <Property Name="surCharge" Type="Double" />
           <Property Name="qtyBed" Type="Int32" />
-          <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__typeRoomId__32E0915F" FromRole="TypeRoom" ToRole="Room" />
+          <NavigationProperty Name="Rooms" Relationship="HotelDBModel.FK__Room__typeRoomId__45F365D3" FromRole="TypeRoom" ToRole="Room" />
         </EntityType>
-        <Association Name="FK__Orders__customer__286302EC">
+        <Association Name="FK__Orders__customer__3B75D760">
           <End Type="HotelDBModel.Customer" Role="Customer" Multiplicity="0..1" />
           <End Type="HotelDBModel.Order" Role="Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -336,7 +336,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Room__floorId__31EC6D26">
+        <Association Name="FK__Room__floorId__44FF419A">
           <End Type="HotelDBModel.Floor" Role="Floor" Multiplicity="0..1" />
           <End Type="HotelDBModel.Room" Role="Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -348,7 +348,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Orders__staffID__29572725">
+        <Association Name="FK__Orders__staffID__3C69FB99">
           <End Type="HotelDBModel.Staff" Role="Staff" Multiplicity="0..1" />
           <End Type="HotelDBModel.Order" Role="Order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -360,7 +360,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Room__orderID__30F848ED">
+        <Association Name="FK__Room__orderID__440B1D61">
           <End Type="HotelDBModel.Order" Role="Order" Multiplicity="0..1" />
           <End Type="HotelDBModel.Room" Role="Room" Multiplicity="*" />
           <ReferentialConstraint>
@@ -372,7 +372,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Room__typeRoomId__32E0915F">
+        <Association Name="FK__Room__typeRoomId__45F365D3">
           <End Type="HotelDBModel.TypeRoom" Role="TypeRoom" Multiplicity="0..1" />
           <End Type="HotelDBModel.Room" Role="Room" Multiplicity="*" />
           <ReferentialConstraint>

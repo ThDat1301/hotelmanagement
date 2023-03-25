@@ -239,11 +239,11 @@
         private DevExpress.XtraGrid.GridControl gcDanhSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
         private System.Windows.Forms.TextBox txtProductName;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtProductPrice;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraGrid.Columns.GridColumn Product_id;
         private DevExpress.XtraGrid.Columns.GridColumn Product_name;
         private DevExpress.XtraGrid.Columns.GridColumn Product_price;
+        public System.Windows.Forms.Label label3;
     }
 }

@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO_Customer.cs" />
+    <Compile Include="DTO_Employee.cs" />
     <Compile Include="DTO_Floor.cs" />
     <Compile Include="DTO_Product.cs" />
     <Compile Include="DTO_Room.cs" />
