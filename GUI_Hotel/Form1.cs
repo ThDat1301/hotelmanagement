@@ -14,6 +14,7 @@ using DevExpress.XtraBars.Ribbon.ViewInfo;
 
 namespace GUI_Hotel
 {
+   
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
 
@@ -22,9 +23,6 @@ namespace GUI_Hotel
         {
             InitializeComponent();
         }
-
-        
-
         private void navMain_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             string item = e.Link.ItemName;
@@ -38,11 +36,13 @@ namespace GUI_Hotel
                     frmFloor frm2 = new frmFloor();
                     frm2.ShowDialog();
                     break;
-
+                case "navItemRoom":
+                    frmRoom frm3 = new frmRoom();
+                    frm3.ShowDialog();
+                    break;
             }
-            
-        }
 
+        }
         private void btnSystem_Click(object sender, EventArgs e)
         {
 
@@ -58,41 +58,38 @@ namespace GUI_Hotel
             Application.Exit();
         }
 
-        void showRoom()
+        FloorBUS busFloor = new FloorBUS();
+        RoomBUS roomBUS = new RoomBUS();
+        public void showRoom()
         {
-            var listFloor = FloorBUS.listFloor();
+            gControl.Gallery.Groups.Clear();
+
+            var listFloor = busFloor.getFloor();
             gControl.Gallery.ItemImageLayout = ImageLayoutMode.ZoomInside;
             gControl.Gallery.ImageSize = new Size(64, 64);
             gControl.Gallery.ShowItemText = true;
             gControl.Gallery.ShowGroupCaption = true;
-            
-            foreach(var f in listFloor)
-            { 
+            foreach (var f in listFloor)
+            {
                 var galleryItem = new GalleryItemGroup();
                 galleryItem.Caption = f.Floor_name;
                 galleryItem.CaptionAlignment = GalleryItemGroupCaptionAlignment.Stretch;
-
-                var listRoom = RoomBUS.listRoomByFloor(f.Floor_id);
-                foreach(var r in listRoom)
+                /* var listRoom = RoomBUS.getRoomByFloor(f.Floor_id);*/
+                var listRoom = roomBUS.getRoomByFloor(f.Floor_id);
+                foreach (var r in listRoom)
                 {
                     var gcItem = new GalleryItem();
                     gcItem.Caption = r.Room_num;
                     gcItem.Value = r.Room_id;
-                    if (r.Room_status)                   
+                    if (r.Room_status)
                         gcItem.ImageOptions.Image = imageList1.Images[0];
                     else gcItem.ImageOptions.Image = imageList1.Images[1];
-
-
-
                     galleryItem.Items.Add(gcItem);
                 }
-
                 gControl.Gallery.Groups.Add(galleryItem);
-
             }
-
-
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {

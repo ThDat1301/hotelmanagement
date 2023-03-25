@@ -10,7 +10,7 @@ namespace DAL_Hotel
 {
     public class RoomDAL
     {
-        public List<DTO_Room> listRoom()
+        public List<DTO_Room> getRoom()
         {
             List<DTO_Room> list = new List<DTO_Room>();
 
@@ -34,7 +34,7 @@ namespace DAL_Hotel
             return list;
         }
 
-        public List<DTO_Room> listRoomByFloor(int floorId)
+        public List<DTO_Room> getRoomByFloor(int floorId)
         {
             List<DTO_Room> list = new List<DTO_Room>();
 
@@ -58,7 +58,62 @@ namespace DAL_Hotel
             return list;
         }
 
-        
+        public bool addRoom(DTO_Room r)
+        {
+            try
+            {
+                Room room = new Room();                
+                room.num = int.Parse(r.Room_num);
+                room.status = r.Room_status;
+                /*room.orderID = r.Room_order_id;*/
+                room.floorId = r.Room_floor_id;
+                room.typeRoomId = r.Room_type_id;
+                HotelDB context = new HotelDB();
+                context.Rooms.Add(room);
+                context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public bool updateRoom(DTO_Room r, int id)
+        {
+            try
+            {
+                HotelDB context = new HotelDB();
+                var room = context.Rooms.FirstOrDefault(i => i.id == id);
+                room.num = int.Parse(r.Room_num);
+                room.status = r.Room_status;
+/*                room.orderID = r.Room_order_id;*/
+                room.floorId = r.Room_floor_id;
+                room.typeRoomId = r.Room_type_id;
+                context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool removeRoom(int id)
+        {
+            try
+            {
+                HotelDB context = new HotelDB();
+                var room = context.Rooms.FirstOrDefault(i => i.id == id);
+                context.Rooms.Remove(room);
+                context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
     }
 }
