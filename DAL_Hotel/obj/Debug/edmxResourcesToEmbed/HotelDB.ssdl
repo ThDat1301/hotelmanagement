@@ -60,7 +60,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="name" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
     <Property Name="gender" Type="bit" />
     <Property Name="phone" Type="nvarchar" MaxLength="11" />
     <Property Name="email" Type="nvarchar" MaxLength="50" />

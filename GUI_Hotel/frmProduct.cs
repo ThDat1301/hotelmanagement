@@ -48,7 +48,6 @@ namespace GUI_Hotel
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
             if(txtProductName.Text.Trim() != "" && txtProductPrice.Text.Trim() != "")
             {
                 string productName = txtProductName.Text;

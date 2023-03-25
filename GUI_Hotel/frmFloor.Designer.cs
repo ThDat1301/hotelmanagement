@@ -54,7 +54,7 @@
             this.bthThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(738, 42);
+            this.toolStrip1.Size = new System.Drawing.Size(861, 47);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -63,7 +63,7 @@
             this.btnThem.Image = global::GUI_Hotel.Properties.Resources.add;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(41, 39);
+            this.btnThem.Size = new System.Drawing.Size(50, 44);
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -73,7 +73,7 @@
             this.btnSua.Image = global::GUI_Hotel.Properties.Resources.update;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(30, 39);
+            this.btnSua.Size = new System.Drawing.Size(38, 44);
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -83,7 +83,7 @@
             this.btnXoa.Image = global::GUI_Hotel.Properties.Resources.delete;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(31, 39);
+            this.btnXoa.Size = new System.Drawing.Size(39, 44);
             this.btnXoa.Text = "Xoá";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -93,7 +93,7 @@
             this.bthThoat.Image = global::GUI_Hotel.Properties.Resources.exit;
             this.bthThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bthThoat.Name = "bthThoat";
-            this.bthThoat.Size = new System.Drawing.Size(41, 39);
+            this.bthThoat.Size = new System.Drawing.Size(51, 44);
             this.bthThoat.Text = "Thoát";
             this.bthThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bthThoat.Click += new System.EventHandler(this.bthThoat_Click);
@@ -101,10 +101,12 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcDanhSach.Location = new System.Drawing.Point(0, 42);
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.Location = new System.Drawing.Point(0, 47);
             this.gcDanhSach.MainView = this.gvDanhSach;
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(738, 200);
+            this.gcDanhSach.Size = new System.Drawing.Size(861, 246);
             this.gcDanhSach.TabIndex = 2;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -114,33 +116,40 @@
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Floor_id,
             this.Floor_name});
+            this.gvDanhSach.DetailHeight = 431;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
+            this.gvDanhSach.OptionsBehavior.Editable = false;
             this.gvDanhSach.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvDanhSach_FocusedRowChanged);
             // 
             // Floor_id
             // 
             this.Floor_id.Caption = "ID";
             this.Floor_id.FieldName = "Floor_id";
+            this.Floor_id.MinWidth = 23;
             this.Floor_id.Name = "Floor_id";
             this.Floor_id.Visible = true;
             this.Floor_id.VisibleIndex = 0;
+            this.Floor_id.Width = 87;
             // 
             // Floor_name
             // 
             this.Floor_name.Caption = "Tên tầng";
             this.Floor_name.FieldName = "Floor_name";
+            this.Floor_name.MinWidth = 23;
             this.Floor_name.Name = "Floor_name";
             this.Floor_name.Visible = true;
             this.Floor_name.VisibleIndex = 1;
+            this.Floor_name.Width = 87;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 260);
+            this.label1.Location = new System.Drawing.Point(18, 320);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 18);
+            this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tầng: ";
             // 
@@ -148,20 +157,22 @@
             // 
             this.txtFloorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFloorName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFloorName.Location = new System.Drawing.Point(73, 257);
+            this.txtFloorName.Location = new System.Drawing.Point(85, 316);
+            this.txtFloorName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFloorName.Name = "txtFloorName";
-            this.txtFloorName.Size = new System.Drawing.Size(100, 26);
+            this.txtFloorName.Size = new System.Drawing.Size(116, 30);
             this.txtFloorName.TabIndex = 4;
             // 
             // frmFloor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 295);
+            this.ClientSize = new System.Drawing.Size(861, 363);
             this.Controls.Add(this.txtFloorName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmFloor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTang";

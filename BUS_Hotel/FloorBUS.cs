@@ -36,9 +36,9 @@ namespace BUS_Hotel
         {
             return dalFloor.removeFloor(id);
         }
-        public bool updateFloor (DTO_Floor f)
+        public bool updateFloor (DTO_Floor f, int id)
         {
-            return dalFloor.updateFloor(f);
+            return dalFloor.updateFloor(f, id);
         }
     }
 }

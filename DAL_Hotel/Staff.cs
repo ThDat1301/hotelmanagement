@@ -21,7 +21,7 @@ namespace DAL_Hotel
         }
     
         public int id { get; set; }
-        public Nullable<int> name { get; set; }
+        public string name { get; set; }
         public Nullable<bool> gender { get; set; }
         public string phone { get; set; }
         public string email { get; set; }

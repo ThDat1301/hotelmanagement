@@ -80,14 +80,14 @@ namespace GUI_Hotel
         {
             if (txtFloorName.Text.Trim() != "")
             {
-                /*int id = int.Parse(gvDanhSach.GetRowCellValue(gvDanhSach.FocusedRowHandle, "Floor_id") + "");*/
+                int id = int.Parse(gvDanhSach.GetRowCellValue(gvDanhSach.FocusedRowHandle, "Floor_id") + "");
                 if (!compareName())
                 {
                     DTO_Floor f = new DTO_Floor(txtFloorName.Text);
                     DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn sửa không?", "Xác nhận thêm tầng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        if (busFloor.updateFloor(f))
+                        if (busFloor.updateFloor(f, id))
                         {
                             MessageBox.Show("Sửa thành công");
                             loadData();

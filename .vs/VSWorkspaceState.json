@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DAL_Hotel",
+    "\\GUI_Hotel"
   ],
+  "SelectedNode": "\\DAL_Hotel\\FloorDAL.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -73,13 +73,12 @@ namespace DAL_Hotel
             }
         }
 
-        public bool updateFloor(DTO_Floor f)
+        public bool updateFloor(DTO_Floor f, int id)
         {
             try
             {
                 HotelDB context = new HotelDB();
-                var floor = context.Floors.FirstOrDefault(t => t.id == f.Floor_id);
-                floor.id = f.Floor_id;
+                var floor = context.Floors.FirstOrDefault(t => t.id == id);
                 floor.name = f.Floor_name;
                 context.SaveChanges();
                 return true;
