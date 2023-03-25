@@ -11,11 +11,36 @@ namespace DTO_Hotel
         private int _Room_id;
         private string _Room_num;
         private bool _Room_status;
-        private float _Room_price;
         private int _Room_order_id;
         private int _Room_floor_id;
         private int _Room_type_id;
 
+        public DTO_Room() { }
+        public DTO_Room(int id, string num, bool status, int order_id, int floor_id, int typeroom_id)
+        {
+            _Room_id = id;
+            _Room_num = num;
+            _Room_status = status;
+            _Room_order_id = order_id;
+            _Room_floor_id = floor_id;
+            _Room_type_id = typeroom_id;
+        }
+
+        public DTO_Room(string num, bool status, int order_id, int floor_id, int typeroom_id)
+        {
+            _Room_num = num;
+            _Room_status = status;
+            _Room_order_id = order_id;
+            _Room_floor_id = floor_id;
+            _Room_type_id = typeroom_id;
+        }
+        public DTO_Room(string num, bool status, int floor_id, int typeroom_id)
+        {
+            _Room_num = num;
+            _Room_status = status;
+            _Room_floor_id = floor_id;
+            _Room_type_id = typeroom_id;
+        }
         public int Room_id
         {
             get { return _Room_id; }
@@ -32,13 +57,6 @@ namespace DTO_Hotel
         { 
             get { return _Room_status; }
             set { _Room_status = value; }
-        }
-
-
-        public float Room_price
-        {
-            get { return _Room_price; }
-            set { _Room_price = value; }
         }
 
         public int Room_order_id
