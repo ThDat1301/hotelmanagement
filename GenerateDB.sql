@@ -18,7 +18,7 @@ go
 create table Staff 
 (
 	id int identity(1,1) primary key, 
-	name int, 
+	name nvarchar(50), 
 	gender Bit, 
 	phone nvarchar(11), 
 	email nvarchar(50),
@@ -32,6 +32,11 @@ create table Orders
 	id int identity(1,1) primary key, 
 	checkinDate Date,
 	checkoutDate Date,
+	totalAmount Float,
+	numOfCus int,
+	status bit,
+	isGroup bit,
+	note nvarchar(2000),
 	customerID int foreign key references Customer(id),
 	staffID int foreign key references Staff(id),
 );
@@ -74,8 +79,9 @@ create table Product
 );
 go
 
-create table Order_Product
+create table OrderDetail
 (
+	quantity int,
 	orderID int foreign key references Orders(id),
 	productID int foreign key references Product(id), 
 	constraint PK_OP primary key (orderID, productID)

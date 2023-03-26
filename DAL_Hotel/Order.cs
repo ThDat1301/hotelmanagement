@@ -17,21 +17,26 @@ namespace DAL_Hotel
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
+            this.OrderDetails = new HashSet<OrderDetail>();
             this.Rooms = new HashSet<Room>();
-            this.Products = new HashSet<Product>();
         }
     
         public int id { get; set; }
         public Nullable<System.DateTime> checkinDate { get; set; }
         public Nullable<System.DateTime> checkoutDate { get; set; }
+        public Nullable<double> totalAmount { get; set; }
+        public Nullable<int> numOfCus { get; set; }
+        public Nullable<bool> status { get; set; }
+        public Nullable<bool> isGroup { get; set; }
+        public string note { get; set; }
         public Nullable<int> customerID { get; set; }
         public Nullable<int> staffID { get; set; }
     
         public virtual Customer Customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual Staff Staff { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Room> Rooms { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
     }
 }

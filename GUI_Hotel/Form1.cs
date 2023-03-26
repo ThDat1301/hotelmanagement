@@ -48,11 +48,13 @@ namespace GUI_Hotel
                     frmProduct frm7 = new frmProduct();
                     frm7.ShowDialog();
                     break;
-
-
                 case "navItemRoom":
                     frmRoom frm3 = new frmRoom();
                     frm3.ShowDialog();
+                    break;
+                case "navItemOrder":
+                    frmOrder frm6 = new frmOrder();
+                    frm6.ShowDialog();
                     break;
             }
 

@@ -142,7 +142,7 @@
             // splitContainerControl1.Panel2
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.gControl);
-            this.splitContainerControl1.Size = new System.Drawing.Size(1194, 469);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1194, 462);
             this.splitContainerControl1.SplitterPosition = 271;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerControl1_Paint);
@@ -165,7 +165,7 @@
             this.navMain.Margin = new System.Windows.Forms.Padding(4);
             this.navMain.Name = "navMain";
             this.navMain.OptionsNavPane.ExpandedWidth = 271;
-            this.navMain.Size = new System.Drawing.Size(271, 469);
+            this.navMain.Size = new System.Drawing.Size(271, 462);
             this.navMain.TabIndex = 0;
             this.navMain.Text = "Chức năng";
             this.navMain.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navMain_LinkClicked);
@@ -173,7 +173,6 @@
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Chức năng";
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navItemTypeRoom),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navItemFloor),
@@ -283,7 +282,7 @@
             this.gControl.Margin = new System.Windows.Forms.Padding(4);
             this.gControl.Name = "gControl";
             this.barManager1.SetPopupContextMenu(this.gControl, this.popupMenu1);
-            this.gControl.Size = new System.Drawing.Size(913, 469);
+            this.gControl.Size = new System.Drawing.Size(911, 462);
             this.gControl.TabIndex = 0;
             this.gControl.Text = "galleryControl1";
             // 
@@ -292,7 +291,7 @@
             this.galleryControlClient1.GalleryControl = this.gControl;
             this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
             this.galleryControlClient1.Margin = new System.Windows.Forms.Padding(4);
-            this.galleryControlClient1.Size = new System.Drawing.Size(892, 465);
+            this.galleryControlClient1.Size = new System.Drawing.Size(886, 458);
             // 
             // imageList1
             // 
