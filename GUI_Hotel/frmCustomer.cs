@@ -21,6 +21,8 @@ namespace GUI_Hotel
             InitializeComponent();
         }
 
+        frmOrder objOrder = (frmOrder) Application.OpenForms["frmOrder"]; // truy cập các biến và hàm public từ frmOrder
+
         CustomerBUS busCustomer = new CustomerBUS();
 
         void loadData()
@@ -152,6 +154,16 @@ namespace GUI_Hotel
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void gvDanhSach_DoubleClick(object sender, EventArgs e)
+        {
+            if(gvDanhSach.GetFocusedRowCellValue("Customer_id") != null)
+            {
+                objOrder.loadCbCus();
+                objOrder.setCustomer(int.Parse(gvDanhSach.GetFocusedRowCellValue("Customer_id").ToString()));
+                this.Close();
+            }
         }
     }
 }

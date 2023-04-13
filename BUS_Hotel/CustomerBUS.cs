@@ -31,6 +31,12 @@ namespace BUS_Hotel
         {
             return dalCustomer.deleteCustomer(id);
         }
+
+        public DTO_Customer getCusById(int id)
+        {
+            return dalCustomer.getCusById(id);
+        }
+
     }
 }
 

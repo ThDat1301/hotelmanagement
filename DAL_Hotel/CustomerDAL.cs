@@ -89,5 +89,25 @@ namespace DAL_Hotel
                 return false;
             }
         }
+
+        public DTO_Customer getCusById(int id)
+        {
+            try
+            {
+                HotelDB context = new HotelDB();
+                var cus = from c in context.Customers where c.id == id select c;
+                foreach(var c in cus)
+                {
+                    DTO_Customer cs = CustomerDAL.toCustomerDTOMap(c);
+                    return cs;
+                }
+            }
+            catch
+            {
+
+            }
+            return new DTO_Customer();
+
+        }
     }
 }

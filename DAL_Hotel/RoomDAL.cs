@@ -63,7 +63,7 @@ namespace DAL_Hotel
             try
             {
                 Room room = new Room();                
-                room.num = int.Parse(r.Room_num);
+                room.num = r.Room_num;
                 room.status = r.Room_status;
                 /*room.orderID = r.Room_order_id;*/
                 room.floorId = r.Room_floor_id;
@@ -86,9 +86,8 @@ namespace DAL_Hotel
             {
                 HotelDB context = new HotelDB();
                 var room = context.Rooms.FirstOrDefault(i => i.id == id);
-                room.num = int.Parse(r.Room_num);
+                room.num = r.Room_num;
                 room.status = r.Room_status;
-/*                room.orderID = r.Room_order_id;*/
                 room.floorId = r.Room_floor_id;
                 room.typeRoomId = r.Room_type_id;
                 context.SaveChanges();
@@ -112,6 +111,31 @@ namespace DAL_Hotel
             catch
             {
                 return false;
+            }
+        }
+
+        public DTO_Room getRoomById(int id)
+        {
+            using (var db = new HotelDB())
+            {
+                var room = db.Rooms.FirstOrDefault(r => r.id == id);
+                return new DTO_Room(id, room.num, (bool)room.status, (int)room.floorId, (int)room.typeRoomId);
+            }
+        }
+
+        public bool changeStatusRoomById(int id, bool status)
+        {
+            using (var db = new HotelDB())
+            {
+                try
+                {
+                    var room = db.Rooms.FirstOrDefault(r => r.id == id);
+                    room.status = status;
+                    db.SaveChanges();
+                    return true;
+                }
+                catch { return false; }
+                
             }
         }
 

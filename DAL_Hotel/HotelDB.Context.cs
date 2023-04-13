@@ -27,6 +27,8 @@ namespace DAL_Hotel
     
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Floor> Floors { get; set; }
+        public virtual DbSet<OrderDetailProduct> OrderDetailProducts { get; set; }
+        public virtual DbSet<OrderDetailRoom> OrderDetailRooms { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }

@@ -84,7 +84,7 @@
             this.btnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1194, 67);
+            this.toolStrip1.Size = new System.Drawing.Size(1194, 60);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -93,7 +93,7 @@
             this.btnSystem.Image = global::GUI_Hotel.Properties.Resources.system;
             this.btnSystem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSystem.Name = "btnSystem";
-            this.btnSystem.Size = new System.Drawing.Size(98, 64);
+            this.btnSystem.Size = new System.Drawing.Size(78, 57);
             this.btnSystem.Text = "Hệ thống";
             this.btnSystem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSystem.Click += new System.EventHandler(this.btnSystem_Click);
@@ -101,14 +101,14 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 67);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 60);
             // 
             // btnReport
             // 
             this.btnReport.Image = global::GUI_Hotel.Properties.Resources.chart;
             this.btnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(85, 64);
+            this.btnReport.Size = new System.Drawing.Size(68, 57);
             this.btnReport.Text = "Báo cáo";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
@@ -116,14 +116,14 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 67);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 60);
             // 
             // btnExit
             // 
             this.btnExit.Image = global::GUI_Hotel.Properties.Resources.exit;
             this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(66, 64);
+            this.btnExit.Size = new System.Drawing.Size(53, 57);
             this.btnExit.Text = "Thoát";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -131,7 +131,7 @@
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 67);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 60);
             this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             // 
@@ -382,7 +382,7 @@
             // Form1
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 529);
             this.Controls.Add(this.splitContainerControl1);

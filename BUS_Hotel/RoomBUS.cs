@@ -38,5 +38,13 @@ namespace BUS_Hotel
         {
             return dalRoom.removeRoom(id);
         }
+        public DTO_Room getRoomById(int id)
+        {
+            return dalRoom.getRoomById(id);
+        }
+        public bool changeStatusRoomById(int id, bool status)
+        {
+            return dalRoom.changeStatusRoomById(id, status);
+        }
     }
 }

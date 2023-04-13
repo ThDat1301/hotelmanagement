@@ -48,11 +48,13 @@ namespace GUI_Hotel
                     frmProduct frm7 = new frmProduct();
                     frm7.ShowDialog();
                     break;
-
-
                 case "navItemRoom":
                     frmRoom frm3 = new frmRoom();
                     frm3.ShowDialog();
+                    break;
+                case "navItemOrder":
+                    frmOrder frm6 = new frmOrder();
+                    frm6.ShowDialog();
                     break;
             }
 
@@ -96,8 +98,8 @@ namespace GUI_Hotel
                     gcItem.Caption = r.Room_num;
                     gcItem.Value = r.Room_id;
                     if (r.Room_status)
-                        gcItem.ImageOptions.Image = imageList1.Images[0];
-                    else gcItem.ImageOptions.Image = imageList1.Images[1];
+                        gcItem.ImageOptions.Image = imageList1.Images[1];
+                    else gcItem.ImageOptions.Image = imageList1.Images[0];
                     galleryItem.Items.Add(gcItem);
                 }
                 gControl.Gallery.Groups.Add(galleryItem);
