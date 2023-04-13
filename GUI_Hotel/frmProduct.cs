@@ -60,6 +60,7 @@ namespace GUI_Hotel
                         loadData();
                         clearTextBox();
                         MessageBox.Show("Thêm thành công!");
+                        
                     }
                     else MessageBox.Show("Thêm không thành công!");
                 }

@@ -98,8 +98,8 @@ namespace GUI_Hotel
                     gcItem.Caption = r.Room_num;
                     gcItem.Value = r.Room_id;
                     if (r.Room_status)
-                        gcItem.ImageOptions.Image = imageList1.Images[0];
-                    else gcItem.ImageOptions.Image = imageList1.Images[1];
+                        gcItem.ImageOptions.Image = imageList1.Images[1];
+                    else gcItem.ImageOptions.Image = imageList1.Images[0];
                     galleryItem.Items.Add(gcItem);
                 }
                 gControl.Gallery.Groups.Add(galleryItem);

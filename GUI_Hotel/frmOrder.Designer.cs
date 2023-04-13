@@ -92,12 +92,13 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.gcSanPhamDat = new DevExpress.XtraGrid.GridControl();
             this.gvSanPhamDat = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.Book_product_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Book_room_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Book_product_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Book_product_name = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Book_room_prod_id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Book_orderDetail_quantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.prod_qty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.prod_price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Book_total_amount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Book_room_prod_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gcPhongDat = new DevExpress.XtraGrid.GridControl();
             this.gvPhongDat = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -106,6 +107,7 @@
             this.Book_floor_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Book_floor_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Book_typeroom_price = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Book_orderDetail_quantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabDanhSach)).BeginInit();
             this.tabDanhSach.SuspendLayout();
@@ -156,7 +158,7 @@
             this.bthThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1113, 42);
+            this.toolStrip1.Size = new System.Drawing.Size(1298, 47);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -165,7 +167,7 @@
             this.btnThem.Image = global::GUI_Hotel.Properties.Resources.add;
             this.btnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(41, 39);
+            this.btnThem.Size = new System.Drawing.Size(50, 44);
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -175,7 +177,7 @@
             this.btnSua.Image = global::GUI_Hotel.Properties.Resources.update;
             this.btnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(30, 39);
+            this.btnSua.Size = new System.Drawing.Size(38, 44);
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -185,7 +187,7 @@
             this.btnXoa.Image = global::GUI_Hotel.Properties.Resources.delete;
             this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(31, 39);
+            this.btnXoa.Size = new System.Drawing.Size(39, 44);
             this.btnXoa.Text = "Xoá";
             this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -195,7 +197,7 @@
             this.bthThoat.Image = global::GUI_Hotel.Properties.Resources.exit;
             this.bthThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bthThoat.Name = "bthThoat";
-            this.bthThoat.Size = new System.Drawing.Size(41, 39);
+            this.bthThoat.Size = new System.Drawing.Size(51, 44);
             this.bthThoat.Text = "Thoát";
             this.bthThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bthThoat.Click += new System.EventHandler(this.bthThoat_Click);
@@ -203,20 +205,23 @@
             // tabDanhSach
             // 
             this.tabDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabDanhSach.Location = new System.Drawing.Point(0, 42);
+            this.tabDanhSach.Location = new System.Drawing.Point(0, 47);
+            this.tabDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.tabDanhSach.Name = "tabDanhSach";
             this.tabDanhSach.SelectedTabPage = this.pageOrders;
-            this.tabDanhSach.Size = new System.Drawing.Size(1113, 726);
+            this.tabDanhSach.Size = new System.Drawing.Size(1298, 898);
             this.tabDanhSach.TabIndex = 3;
             this.tabDanhSach.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.pageOrders,
             this.pageOrderDetails});
+            this.tabDanhSach.SelectedPageChanging += new DevExpress.XtraTab.TabPageChangingEventHandler(this.tabDanhSach_SelectedPageChanging);
             // 
             // pageOrders
             // 
             this.pageOrders.Controls.Add(this.splitContainerControl1);
+            this.pageOrders.Margin = new System.Windows.Forms.Padding(4);
             this.pageOrders.Name = "pageOrders";
-            this.pageOrders.Size = new System.Drawing.Size(1111, 701);
+            this.pageOrders.Size = new System.Drawing.Size(1296, 868);
             this.pageOrders.Text = "Danh sách";
             // 
             // splitContainerControl1
@@ -224,6 +229,7 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             // 
             // splitContainerControl1.Panel1
@@ -238,24 +244,27 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.gcDanhSach);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1111, 701);
-            this.splitContainerControl1.SplitterPosition = 49;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1296, 868);
+            this.splitContainerControl1.SplitterPosition = 60;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // dpTo
             // 
             this.dpTo.CustomFormat = "dd/MM/yyyy";
-            this.dpTo.Location = new System.Drawing.Point(388, 12);
+            this.dpTo.Location = new System.Drawing.Point(460, 15);
+            this.dpTo.Margin = new System.Windows.Forms.Padding(4);
             this.dpTo.Name = "dpTo";
-            this.dpTo.Size = new System.Drawing.Size(122, 21);
+            this.dpTo.Size = new System.Drawing.Size(142, 23);
             this.dpTo.TabIndex = 1;
+            this.dpTo.ValueChanged += new System.EventHandler(this.dpTo_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(335, 18);
+            this.label2.Location = new System.Drawing.Point(391, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Đến ngày";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,17 +272,20 @@
             // dpFrom
             // 
             this.dpFrom.CustomFormat = "dd/MM/yyyy";
-            this.dpFrom.Location = new System.Drawing.Point(183, 12);
+            this.dpFrom.Location = new System.Drawing.Point(214, 15);
+            this.dpFrom.Margin = new System.Windows.Forms.Padding(4);
             this.dpFrom.Name = "dpFrom";
-            this.dpFrom.Size = new System.Drawing.Size(122, 21);
+            this.dpFrom.Size = new System.Drawing.Size(142, 23);
             this.dpFrom.TabIndex = 1;
+            this.dpFrom.ValueChanged += new System.EventHandler(this.dpFrom_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(130, 18);
+            this.label1.Location = new System.Drawing.Point(152, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Từ ngày";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -281,10 +293,12 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Location = new System.Drawing.Point(0, 0);
             this.gcDanhSach.MainView = this.gvDanhSach;
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(1111, 642);
+            this.gcDanhSach.Size = new System.Drawing.Size(1296, 796);
             this.gcDanhSach.TabIndex = 0;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -302,95 +316,110 @@
             this.Order_note,
             this.Order_customer_id,
             this.Order_employee_id});
+            this.gvDanhSach.DetailHeight = 431;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
+            this.gvDanhSach.OptionsBehavior.Editable = false;
+            this.gvDanhSach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gvDanhSach_MouseDown);
             // 
             // Order_id
             // 
             this.Order_id.Caption = "Mã đặt phòng";
             this.Order_id.FieldName = "Order_id";
+            this.Order_id.MinWidth = 23;
             this.Order_id.Name = "Order_id";
             this.Order_id.Visible = true;
             this.Order_id.VisibleIndex = 0;
+            this.Order_id.Width = 87;
             // 
             // Order_checkin_date
             // 
             this.Order_checkin_date.Caption = "Ngày đặt phòng";
             this.Order_checkin_date.FieldName = "Order_checkin_date";
-            this.Order_checkin_date.MinWidth = 21;
+            this.Order_checkin_date.MinWidth = 24;
             this.Order_checkin_date.Name = "Order_checkin_date";
             this.Order_checkin_date.Visible = true;
             this.Order_checkin_date.VisibleIndex = 1;
+            this.Order_checkin_date.Width = 87;
             // 
             // Order_checkout_date
             // 
             this.Order_checkout_date.Caption = "Ngày trả phòng";
             this.Order_checkout_date.FieldName = "Order_checkout_date";
-            this.Order_checkout_date.MinWidth = 21;
+            this.Order_checkout_date.MinWidth = 24;
             this.Order_checkout_date.Name = "Order_checkout_date";
             this.Order_checkout_date.Visible = true;
             this.Order_checkout_date.VisibleIndex = 2;
+            this.Order_checkout_date.Width = 87;
             // 
             // Order_total_amount
             // 
             this.Order_total_amount.Caption = "Tổng tiền";
             this.Order_total_amount.FieldName = "Order_total_amount";
-            this.Order_total_amount.MinWidth = 21;
+            this.Order_total_amount.MinWidth = 24;
             this.Order_total_amount.Name = "Order_total_amount";
             this.Order_total_amount.Visible = true;
             this.Order_total_amount.VisibleIndex = 3;
+            this.Order_total_amount.Width = 87;
             // 
             // Order_num_of_cus
             // 
             this.Order_num_of_cus.Caption = "Số lượng khách";
             this.Order_num_of_cus.FieldName = "Order_num_of_cus";
-            this.Order_num_of_cus.MinWidth = 21;
+            this.Order_num_of_cus.MinWidth = 24;
             this.Order_num_of_cus.Name = "Order_num_of_cus";
             this.Order_num_of_cus.Visible = true;
             this.Order_num_of_cus.VisibleIndex = 4;
+            this.Order_num_of_cus.Width = 87;
             // 
             // Order_status
             // 
             this.Order_status.Caption = "Trạng thái";
             this.Order_status.FieldName = "Order_status";
-            this.Order_status.MinWidth = 21;
+            this.Order_status.MinWidth = 24;
             this.Order_status.Name = "Order_status";
+            this.Order_status.Width = 87;
             // 
             // Order_is_group
             // 
             this.Order_is_group.Caption = "Đặt theo đoàn";
             this.Order_is_group.FieldName = "Order_is_group";
-            this.Order_is_group.MinWidth = 21;
+            this.Order_is_group.MinWidth = 24;
             this.Order_is_group.Name = "Order_is_group";
+            this.Order_is_group.Width = 87;
             // 
             // Order_note
             // 
             this.Order_note.Caption = "Ghi chú";
             this.Order_note.FieldName = "Order_note";
-            this.Order_note.MinWidth = 21;
+            this.Order_note.MinWidth = 24;
             this.Order_note.Name = "Order_note";
             this.Order_note.Visible = true;
             this.Order_note.VisibleIndex = 5;
+            this.Order_note.Width = 87;
             // 
             // Order_customer_id
             // 
             this.Order_customer_id.Caption = "Mã khách hàng";
             this.Order_customer_id.FieldName = "Order_customer_id";
-            this.Order_customer_id.MinWidth = 21;
+            this.Order_customer_id.MinWidth = 24;
             this.Order_customer_id.Name = "Order_customer_id";
+            this.Order_customer_id.Width = 87;
             // 
             // Order_employee_id
             // 
             this.Order_employee_id.Caption = "Mã nhân viên";
             this.Order_employee_id.FieldName = "Order_employee_id";
-            this.Order_employee_id.MinWidth = 21;
+            this.Order_employee_id.MinWidth = 24;
             this.Order_employee_id.Name = "Order_employee_id";
+            this.Order_employee_id.Width = 87;
             // 
             // pageOrderDetails
             // 
             this.pageOrderDetails.Controls.Add(this.tableLayoutPanel1);
+            this.pageOrderDetails.Margin = new System.Windows.Forms.Padding(4);
             this.pageOrderDetails.Name = "pageOrderDetails";
-            this.pageOrderDetails.Size = new System.Drawing.Size(1111, 701);
+            this.pageOrderDetails.Size = new System.Drawing.Size(1296, 868);
             this.pageOrderDetails.Text = "Chi tiết";
             // 
             // tableLayoutPanel1
@@ -404,21 +433,21 @@
             this.tableLayoutPanel1.Controls.Add(this.splitContainerControl2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1111, 701);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1296, 868);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gcPhong);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(3, 2);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl1.Location = new System.Drawing.Point(4, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(327, 697);
+            this.groupControl1.Size = new System.Drawing.Size(380, 864);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách phòng trống";
             // 
@@ -426,15 +455,17 @@
             // 
             this.gcPhong.AllowDrop = true;
             this.gcPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPhong.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gcPhong.Location = new System.Drawing.Point(2, 23);
+            this.gcPhong.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.gcPhong.Location = new System.Drawing.Point(2, 28);
             this.gcPhong.MainView = this.gvPhong;
-            this.gcPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gcPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gcPhong.Name = "gcPhong";
-            this.gcPhong.Size = new System.Drawing.Size(323, 672);
+            this.gcPhong.Size = new System.Drawing.Size(376, 834);
             this.gcPhong.TabIndex = 0;
             this.gcPhong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPhong});
+            this.gcPhong.DragDrop += new System.Windows.Forms.DragEventHandler(this.gcPhong_DragDrop);
+            this.gcPhong.DragOver += new System.Windows.Forms.DragEventHandler(this.gcPhong_DragOver);
             // 
             // gvPhong
             // 
@@ -444,77 +475,84 @@
             this.Floor_id,
             this.Floor_name,
             this.TypeRoom_price});
-            this.gvPhong.DetailHeight = 284;
             this.gvPhong.GridControl = this.gcPhong;
+            this.gvPhong.GroupCount = 1;
             this.gvPhong.Name = "gvPhong";
+            this.gvPhong.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.Floor_name, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gvPhong.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gvPhong_MouseDown);
+            this.gvPhong.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gvPhong_MouseMove);
             // 
             // Room_id
             // 
             this.Room_id.Caption = "ID";
             this.Room_id.FieldName = "id";
-            this.Room_id.MinWidth = 21;
+            this.Room_id.MinWidth = 24;
             this.Room_id.Name = "Room_id";
-            this.Room_id.Width = 81;
+            this.Room_id.Width = 94;
             // 
             // Room_num
             // 
             this.Room_num.Caption = "Số phòng ";
             this.Room_num.FieldName = "num";
-            this.Room_num.MinWidth = 21;
+            this.Room_num.MinWidth = 24;
             this.Room_num.Name = "Room_num";
             this.Room_num.Visible = true;
             this.Room_num.VisibleIndex = 0;
-            this.Room_num.Width = 81;
+            this.Room_num.Width = 94;
             // 
             // Floor_id
             // 
             this.Floor_id.Caption = "ID";
             this.Floor_id.FieldName = "id";
-            this.Floor_id.MinWidth = 21;
+            this.Floor_id.MinWidth = 24;
             this.Floor_id.Name = "Floor_id";
-            this.Floor_id.Width = 81;
+            this.Floor_id.Width = 94;
             // 
             // Floor_name
             // 
             this.Floor_name.Caption = "Tầng";
             this.Floor_name.FieldName = "name";
-            this.Floor_name.MinWidth = 21;
+            this.Floor_name.MinWidth = 24;
             this.Floor_name.Name = "Floor_name";
             this.Floor_name.Visible = true;
             this.Floor_name.VisibleIndex = 1;
-            this.Floor_name.Width = 81;
+            this.Floor_name.Width = 94;
             // 
             // TypeRoom_price
             // 
             this.TypeRoom_price.Caption = "Đơn giá";
             this.TypeRoom_price.FieldName = "price";
+            this.TypeRoom_price.MinWidth = 23;
             this.TypeRoom_price.Name = "TypeRoom_price";
             this.TypeRoom_price.Visible = true;
-            this.TypeRoom_price.VisibleIndex = 2;
+            this.TypeRoom_price.VisibleIndex = 1;
+            this.TypeRoom_price.Width = 87;
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.gcSanPham);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(835, 2);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl2.Location = new System.Drawing.Point(975, 2);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(273, 697);
+            this.groupControl2.Size = new System.Drawing.Size(317, 864);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Sản phẩm - Dịch vụ";
             // 
             // gcSanPham
             // 
             this.gcSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcSanPham.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gcSanPham.Location = new System.Drawing.Point(2, 23);
+            this.gcSanPham.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.gcSanPham.Location = new System.Drawing.Point(2, 28);
             this.gcSanPham.MainView = this.gvSanPham;
-            this.gcSanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gcSanPham.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gcSanPham.Name = "gcSanPham";
-            this.gcSanPham.Size = new System.Drawing.Size(269, 672);
+            this.gcSanPham.Size = new System.Drawing.Size(313, 834);
             this.gcSanPham.TabIndex = 0;
             this.gcSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPham});
+            this.gcSanPham.DoubleClick += new System.EventHandler(this.gcSanPham_DoubleClick);
             // 
             // gvSanPham
             // 
@@ -522,7 +560,6 @@
             this.Product_id,
             this.Product_name,
             this.Product_price});
-            this.gvSanPham.DetailHeight = 284;
             this.gvSanPham.GridControl = this.gcSanPham;
             this.gvSanPham.Name = "gvSanPham";
             this.gvSanPham.OptionsView.ShowGroupPanel = false;
@@ -531,38 +568,38 @@
             // 
             this.Product_id.Caption = "Mã SP-DV";
             this.Product_id.FieldName = "Product_id";
-            this.Product_id.MinWidth = 21;
+            this.Product_id.MinWidth = 24;
             this.Product_id.Name = "Product_id";
             this.Product_id.Visible = true;
             this.Product_id.VisibleIndex = 0;
-            this.Product_id.Width = 81;
+            this.Product_id.Width = 94;
             // 
             // Product_name
             // 
             this.Product_name.Caption = "Tên SP - DV";
             this.Product_name.FieldName = "Product_name";
-            this.Product_name.MinWidth = 21;
+            this.Product_name.MinWidth = 24;
             this.Product_name.Name = "Product_name";
             this.Product_name.Visible = true;
             this.Product_name.VisibleIndex = 1;
-            this.Product_name.Width = 81;
+            this.Product_name.Width = 94;
             // 
             // Product_price
             // 
             this.Product_price.Caption = "Đơn giá";
             this.Product_price.FieldName = "Product_price";
-            this.Product_price.MinWidth = 21;
+            this.Product_price.MinWidth = 24;
             this.Product_price.Name = "Product_price";
             this.Product_price.Visible = true;
             this.Product_price.VisibleIndex = 2;
-            this.Product_price.Width = 81;
+            this.Product_price.Width = 94;
             // 
             // splitContainerControl2
             // 
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.Horizontal = false;
-            this.splitContainerControl2.Location = new System.Drawing.Point(336, 2);
-            this.splitContainerControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.splitContainerControl2.Location = new System.Drawing.Point(392, 2);
+            this.splitContainerControl2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.splitContainerControl2.Name = "splitContainerControl2";
             // 
             // splitContainerControl2.Panel1
@@ -591,8 +628,8 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl4);
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(493, 697);
-            this.splitContainerControl2.SplitterPosition = 126;
+            this.splitContainerControl2.Size = new System.Drawing.Size(575, 864);
+            this.splitContainerControl2.SplitterPosition = 155;
             this.splitContainerControl2.TabIndex = 2;
             // 
             // lbCancel
@@ -600,33 +637,37 @@
             this.lbCancel.AutoSize = true;
             this.lbCancel.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCancel.ForeColor = System.Drawing.Color.Red;
-            this.lbCancel.Location = new System.Drawing.Point(444, 5);
+            this.lbCancel.Location = new System.Drawing.Point(518, 6);
+            this.lbCancel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCancel.Name = "lbCancel";
-            this.lbCancel.Size = new System.Drawing.Size(25, 25);
+            this.lbCancel.Size = new System.Drawing.Size(32, 33);
             this.lbCancel.TabIndex = 7;
             this.lbCancel.Text = "*";
             // 
             // txtNumCus
             // 
-            this.txtNumCus.Location = new System.Drawing.Point(322, 68);
+            this.txtNumCus.Location = new System.Drawing.Point(376, 84);
+            this.txtNumCus.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCus.MaxLength = 3;
             this.txtNumCus.Name = "txtNumCus";
-            this.txtNumCus.Size = new System.Drawing.Size(62, 21);
+            this.txtNumCus.Size = new System.Drawing.Size(72, 23);
             this.txtNumCus.TabIndex = 6;
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(109, 97);
+            this.txtNote.Location = new System.Drawing.Point(127, 119);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(360, 21);
+            this.txtNote.Size = new System.Drawing.Size(419, 23);
             this.txtNote.TabIndex = 6;
             // 
             // chkIsGroup
             // 
             this.chkIsGroup.AutoSize = true;
-            this.chkIsGroup.Location = new System.Drawing.Point(392, 71);
+            this.chkIsGroup.Location = new System.Drawing.Point(457, 87);
+            this.chkIsGroup.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsGroup.Name = "chkIsGroup";
-            this.chkIsGroup.Size = new System.Drawing.Size(77, 17);
+            this.chkIsGroup.Size = new System.Drawing.Size(90, 20);
             this.chkIsGroup.TabIndex = 5;
             this.chkIsGroup.Text = "Theo đoàn";
             this.chkIsGroup.UseVisualStyleBackColor = true;
@@ -634,25 +675,28 @@
             // dpCheckout
             // 
             this.dpCheckout.CustomFormat = "dd/MM/yyyy";
-            this.dpCheckout.Location = new System.Drawing.Point(322, 36);
+            this.dpCheckout.Location = new System.Drawing.Point(376, 44);
+            this.dpCheckout.Margin = new System.Windows.Forms.Padding(4);
             this.dpCheckout.Name = "dpCheckout";
-            this.dpCheckout.Size = new System.Drawing.Size(134, 21);
+            this.dpCheckout.Size = new System.Drawing.Size(156, 23);
             this.dpCheckout.TabIndex = 4;
             // 
             // dpCheckin
             // 
             this.dpCheckin.CustomFormat = "dd/MM/yyyy";
-            this.dpCheckin.Location = new System.Drawing.Point(109, 38);
+            this.dpCheckin.Location = new System.Drawing.Point(127, 47);
+            this.dpCheckin.Margin = new System.Windows.Forms.Padding(4);
             this.dpCheckin.Name = "dpCheckin";
-            this.dpCheckin.Size = new System.Drawing.Size(134, 21);
+            this.dpCheckin.Size = new System.Drawing.Size(156, 23);
             this.dpCheckin.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(266, 44);
+            this.label5.Location = new System.Drawing.Point(310, 54);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 3;
             this.label5.Text = "Ngày trả";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -660,9 +704,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(266, 71);
+            this.label8.Location = new System.Drawing.Point(310, 87);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.Size = new System.Drawing.Size(59, 16);
             this.label8.TabIndex = 3;
             this.label8.Text = "Số khách";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -670,9 +715,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 97);
+            this.label7.Location = new System.Drawing.Point(28, 119);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 13);
+            this.label7.Size = new System.Drawing.Size(49, 16);
             this.label7.TabIndex = 3;
             this.label7.Text = "Ghi chú";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -680,9 +726,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 72);
+            this.label6.Location = new System.Drawing.Point(28, 89);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.Size = new System.Drawing.Size(66, 16);
             this.label6.TabIndex = 3;
             this.label6.Text = "Trạng thái";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -690,9 +737,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 44);
+            this.label4.Location = new System.Drawing.Point(28, 54);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
+            this.label4.Size = new System.Drawing.Size(57, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ngày đặt";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -701,44 +749,47 @@
             // 
             this.btnAddCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.ImageOptions.Image")));
             this.btnAddCustomer.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAddCustomer.Location = new System.Drawing.Point(304, 5);
-            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddCustomer.Location = new System.Drawing.Point(355, 6);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(27, 23);
+            this.btnAddCustomer.Size = new System.Drawing.Size(31, 28);
             this.btnAddCustomer.TabIndex = 2;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // cbStatus
             // 
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(109, 69);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStatus.Location = new System.Drawing.Point(127, 85);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(133, 21);
+            this.cbStatus.Size = new System.Drawing.Size(154, 24);
             this.cbStatus.TabIndex = 1;
             // 
             // cbCustomer
             // 
             this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(109, 6);
-            this.cbCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCustomer.Location = new System.Drawing.Point(127, 7);
+            this.cbCustomer.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(191, 21);
+            this.cbCustomer.Size = new System.Drawing.Size(222, 24);
             this.cbCustomer.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 10);
+            this.label3.Location = new System.Drawing.Point(28, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Khách hàng";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(394, 533);
+            this.btnSave.Location = new System.Drawing.Point(460, 656);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(88, 28);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -748,19 +799,21 @@
             this.groupControl5.Controls.Add(this.txtTotalAmount);
             this.groupControl5.Controls.Add(this.lb);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl5.Location = new System.Drawing.Point(0, 457);
+            this.groupControl5.Location = new System.Drawing.Point(0, 562);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(493, 70);
+            this.groupControl5.Size = new System.Drawing.Size(575, 86);
             this.groupControl5.TabIndex = 2;
             this.groupControl5.Text = "Tổng tiền";
             // 
             // txtTotalAmount
             // 
             this.txtTotalAmount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalAmount.Location = new System.Drawing.Point(141, 34);
+            this.txtTotalAmount.Location = new System.Drawing.Point(164, 42);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.ReadOnly = true;
-            this.txtTotalAmount.Size = new System.Drawing.Size(315, 27);
+            this.txtTotalAmount.Size = new System.Drawing.Size(367, 32);
             this.txtTotalAmount.TabIndex = 7;
             // 
             // lb
@@ -768,9 +821,10 @@
             this.lb.AutoSize = true;
             this.lb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb.ForeColor = System.Drawing.Color.Red;
-            this.lb.Location = new System.Drawing.Point(23, 37);
+            this.lb.Location = new System.Drawing.Point(27, 46);
+            this.lb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(112, 19);
+            this.lb.Size = new System.Drawing.Size(135, 24);
             this.lb.TabIndex = 0;
             this.lb.Text = "TỔNG TIỀN: ";
             // 
@@ -778,19 +832,22 @@
             // 
             this.groupControl4.Controls.Add(this.gcSanPhamDat);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(0, 247);
+            this.groupControl4.Location = new System.Drawing.Point(0, 304);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(493, 210);
+            this.groupControl4.Size = new System.Drawing.Size(575, 258);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Danh sách sản phẩm - dịch vụ đặt";
             // 
             // gcSanPhamDat
             // 
             this.gcSanPhamDat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcSanPhamDat.Location = new System.Drawing.Point(2, 23);
+            this.gcSanPhamDat.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gcSanPhamDat.Location = new System.Drawing.Point(2, 28);
             this.gcSanPhamDat.MainView = this.gvSanPhamDat;
+            this.gcSanPhamDat.Margin = new System.Windows.Forms.Padding(4);
             this.gcSanPhamDat.Name = "gcSanPhamDat";
-            this.gcSanPhamDat.Size = new System.Drawing.Size(489, 185);
+            this.gcSanPhamDat.Size = new System.Drawing.Size(571, 228);
             this.gcSanPhamDat.TabIndex = 0;
             this.gcSanPhamDat.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPhamDat});
@@ -798,66 +855,99 @@
             // gvSanPhamDat
             // 
             this.gvSanPhamDat.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.Book_product_id,
             this.Book_room_name,
+            this.Book_product_id,
             this.Book_product_name,
-            this.Book_room_prod_id,
-            this.Book_orderDetail_quantity,
-            this.Book_total_amount});
+            this.prod_qty,
+            this.prod_price,
+            this.Book_total_amount,
+            this.Book_room_prod_id});
+            this.gvSanPhamDat.DetailHeight = 431;
             this.gvSanPhamDat.GridControl = this.gcSanPhamDat;
             this.gvSanPhamDat.Name = "gvSanPhamDat";
-            // 
-            // Book_product_id
-            // 
-            this.Book_product_id.Caption = "Mã SP-DV";
-            this.Book_product_id.FieldName = "Product_id";
-            this.Book_product_id.Name = "Book_product_id";
+            this.gvSanPhamDat.OptionsView.ShowFooter = true;
+            this.gvSanPhamDat.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvSanPhamDat_CellValueChanged);
             // 
             // Book_room_name
             // 
             this.Book_room_name.Caption = "Phòng";
-            this.Book_room_name.FieldName = "Room_num";
+            this.Book_room_name.FieldName = "roomNum";
+            this.Book_room_name.MinWidth = 23;
             this.Book_room_name.Name = "Book_room_name";
+            this.Book_room_name.OptionsColumn.AllowEdit = false;
             this.Book_room_name.Visible = true;
             this.Book_room_name.VisibleIndex = 0;
+            this.Book_room_name.Width = 87;
+            // 
+            // Book_product_id
+            // 
+            this.Book_product_id.Caption = "Mã SP-DV";
+            this.Book_product_id.FieldName = "Product_room_id";
+            this.Book_product_id.MinWidth = 23;
+            this.Book_product_id.Name = "Book_product_id";
+            this.Book_product_id.Width = 87;
             // 
             // Book_product_name
             // 
             this.Book_product_name.Caption = "Tên SP-DV";
-            this.Book_product_name.FieldName = "Product_name";
+            this.Book_product_name.FieldName = "productName";
+            this.Book_product_name.MinWidth = 23;
             this.Book_product_name.Name = "Book_product_name";
+            this.Book_product_name.OptionsColumn.AllowEdit = false;
             this.Book_product_name.Visible = true;
             this.Book_product_name.VisibleIndex = 1;
+            this.Book_product_name.Width = 87;
             // 
-            // Book_room_prod_id
+            // prod_qty
             // 
-            this.Book_room_prod_id.Caption = "Mã phòng";
-            this.Book_room_prod_id.FieldName = "Room_id";
-            this.Book_room_prod_id.Name = "Book_room_prod_id";
+            this.prod_qty.Caption = "Số lượng";
+            this.prod_qty.FieldName = "productQty";
+            this.prod_qty.MinWidth = 23;
+            this.prod_qty.Name = "prod_qty";
+            this.prod_qty.Visible = true;
+            this.prod_qty.VisibleIndex = 2;
+            this.prod_qty.Width = 87;
             // 
-            // Book_orderDetail_quantity
+            // prod_price
             // 
-            this.Book_orderDetail_quantity.Caption = "Số lượng";
-            this.Book_orderDetail_quantity.FieldName = "OrderDetail_quantity";
-            this.Book_orderDetail_quantity.Name = "Book_orderDetail_quantity";
-            this.Book_orderDetail_quantity.Visible = true;
-            this.Book_orderDetail_quantity.VisibleIndex = 2;
+            this.prod_price.Caption = "Đơn giá";
+            this.prod_price.FieldName = "productPrice";
+            this.prod_price.MinWidth = 23;
+            this.prod_price.Name = "prod_price";
+            this.prod_price.OptionsColumn.AllowEdit = false;
+            this.prod_price.Visible = true;
+            this.prod_price.VisibleIndex = 3;
+            this.prod_price.Width = 87;
             // 
             // Book_total_amount
             // 
             this.Book_total_amount.Caption = "Thành tiền";
-            this.Book_total_amount.FieldName = "Total_amount";
+            this.Book_total_amount.FieldName = "productTotalAmount";
+            this.Book_total_amount.MinWidth = 23;
             this.Book_total_amount.Name = "Book_total_amount";
+            this.Book_total_amount.OptionsColumn.AllowEdit = false;
+            this.Book_total_amount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "productTotalAmount", "{0:n}")});
             this.Book_total_amount.Visible = true;
-            this.Book_total_amount.VisibleIndex = 3;
+            this.Book_total_amount.VisibleIndex = 4;
+            this.Book_total_amount.Width = 87;
+            // 
+            // Book_room_prod_id
+            // 
+            this.Book_room_prod_id.Caption = "Mã phòng";
+            this.Book_room_prod_id.FieldName = "Product_room_id";
+            this.Book_room_prod_id.MinWidth = 23;
+            this.Book_room_prod_id.Name = "Book_room_prod_id";
+            this.Book_room_prod_id.Width = 87;
             // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.gcPhongDat);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(493, 247);
+            this.groupControl3.Size = new System.Drawing.Size(575, 304);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Danh sách phòng đặt";
             // 
@@ -865,13 +955,17 @@
             // 
             this.gcPhongDat.AllowDrop = true;
             this.gcPhongDat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPhongDat.Location = new System.Drawing.Point(2, 23);
+            this.gcPhongDat.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gcPhongDat.Location = new System.Drawing.Point(2, 28);
             this.gcPhongDat.MainView = this.gvPhongDat;
+            this.gcPhongDat.Margin = new System.Windows.Forms.Padding(4);
             this.gcPhongDat.Name = "gcPhongDat";
-            this.gcPhongDat.Size = new System.Drawing.Size(489, 222);
+            this.gcPhongDat.Size = new System.Drawing.Size(571, 274);
             this.gcPhongDat.TabIndex = 0;
             this.gcPhongDat.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPhongDat});
+            this.gcPhongDat.DragDrop += new System.Windows.Forms.DragEventHandler(this.gcPhong_DragDrop);
+            this.gcPhongDat.DragOver += new System.Windows.Forms.DragEventHandler(this.gcPhong_DragOver);
             // 
             // gvPhongDat
             // 
@@ -881,52 +975,76 @@
             this.Book_floor_id,
             this.Book_floor_name,
             this.Book_typeroom_price});
+            this.gvPhongDat.DetailHeight = 431;
             this.gvPhongDat.GridControl = this.gcPhongDat;
             this.gvPhongDat.Name = "gvPhongDat";
+            this.gvPhongDat.OptionsView.ShowFooter = true;
+            this.gvPhongDat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gvPhongDat_MouseDown);
+            this.gvPhongDat.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gvPhongDat_MouseMove);
+            this.gvPhongDat.RowCountChanged += new System.EventHandler(this.gvPhongDat_RowCountChanged);
             // 
             // Book_room_id
             // 
             this.Book_room_id.Caption = "Mã phòng";
-            this.Book_room_id.FieldName = "Room_id";
+            this.Book_room_id.FieldName = "id";
+            this.Book_room_id.MinWidth = 23;
             this.Book_room_id.Name = "Book_room_id";
+            this.Book_room_id.Width = 87;
             // 
             // Book_room_num
             // 
             this.Book_room_num.Caption = "Số phòng";
-            this.Book_room_num.FieldName = "Room_num";
+            this.Book_room_num.FieldName = "num";
+            this.Book_room_num.MinWidth = 23;
             this.Book_room_num.Name = "Book_room_num";
             this.Book_room_num.Visible = true;
             this.Book_room_num.VisibleIndex = 0;
+            this.Book_room_num.Width = 87;
             // 
             // Book_floor_id
             // 
             this.Book_floor_id.Caption = "Mã tầng";
-            this.Book_floor_id.FieldName = "Floor_id";
+            this.Book_floor_id.FieldName = "id";
+            this.Book_floor_id.MinWidth = 23;
             this.Book_floor_id.Name = "Book_floor_id";
+            this.Book_floor_id.Width = 87;
             // 
             // Book_floor_name
             // 
             this.Book_floor_name.Caption = "Tầng";
-            this.Book_floor_name.FieldName = "Floor_name";
+            this.Book_floor_name.FieldName = "name";
+            this.Book_floor_name.MinWidth = 23;
             this.Book_floor_name.Name = "Book_floor_name";
             this.Book_floor_name.Visible = true;
             this.Book_floor_name.VisibleIndex = 1;
+            this.Book_floor_name.Width = 87;
             // 
             // Book_typeroom_price
             // 
             this.Book_typeroom_price.Caption = "Đơn giá";
-            this.Book_typeroom_price.FieldName = "TypeRoom_price";
+            this.Book_typeroom_price.FieldName = "price";
+            this.Book_typeroom_price.MinWidth = 23;
             this.Book_typeroom_price.Name = "Book_typeroom_price";
+            this.Book_typeroom_price.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "price", "{0:n}")});
             this.Book_typeroom_price.Visible = true;
             this.Book_typeroom_price.VisibleIndex = 2;
+            this.Book_typeroom_price.Width = 87;
+            // 
+            // Book_orderDetail_quantity
+            // 
+            this.Book_orderDetail_quantity.Caption = "Số lượng";
+            this.Book_orderDetail_quantity.FieldName = "productQty";
+            this.Book_orderDetail_quantity.Name = "Book_orderDetail_quantity";
             // 
             // frmOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 768);
+            this.ClientSize = new System.Drawing.Size(1298, 945);
             this.Controls.Add(this.tabDanhSach);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOrder";
@@ -1051,11 +1169,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn Book_room_name;
         private DevExpress.XtraGrid.Columns.GridColumn Book_product_name;
         private DevExpress.XtraGrid.Columns.GridColumn Book_room_prod_id;
-        private DevExpress.XtraGrid.Columns.GridColumn Book_orderDetail_quantity;
         private DevExpress.XtraGrid.Columns.GridColumn Book_total_amount;
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private System.Windows.Forms.TextBox txtNumCus;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTotalAmount;
+        private DevExpress.XtraGrid.Columns.GridColumn prod_qty;
+        private DevExpress.XtraGrid.Columns.GridColumn prod_price;
+        private DevExpress.XtraGrid.Columns.GridColumn Book_orderDetail_quantity;
     }
 }

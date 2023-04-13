@@ -14,15 +14,24 @@ namespace DAL_Hotel
     
     public partial class Room
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Room()
+        {
+            this.OrderDetailProducts = new HashSet<OrderDetailProduct>();
+            this.OrderDetailRooms = new HashSet<OrderDetailRoom>();
+        }
+    
         public int id { get; set; }
-        public Nullable<int> num { get; set; }
+        public string num { get; set; }
         public Nullable<bool> status { get; set; }
-        public Nullable<int> orderID { get; set; }
         public Nullable<int> floorId { get; set; }
         public Nullable<int> typeRoomId { get; set; }
     
         public virtual Floor Floor { get; set; }
-        public virtual Order Order { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetailProduct> OrderDetailProducts { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetailRoom> OrderDetailRooms { get; set; }
         public virtual TypeRoom TypeRoom { get; set; }
     }
 }

@@ -31,5 +31,10 @@ namespace BUS_Hotel
         {
             return dalProduct.deleteProduct(id);
         }
+
+        public DTO_Product getProductById(int id)
+        {
+            return dalProduct.getProductById(id);
+        }
     }
 }

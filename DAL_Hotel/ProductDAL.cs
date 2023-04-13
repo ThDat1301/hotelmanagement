@@ -86,5 +86,14 @@ namespace DAL_Hotel
             }
         }
 
+        public DTO_Product getProductById(int id)
+        {
+            using (var db = new HotelDB())
+            {
+                var pro = db.Products.FirstOrDefault(p => p.id == id);
+                return new DTO_Product(id, pro.name, (float)pro.price);
+            }
+        }
+
     }
 }

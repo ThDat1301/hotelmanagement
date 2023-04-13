@@ -21,12 +21,24 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="OrderDetails">
-      <EntityTypeMapping TypeName="HotelDBModel.OrderDetail">
-        <MappingFragment StoreEntitySet="OrderDetail">
+    <EntitySetMapping Name="OrderDetailProducts">
+      <EntityTypeMapping TypeName="HotelDBModel.OrderDetailProduct">
+        <MappingFragment StoreEntitySet="OrderDetailProduct">
           <ScalarProperty Name="productID" ColumnName="productID" />
           <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="roomID" ColumnName="roomID" />
           <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetailRooms">
+      <EntityTypeMapping TypeName="HotelDBModel.OrderDetailRoom">
+        <MappingFragment StoreEntitySet="OrderDetailRoom">
+          <ScalarProperty Name="dayAt" ColumnName="dayAt" />
+          <ScalarProperty Name="roomID" ColumnName="roomID" />
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -60,7 +72,6 @@
         <MappingFragment StoreEntitySet="Room">
           <ScalarProperty Name="typeRoomId" ColumnName="typeRoomId" />
           <ScalarProperty Name="floorId" ColumnName="floorId" />
-          <ScalarProperty Name="orderID" ColumnName="orderID" />
           <ScalarProperty Name="status" ColumnName="status" />
           <ScalarProperty Name="num" ColumnName="num" />
           <ScalarProperty Name="id" ColumnName="id" />

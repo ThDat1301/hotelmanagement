@@ -12,13 +12,14 @@ namespace DAL_Hotel
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderDetail
+    public partial class OrderDetailRoom
     {
-        public Nullable<int> quantity { get; set; }
-        public int orderID { get; set; }
-        public int productID { get; set; }
+        public int id { get; set; }
+        public Nullable<int> orderID { get; set; }
+        public Nullable<int> roomID { get; set; }
+        public Nullable<int> dayAt { get; set; }
     
         public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual Room Room { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GUI_Hotel
 {
@@ -13,14 +14,14 @@ namespace GUI_Hotel
         static SqlConnection conn = new SqlConnection();
         public static void getConn()
         {
-            conn.ConnectionString = "Server=LTFA_LT\\SQLSERVER_151222;Database=HotelDB;User Id=sa;Password=01312101220;";
+            conn.ConnectionString = "Server=THDAT\\THDAT_SERVER;Database=HotelDB;User Id=sa;Password=01312101220;";
             try
             {
                 conn.Open();
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -38,6 +39,24 @@ namespace GUI_Hotel
             adap.Fill(dt);
             closeConn();
             return dt;
+        }
+
+        public static DataTable getTbOrderDetailRoom(int id)
+        {
+            getConn();
+            string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f, OrderDetailRoom o WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND o.roomID = r.id AND o.orderID =@OrderId";
+            SqlCommand command = new SqlCommand(sql, Functions.conn);
+            command.Parameters.AddWithValue("@OrderId", id);
+            DataTable dt = new DataTable();
+            SqlDataAdapter adap = new SqlDataAdapter(command);
+            adap.Fill(dt);
+            closeConn();
+            return dt;
+        }
+
+        public static int getDayAt(DateTime d1, DateTime d2)
+        {
+            return (d2 - d1).Days;
         }
     }
 }

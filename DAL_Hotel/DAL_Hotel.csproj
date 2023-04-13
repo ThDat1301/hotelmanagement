@@ -81,9 +81,15 @@
     <Compile Include="Order.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="OrderDetail.cs">
+    <Compile Include="OrderDAL.cs" />
+    <Compile Include="OrderDetailProduct.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderDetailProductDAL.cs" />
+    <Compile Include="OrderDetailRoom.cs">
+      <DependentUpon>HotelDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetailRoomDAL.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>

@@ -54,8 +54,12 @@
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
     <Compile Include="FloorBUS.cs" />
+    <Compile Include="OrderBUS.cs" />
+    <Compile Include="OrderDetailProductBUS.cs" />
+    <Compile Include="OrderDetailRoomBUS.cs" />
     <Compile Include="OrderStatus.cs" />
     <Compile Include="ProductBUS.cs" />
+    <Compile Include="ProductCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomBUS.cs" />
     <Compile Include="TypeRoomBUS.cs" />

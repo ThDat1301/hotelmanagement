@@ -84,7 +84,7 @@
             this.btnExit});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1194, 67);
+            this.toolStrip1.Size = new System.Drawing.Size(1194, 60);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -93,7 +93,7 @@
             this.btnSystem.Image = global::GUI_Hotel.Properties.Resources.system;
             this.btnSystem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSystem.Name = "btnSystem";
-            this.btnSystem.Size = new System.Drawing.Size(98, 64);
+            this.btnSystem.Size = new System.Drawing.Size(78, 57);
             this.btnSystem.Text = "Hệ thống";
             this.btnSystem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSystem.Click += new System.EventHandler(this.btnSystem_Click);
@@ -101,14 +101,14 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 67);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 60);
             // 
             // btnReport
             // 
             this.btnReport.Image = global::GUI_Hotel.Properties.Resources.chart;
             this.btnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(85, 64);
+            this.btnReport.Size = new System.Drawing.Size(68, 57);
             this.btnReport.Text = "Báo cáo";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
@@ -116,14 +116,14 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 67);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 60);
             // 
             // btnExit
             // 
             this.btnExit.Image = global::GUI_Hotel.Properties.Resources.exit;
             this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(66, 64);
+            this.btnExit.Size = new System.Drawing.Size(53, 57);
             this.btnExit.Text = "Thoát";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -131,7 +131,7 @@
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 67);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 60);
             this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             // 
@@ -142,7 +142,7 @@
             // splitContainerControl1.Panel2
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.gControl);
-            this.splitContainerControl1.Size = new System.Drawing.Size(1194, 462);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1194, 469);
             this.splitContainerControl1.SplitterPosition = 271;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerControl1_Paint);
@@ -165,7 +165,7 @@
             this.navMain.Margin = new System.Windows.Forms.Padding(4);
             this.navMain.Name = "navMain";
             this.navMain.OptionsNavPane.ExpandedWidth = 271;
-            this.navMain.Size = new System.Drawing.Size(271, 462);
+            this.navMain.Size = new System.Drawing.Size(271, 469);
             this.navMain.TabIndex = 0;
             this.navMain.Text = "Chức năng";
             this.navMain.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navMain_LinkClicked);
@@ -173,6 +173,7 @@
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Chức năng";
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navItemTypeRoom),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navItemFloor),
@@ -282,7 +283,7 @@
             this.gControl.Margin = new System.Windows.Forms.Padding(4);
             this.gControl.Name = "gControl";
             this.barManager1.SetPopupContextMenu(this.gControl, this.popupMenu1);
-            this.gControl.Size = new System.Drawing.Size(911, 462);
+            this.gControl.Size = new System.Drawing.Size(913, 469);
             this.gControl.TabIndex = 0;
             this.gControl.Text = "galleryControl1";
             // 
@@ -291,7 +292,7 @@
             this.galleryControlClient1.GalleryControl = this.gControl;
             this.galleryControlClient1.Location = new System.Drawing.Point(2, 2);
             this.galleryControlClient1.Margin = new System.Windows.Forms.Padding(4);
-            this.galleryControlClient1.Size = new System.Drawing.Size(886, 458);
+            this.galleryControlClient1.Size = new System.Drawing.Size(892, 465);
             // 
             // imageList1
             // 
@@ -381,7 +382,7 @@
             // Form1
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 529);
             this.Controls.Add(this.splitContainerControl1);

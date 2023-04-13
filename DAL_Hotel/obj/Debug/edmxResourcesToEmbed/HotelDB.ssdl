@@ -18,14 +18,24 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="OrderDetail">
+  <EntityType Name="OrderDetailProduct">
     <Key>
-      <PropertyRef Name="orderID" />
-      <PropertyRef Name="productID" />
+      <PropertyRef Name="id" />
     </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="quantity" Type="int" />
-    <Property Name="orderID" Type="int" Nullable="false" />
-    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="roomID" Type="int" />
+    <Property Name="orderID" Type="int" />
+    <Property Name="productID" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderDetailRoom">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orderID" Type="int" />
+    <Property Name="roomID" Type="int" />
+    <Property Name="dayAt" Type="int" />
   </EntityType>
   <EntityType Name="Orders">
     <Key>
@@ -55,9 +65,8 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="num" Type="int" />
+    <Property Name="num" Type="nvarchar" MaxLength="50" />
     <Property Name="status" Type="bit" />
-    <Property Name="orderID" Type="int" />
     <Property Name="floorId" Type="int" />
     <Property Name="typeRoomId" Type="int" />
   </EntityType>
@@ -84,31 +93,67 @@
     <Property Name="surCharge" Type="float" />
     <Property Name="qtyBed" Type="int" />
   </EntityType>
-  <Association Name="FK__OrderDeta__order__37A5467C">
-    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
-    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+  <Association Name="FK__OrderDeta__order__4AB81AF0">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="OrderDetailProduct" Type="Self.OrderDetailProduct" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Orders">
         <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="OrderDetail">
+      <Dependent Role="OrderDetailProduct">
         <PropertyRef Name="orderID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrderDeta__produ__38996AB5">
-    <End Role="Product" Type="Self.Product" Multiplicity="1" />
-    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+  <Association Name="FK__OrderDeta__order__4E88ABD4">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="OrderDetailRoom" Type="Self.OrderDetailRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetailRoom">
+        <PropertyRef Name="orderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__produ__4BAC3F29">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="OrderDetailProduct" Type="Self.OrderDetailProduct" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="OrderDetail">
+      <Dependent Role="OrderDetailProduct">
         <PropertyRef Name="productID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Orders__customer__286302EC">
+  <Association Name="FK__OrderDeta__roomI__49C3F6B7">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="OrderDetailProduct" Type="Self.OrderDetailProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetailProduct">
+        <PropertyRef Name="roomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__roomI__4F7CD00D">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="OrderDetailRoom" Type="Self.OrderDetailRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDetailRoom">
+        <PropertyRef Name="roomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__customer__3B75D760">
     <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
@@ -120,7 +165,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Orders__staffID__29572725">
+  <Association Name="FK__Orders__staffID__3C69FB99">
     <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
@@ -132,7 +177,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Room__floorId__31EC6D26">
+  <Association Name="FK__Room__floorId__440B1D61">
     <End Role="Floor" Type="Self.Floor" Multiplicity="0..1" />
     <End Role="Room" Type="Self.Room" Multiplicity="*" />
     <ReferentialConstraint>
@@ -144,19 +189,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Room__orderID__30F848ED">
-    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
-    <End Role="Room" Type="Self.Room" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Orders">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Room">
-        <PropertyRef Name="orderID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Room__typeRoomId__32E0915F">
+  <Association Name="FK__Room__typeRoomId__44FF419A">
     <End Role="TypeRoom" Type="Self.TypeRoom" Multiplicity="0..1" />
     <End Role="Room" Type="Self.Room" Multiplicity="*" />
     <ReferentialConstraint>
@@ -171,37 +204,46 @@
   <EntityContainer Name="HotelDBModelStoreContainer">
     <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Floor" EntityType="Self.Floor" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetailProduct" EntityType="Self.OrderDetailProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetailRoom" EntityType="Self.OrderDetailRoom" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TypeRoom" EntityType="Self.TypeRoom" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__OrderDeta__order__37A5467C" Association="Self.FK__OrderDeta__order__37A5467C">
+    <AssociationSet Name="FK__OrderDeta__order__4AB81AF0" Association="Self.FK__OrderDeta__order__4AB81AF0">
       <End Role="Orders" EntitySet="Orders" />
-      <End Role="OrderDetail" EntitySet="OrderDetail" />
+      <End Role="OrderDetailProduct" EntitySet="OrderDetailProduct" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrderDeta__produ__38996AB5" Association="Self.FK__OrderDeta__produ__38996AB5">
+    <AssociationSet Name="FK__OrderDeta__order__4E88ABD4" Association="Self.FK__OrderDeta__order__4E88ABD4">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetailRoom" EntitySet="OrderDetailRoom" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__produ__4BAC3F29" Association="Self.FK__OrderDeta__produ__4BAC3F29">
       <End Role="Product" EntitySet="Product" />
-      <End Role="OrderDetail" EntitySet="OrderDetail" />
+      <End Role="OrderDetailProduct" EntitySet="OrderDetailProduct" />
     </AssociationSet>
-    <AssociationSet Name="FK__Orders__customer__286302EC" Association="Self.FK__Orders__customer__286302EC">
+    <AssociationSet Name="FK__OrderDeta__roomI__49C3F6B7" Association="Self.FK__OrderDeta__roomI__49C3F6B7">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="OrderDetailProduct" EntitySet="OrderDetailProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__roomI__4F7CD00D" Association="Self.FK__OrderDeta__roomI__4F7CD00D">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="OrderDetailRoom" EntitySet="OrderDetailRoom" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__customer__3B75D760" Association="Self.FK__Orders__customer__3B75D760">
       <End Role="Customer" EntitySet="Customer" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK__Orders__staffID__29572725" Association="Self.FK__Orders__staffID__29572725">
+    <AssociationSet Name="FK__Orders__staffID__3C69FB99" Association="Self.FK__Orders__staffID__3C69FB99">
       <End Role="Staff" EntitySet="Staff" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK__Room__floorId__31EC6D26" Association="Self.FK__Room__floorId__31EC6D26">
+    <AssociationSet Name="FK__Room__floorId__440B1D61" Association="Self.FK__Room__floorId__440B1D61">
       <End Role="Floor" EntitySet="Floor" />
       <End Role="Room" EntitySet="Room" />
     </AssociationSet>
-    <AssociationSet Name="FK__Room__orderID__30F848ED" Association="Self.FK__Room__orderID__30F848ED">
-      <End Role="Orders" EntitySet="Orders" />
-      <End Role="Room" EntitySet="Room" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Room__typeRoomId__32E0915F" Association="Self.FK__Room__typeRoomId__32E0915F">
+    <AssociationSet Name="FK__Room__typeRoomId__44FF419A" Association="Self.FK__Room__typeRoomId__44FF419A">
       <End Role="TypeRoom" EntitySet="TypeRoom" />
       <End Role="Room" EntitySet="Room" />
     </AssociationSet>
