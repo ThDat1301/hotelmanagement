@@ -118,5 +118,10 @@ namespace GUI_Hotel
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
             }
         }
+
+        private void bthThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

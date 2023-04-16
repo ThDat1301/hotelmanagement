@@ -170,9 +170,14 @@ namespace GUI_Hotel
                 tabDanhSach.SelectedTabPage = pageOrders;
                 loadOrder();
                 reset();
+                string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=0";
+                DataTable tb = Functions.getData(sql);
+                gcPhong.DataSource = tb;
+                gvPhong.ExpandAllGroups();
+
                 MessageBox.Show("Thêm đơn đặt phòng thành công!");
             }
-            else if(checkEdit)
+            else if(!checkAdd && checkEdit)
             {
                 try
                 {
@@ -240,13 +245,20 @@ namespace GUI_Hotel
                 {
                     checkEdit = false;
                 }
+
+                tabDanhSach.SelectedTabPage = pageOrders;
+                loadOrder();
+                reset();
+
+                string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=0";
+                DataTable tb = Functions.getData(sql);
+                gcPhong.DataSource = tb;
+                gvPhong.ExpandAllGroups();
+
+                MessageBox.Show("Sửa đơn đặt phòng thành công!");
             }
 
-            tabDanhSach.SelectedTabPage = pageOrders;
-            loadOrder();
-            reset();
-
-            MessageBox.Show("Sửa đơn đặt phòng thành công!");
+            
 
         }
 

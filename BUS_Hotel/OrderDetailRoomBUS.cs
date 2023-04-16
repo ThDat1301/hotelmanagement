@@ -28,5 +28,9 @@ namespace BUS_Hotel
         {
             return dalOrderDetailRoom.deleteOrderDetailRoomsByOrderId(id);
         }
+        public DTO_OrderDetailRoom getOdrByIdRoom(int idRoom)
+        {
+            return dalOrderDetailRoom.getOdrByIdRoom(idRoom);
+        }
     }
 }

@@ -13,6 +13,10 @@ namespace DTO_Hotel
         private int _Room_room_id;
         private int _Room_order_id;
 
+        public DTO_OrderDetailRoom()
+        {
+        }
+
         public DTO_OrderDetailRoom(int room_day_at, int room_room_id, int room_order_id)
         {
             _Room_day_at = room_day_at;

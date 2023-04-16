@@ -102,6 +102,7 @@
             this.bthThoat.Size = new System.Drawing.Size(51, 44);
             this.bthThoat.Text = "Thoát";
             this.bthThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.bthThoat.Click += new System.EventHandler(this.bthThoat_Click);
             // 
             // groupControl1
             // 

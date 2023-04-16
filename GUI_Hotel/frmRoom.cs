@@ -94,35 +94,27 @@ namespace GUI_Hotel
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (txtNum.Text.Trim() != "")
-            {
-                if (!compareNum())
-                {
-                    string floorName = cbFloor.SelectedItem.ToString();
-                    int floorID = busFloor.getFloorIdByName(floorName);
-                    string typeRoomName = cbTypeRoom.SelectedItem.ToString();
-                    int typeRoomID = busTypeRoom.getTypeRoomIDByName(typeRoomName);
-                    bool status = checkBoxStatus.Checked;
-                    int id = int.Parse(gvDanhSach.GetRowCellValue(gvDanhSach.FocusedRowHandle, "Room_id") + "");
-                    DTO_Room room = new DTO_Room(txtNum.Text, status, floorID, typeRoomID);
+            {          
+                string floorName = cbFloor.SelectedItem.ToString();
+                int floorID = busFloor.getFloorIdByName(floorName);
+                string typeRoomName = cbTypeRoom.SelectedItem.ToString();
+                int typeRoomID = busTypeRoom.getTypeRoomIDByName(typeRoomName);
+                bool status = checkBoxStatus.Checked;
+                int id = int.Parse(gvDanhSach.GetRowCellValue(gvDanhSach.FocusedRowHandle, "Room_id") + "");
+                DTO_Room room = new DTO_Room(txtNum.Text, status, floorID, typeRoomID);
 
-                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật không?", "Xác nhận cập nhật thông tin phòng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn cập nhật không?", "Xác nhận cập nhật thông tin phòng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (busRoom.updateRoom(room, id))
                     {
-                        if (busRoom.updateRoom(room, id))
-                        {
-                            loadData();
-                            txtNum.Clear();
-                            MessageBox.Show("Cập nhật thành công.");
-                            form1.showRoom();
-                        }
-                        else MessageBox.Show("Cập nhật không thành công.");
+                        loadData();
+                        txtNum.Clear();
+                        MessageBox.Show("Cập nhật thành công.");
+                        form1.showRoom();
                     }
+                    else MessageBox.Show("Cập nhật không thành công.");
                 }
-                else
-                {
-                    MessageBox.Show("Trùng số phòng. Vui lòng kiểm tra lại");
-                }
-
             }
             else
             {
