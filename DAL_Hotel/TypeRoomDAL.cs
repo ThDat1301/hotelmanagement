@@ -12,6 +12,11 @@ namespace DAL_Hotel
 {
     public class TypeRoomDAL
     {
+        public static DTO_TypeRoom toTypeRoomDTOMap(TypeRoom t)
+        {
+            return new DTO_TypeRoom(t.id, t.name, (float)t.price, (int)t.maxCus, (float)t.surCharge, (int)t.qtyBed);
+        }
+
         public List<DTO_TypeRoom> getTypeRoom()
         {
             List<DTO_TypeRoom> list = new List<DTO_TypeRoom>();
@@ -57,6 +62,20 @@ namespace DAL_Hotel
             catch
             {
                 return 0;
+            }
+        }
+
+        public DTO_TypeRoom getTypeRoomById(int id)
+        {
+            try
+            {
+                HotelDB db = new HotelDB();
+                var typeRoom = db.TypeRooms.FirstOrDefault(t => t.id == id);
+                return TypeRoomDAL.toTypeRoomDTOMap(typeRoom);
+            }
+            catch
+            {
+                return new DTO_TypeRoom();
             }
         }
 

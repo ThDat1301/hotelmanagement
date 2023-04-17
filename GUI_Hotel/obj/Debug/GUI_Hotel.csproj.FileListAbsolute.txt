@@ -133,3 +133,4 @@ C:\work-space\hotelmanagement\GUI_Hotel\obj\Debug\GUI_Hotel.pdb
 C:\work-space\hotelmanagement\GUI_Hotel\obj\Debug\GUI_Hotel.frmOrder.resources
 C:\work-space\hotelmanagement\GUI_Hotel\bin\Debug\DevExpress.XtraVerticalGrid.v22.2.dll
 C:\work-space\hotelmanagement\GUI_Hotel\bin\Debug\DevExpress.XtraVerticalGrid.v22.2.xml
+C:\work-space\hotelmanagement\GUI_Hotel\obj\Debug\GUI_Hotel.frmOrder1.resources

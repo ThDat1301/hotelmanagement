@@ -25,6 +25,10 @@ namespace BUS_Hotel
         {
             return dalTypeRoom.getTypeRoomIDByName(name);
         }
+        public DTO_TypeRoom getTypeRoomById(int id)
+        {
+            return dalTypeRoom.getTypeRoomById(id);
+        }
         public bool addTypeRoom(DTO_TypeRoom tr)
         {   
             return dalTypeRoom.addTypeRoom(tr);

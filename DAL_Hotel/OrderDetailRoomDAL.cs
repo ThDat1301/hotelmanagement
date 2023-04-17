@@ -49,6 +49,19 @@ namespace DAL_Hotel
             }
         }
 
+        public DTO_OrderDetailRoom getOdrByIdRoom(int idRoom)
+        {
+            try
+            {
+                var context = new HotelDB();
+                var o = context.OrderDetailRooms.OrderByDescending(r => r.dayAt).FirstOrDefault(r => r.roomID == idRoom);
+                return OrderDetailRoomDAL.toOrderDetailRoomDTOMap(o);            }
+            catch
+            {
+                return new DTO_OrderDetailRoom();
+            }
+        }
+
         public bool deleteOrderDetailRoomsByOrderId(int id)
         {
             using (var db = new HotelDB())

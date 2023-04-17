@@ -1047,7 +1047,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmOrder";
+            this.Text = "Đặt phòng theo đoàn";
             this.Load += new System.EventHandler(this.frmOrder_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

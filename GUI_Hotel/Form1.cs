@@ -23,6 +23,9 @@ namespace GUI_Hotel
         {
             InitializeComponent();
         }
+
+        RoomBUS busRoom = new RoomBUS();
+
         private void navMain_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             string item = e.Link.ItemName;
@@ -122,9 +125,15 @@ namespace GUI_Hotel
 
         private void btnMakeOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var gc_item = new GalleryItem();
-            string id = item.Value.ToString();
-            MessageBox.Show(id);
+            int idRoom = int.Parse(item.Value.ToString());
+            if (!busRoom.getRoomById(idRoom).Room_status)
+            {
+                frmOrder1 f = new frmOrder1();
+                f.idPhong = idRoom;
+                f.isAdd = true;
+                f.ShowDialog();
+            }
+            else MessageBox.Show("Phòng không khả dụng!");
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -137,6 +146,17 @@ namespace GUI_Hotel
 
         }
 
-       
+        private void btnUpdateOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int idRoom = int.Parse(item.Value.ToString());
+            if (busRoom.getRoomById(idRoom).Room_status)
+            {
+                frmOrder1 f = new frmOrder1();
+                f.idPhong = idRoom;
+                f.isAdd = false;
+                f.ShowDialog();
+            }
+            else MessageBox.Show("Phòng chưa được đặt!");
+        }
     }
 }
