@@ -11,6 +11,14 @@ namespace BUS_Hotel
     public class RoomBUS
     {
         RoomDAL dalRoom = new RoomDAL();
+
+        public List<DTO_Room> getEmptyRoom()
+        {
+            List<DTO_Room> list = new List<DTO_Room>();
+            list = dalRoom.getEmptyRoom();
+            return list;
+        }
+
         public List<DTO_Room> getRoom()
         {
             List<DTO_Room> list = new List<DTO_Room>();

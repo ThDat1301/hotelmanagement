@@ -11,6 +11,7 @@ using DevExpress.Utils.Drawing;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.Utils;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
+using DAL_Hotel;
 
 namespace GUI_Hotel
 {
@@ -154,6 +155,18 @@ namespace GUI_Hotel
                 frmOrder1 f = new frmOrder1();
                 f.idPhong = idRoom;
                 f.isAdd = false;
+                f.ShowDialog();
+            }
+            else MessageBox.Show("Phòng chưa được đặt!");
+        }
+
+        private void btnChangeRoom_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int idRoom = int.Parse(item.Value.ToString());
+            if (busRoom.getRoomById(idRoom).Room_status)
+            {
+                frmChangeRoom f = new frmChangeRoom();
+                f.roomId = idRoom;
                 f.ShowDialog();
             }
             else MessageBox.Show("Phòng chưa được đặt!");

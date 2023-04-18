@@ -52,7 +52,7 @@
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnMakeOrder = new DevExpress.XtraBars.BarButtonItem();
             this.btnUpdateOrder = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPay = new DevExpress.XtraBars.BarButtonItem();
+            this.btnChangeRoom = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -306,7 +306,7 @@
             this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnMakeOrder),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnUpdateOrder),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPay)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnChangeRoom)});
             this.popupMenu1.Manager = this.barManager1;
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Popup += new System.EventHandler(this.popupMenu1_Popup);
@@ -325,11 +325,12 @@
             this.btnUpdateOrder.Name = "btnUpdateOrder";
             this.btnUpdateOrder.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdateOrder_ItemClick);
             // 
-            // btnPay
+            // btnChangeRoom
             // 
-            this.btnPay.Caption = "Thanh toán";
-            this.btnPay.Id = 2;
-            this.btnPay.Name = "btnPay";
+            this.btnChangeRoom.Caption = "Chuyển phòng";
+            this.btnChangeRoom.Id = 2;
+            this.btnChangeRoom.Name = "btnChangeRoom";
+            this.btnChangeRoom.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChangeRoom_ItemClick);
             // 
             // barManager1
             // 
@@ -341,7 +342,7 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnMakeOrder,
             this.btnUpdateOrder,
-            this.btnPay});
+            this.btnChangeRoom});
             this.barManager1.MaxItemId = 3;
             // 
             // barDockControlTop
@@ -396,7 +397,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý khách sạn XYZ";
+            this.Text = "Quản lý khách sạn OU";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -438,7 +439,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnMakeOrder;
         private DevExpress.XtraBars.BarButtonItem btnUpdateOrder;
-        private DevExpress.XtraBars.BarButtonItem btnPay;
+        private DevExpress.XtraBars.BarButtonItem btnChangeRoom;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraNavBar.NavBarItem navItemTypeRoom;
         private DevExpress.XtraNavBar.NavBarItem navItemFloor;

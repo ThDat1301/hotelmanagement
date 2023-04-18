@@ -119,37 +119,37 @@
             // 
             // txtProductName
             // 
-            this.txtProductName.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtProductName.Location = new System.Drawing.Point(154, 49);
+            this.txtProductName.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtProductName.Location = new System.Drawing.Point(186, 49);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(418, 24);
+            this.txtProductName.Size = new System.Drawing.Size(430, 30);
             this.txtProductName.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11F);
             this.label3.Location = new System.Drawing.Point(33, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 21);
+            this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên sản phẩm:";
             // 
             // txtProductPrice
             // 
-            this.txtProductPrice.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtProductPrice.Location = new System.Drawing.Point(84, 89);
+            this.txtProductPrice.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtProductPrice.Location = new System.Drawing.Point(186, 89);
             this.txtProductPrice.Name = "txtProductPrice";
-            this.txtProductPrice.Size = new System.Drawing.Size(160, 24);
+            this.txtProductPrice.Size = new System.Drawing.Size(430, 30);
             this.txtProductPrice.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11F);
             this.label2.Location = new System.Drawing.Point(33, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 21);
+            this.label2.Size = new System.Drawing.Size(50, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Giá: ";
             // 
@@ -166,6 +166,8 @@
             // 
             // gvDanhSach
             // 
+            this.gvDanhSach.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvDanhSach.Appearance.Row.Options.UseFont = true;
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Product_id,
             this.Product_name,
@@ -177,6 +179,10 @@
             // 
             // Product_id
             // 
+            this.Product_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_id.AppearanceCell.Options.UseFont = true;
+            this.Product_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_id.AppearanceHeader.Options.UseFont = true;
             this.Product_id.Caption = "Mã sản phẩm";
             this.Product_id.FieldName = "Product_id";
             this.Product_id.MinWidth = 25;
@@ -187,6 +193,10 @@
             // 
             // Product_name
             // 
+            this.Product_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_name.AppearanceCell.Options.UseFont = true;
+            this.Product_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_name.AppearanceHeader.Options.UseFont = true;
             this.Product_name.Caption = "Tên sản phẩm";
             this.Product_name.FieldName = "Product_name";
             this.Product_name.MinWidth = 25;
@@ -197,6 +207,10 @@
             // 
             // Product_price
             // 
+            this.Product_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_price.AppearanceCell.Options.UseFont = true;
+            this.Product_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_price.AppearanceHeader.Options.UseFont = true;
             this.Product_price.Caption = "Giá sản phẩm";
             this.Product_price.FieldName = "Product_price";
             this.Product_price.MinWidth = 25;
@@ -215,7 +229,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmProduct";
+            this.Text = "Quản lý dịch vụ";
             this.Load += new System.EventHandler(this.frmProduct_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

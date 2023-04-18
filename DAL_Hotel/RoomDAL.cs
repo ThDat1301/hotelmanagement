@@ -34,6 +34,28 @@ namespace DAL_Hotel
             return list;
         }
 
+        public List<DTO_Room> getEmptyRoom()
+        {
+            List<DTO_Room> list = new List<DTO_Room>();
+
+            using (var db = new HotelDB())
+            {
+                
+                var tb = from room in db.Rooms where room.status == false select room;
+
+                foreach (var i in tb)
+                {
+                    DTO_Room room = new DTO_Room();
+                    room.Room_id = i.id;
+                    room.Room_num = i.num.ToString();
+                    room.Room_status = (bool)i.status;
+                    room.Room_floor_id = (int)i.floorId;
+                    room.Room_type_id = (int)i.typeRoomId;
+                    list.Add(room);
+                }
+            }
+            return list;
+        }
         public List<DTO_Room> getRoomByFloor(int floorId)
         {
             List<DTO_Room> list = new List<DTO_Room>();

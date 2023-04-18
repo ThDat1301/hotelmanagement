@@ -60,12 +60,11 @@ namespace GUI_Hotel
             searchCus.EditValue = 1;
             txtTotalAmount.Text = roomPrice.ToString("N0");
             loadGcProduct();
-            
-
             listProductCart = new List<ProductCart>();
-            odr = busOdr.getOdrByIdRoom(idPhong);
+
             if (!isAdd)
             {
+                odr = busOdr.getOdrByIdRoom(idPhong);
                 DTO_Order o = busOrder.getOrderById(odr.Room_order_id);
 
                 dpCheckin.Value = o.Order_checkin_date;

@@ -117,10 +117,10 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Location = new System.Drawing.Point(0, 47);
             this.gcDanhSach.MainView = this.gvDanhSach;
-            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Name = "gcDanhSach";
             this.gcDanhSach.Size = new System.Drawing.Size(1127, 246);
             this.gcDanhSach.TabIndex = 1;
@@ -130,6 +130,8 @@
             // 
             // gvDanhSach
             // 
+            this.gvDanhSach.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvDanhSach.Appearance.Row.Options.UseFont = true;
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.TypeRoom_id,
             this.TypeRoom_name,
@@ -146,6 +148,10 @@
             // 
             // TypeRoom_id
             // 
+            this.TypeRoom_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_id.AppearanceCell.Options.UseFont = true;
+            this.TypeRoom_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_id.AppearanceHeader.Options.UseFont = true;
             this.TypeRoom_id.Caption = "Mã loại phòng";
             this.TypeRoom_id.FieldName = "TypeRoom_id";
             this.TypeRoom_id.MinWidth = 24;
@@ -156,6 +162,10 @@
             // 
             // TypeRoom_name
             // 
+            this.TypeRoom_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_name.AppearanceCell.Options.UseFont = true;
+            this.TypeRoom_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_name.AppearanceHeader.Options.UseFont = true;
             this.TypeRoom_name.Caption = "Tên loại phòng";
             this.TypeRoom_name.FieldName = "TypeRoom_name";
             this.TypeRoom_name.MinWidth = 24;
@@ -166,6 +176,10 @@
             // 
             // TypeRoom_price
             // 
+            this.TypeRoom_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_price.AppearanceCell.Options.UseFont = true;
+            this.TypeRoom_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_price.AppearanceHeader.Options.UseFont = true;
             this.TypeRoom_price.Caption = "Giá";
             this.TypeRoom_price.FieldName = "TypeRoom_price";
             this.TypeRoom_price.MinWidth = 23;
@@ -175,6 +189,10 @@
             // 
             // TypeRoom_maxCus
             // 
+            this.TypeRoom_maxCus.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_maxCus.AppearanceCell.Options.UseFont = true;
+            this.TypeRoom_maxCus.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_maxCus.AppearanceHeader.Options.UseFont = true;
             this.TypeRoom_maxCus.Caption = "Số khách hàng tối đa";
             this.TypeRoom_maxCus.FieldName = "TypeRoom_maxCus";
             this.TypeRoom_maxCus.MinWidth = 23;
@@ -184,6 +202,10 @@
             // 
             // TypeRoom_surCharge
             // 
+            this.TypeRoom_surCharge.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_surCharge.AppearanceCell.Options.UseFont = true;
+            this.TypeRoom_surCharge.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_surCharge.AppearanceHeader.Options.UseFont = true;
             this.TypeRoom_surCharge.Caption = "Chi phí phụ thu";
             this.TypeRoom_surCharge.FieldName = "TypeRoom_surCharge";
             this.TypeRoom_surCharge.MinWidth = 23;
@@ -193,6 +215,10 @@
             // 
             // TypeRoom_qtyBed
             // 
+            this.TypeRoom_qtyBed.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_qtyBed.AppearanceCell.Options.UseFont = true;
+            this.TypeRoom_qtyBed.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_qtyBed.AppearanceHeader.Options.UseFont = true;
             this.TypeRoom_qtyBed.Caption = "Số lượng giường";
             this.TypeRoom_qtyBed.FieldName = "TypeRoom_qtyBed";
             this.TypeRoom_qtyBed.MinWidth = 23;
@@ -214,7 +240,7 @@
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 293);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1127, 162);
             this.groupControl1.TabIndex = 2;
@@ -226,7 +252,7 @@
             this.txtTypeRoomQtyBed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTypeRoomQtyBed.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTypeRoomQtyBed.Location = new System.Drawing.Point(926, 43);
-            this.txtTypeRoomQtyBed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTypeRoomQtyBed.Margin = new System.Windows.Forms.Padding(4);
             this.txtTypeRoomQtyBed.Name = "txtTypeRoomQtyBed";
             this.txtTypeRoomQtyBed.Size = new System.Drawing.Size(175, 30);
             this.txtTypeRoomQtyBed.TabIndex = 9;
@@ -235,8 +261,8 @@
             // 
             this.txtTypeRoomSurCharge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTypeRoomSurCharge.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTypeRoomSurCharge.Location = new System.Drawing.Point(527, 94);
-            this.txtTypeRoomSurCharge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTypeRoomSurCharge.Location = new System.Drawing.Point(548, 94);
+            this.txtTypeRoomSurCharge.Margin = new System.Windows.Forms.Padding(4);
             this.txtTypeRoomSurCharge.Name = "txtTypeRoomSurCharge";
             this.txtTypeRoomSurCharge.Size = new System.Drawing.Size(175, 30);
             this.txtTypeRoomSurCharge.TabIndex = 8;
@@ -245,8 +271,8 @@
             // 
             this.txtTypeRoomMaxCus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTypeRoomMaxCus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTypeRoomMaxCus.Location = new System.Drawing.Point(527, 43);
-            this.txtTypeRoomMaxCus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTypeRoomMaxCus.Location = new System.Drawing.Point(548, 43);
+            this.txtTypeRoomMaxCus.Margin = new System.Windows.Forms.Padding(4);
             this.txtTypeRoomMaxCus.Name = "txtTypeRoomMaxCus";
             this.txtTypeRoomMaxCus.Size = new System.Drawing.Size(175, 30);
             this.txtTypeRoomMaxCus.TabIndex = 7;
@@ -289,7 +315,7 @@
             this.txtTypeRoomePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTypeRoomePrice.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTypeRoomePrice.Location = new System.Drawing.Point(118, 94);
-            this.txtTypeRoomePrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTypeRoomePrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtTypeRoomePrice.Name = "txtTypeRoomePrice";
             this.txtTypeRoomePrice.Size = new System.Drawing.Size(175, 30);
             this.txtTypeRoomePrice.TabIndex = 3;
@@ -310,7 +336,7 @@
             this.txtTypeRoomName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTypeRoomName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTypeRoomName.Location = new System.Drawing.Point(118, 44);
-            this.txtTypeRoomName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTypeRoomName.Margin = new System.Windows.Forms.Padding(4);
             this.txtTypeRoomName.Name = "txtTypeRoomName";
             this.txtTypeRoomName.Size = new System.Drawing.Size(175, 30);
             this.txtTypeRoomName.TabIndex = 1;
@@ -335,7 +361,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTypeRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoaiPhong";

@@ -101,10 +101,10 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Location = new System.Drawing.Point(0, 47);
             this.gcDanhSach.MainView = this.gvDanhSach;
-            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Name = "gcDanhSach";
             this.gcDanhSach.Size = new System.Drawing.Size(861, 246);
             this.gcDanhSach.TabIndex = 2;
@@ -113,6 +113,8 @@
             // 
             // gvDanhSach
             // 
+            this.gvDanhSach.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvDanhSach.Appearance.Row.Options.UseFont = true;
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Floor_id,
             this.Floor_name});
@@ -124,6 +126,10 @@
             // 
             // Floor_id
             // 
+            this.Floor_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Floor_id.AppearanceCell.Options.UseFont = true;
+            this.Floor_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Floor_id.AppearanceHeader.Options.UseFont = true;
             this.Floor_id.Caption = "ID";
             this.Floor_id.FieldName = "Floor_id";
             this.Floor_id.MinWidth = 23;
@@ -134,6 +140,8 @@
             // 
             // Floor_name
             // 
+            this.Floor_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Floor_name.AppearanceHeader.Options.UseFont = true;
             this.Floor_name.Caption = "Tên tầng";
             this.Floor_name.FieldName = "Floor_name";
             this.Floor_name.MinWidth = 23;
@@ -145,7 +153,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11F);
             this.label1.Location = new System.Drawing.Point(18, 320);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -156,9 +164,9 @@
             // txtFloorName
             // 
             this.txtFloorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFloorName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFloorName.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtFloorName.Location = new System.Drawing.Point(85, 316);
-            this.txtFloorName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFloorName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFloorName.Name = "txtFloorName";
             this.txtFloorName.Size = new System.Drawing.Size(116, 30);
             this.txtFloorName.TabIndex = 4;
@@ -172,10 +180,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmFloor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTang";
+            this.Text = "Quản lý tầng";
             this.Load += new System.EventHandler(this.frmFloor_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

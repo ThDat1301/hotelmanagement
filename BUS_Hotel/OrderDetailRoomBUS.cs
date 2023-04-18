@@ -20,6 +20,10 @@ namespace BUS_Hotel
         {
             return dalOrderDetailRoom.addOrderDetailRoom(od);
         }
+        public bool updateOrderDetailRoom(DTO_OrderDetailRoom od)
+        {
+            return dalOrderDetailRoom.updateOrderDetailRoom(od);
+        }
         public bool deleteOrderDetailRoom(int id)
         {
             return dalOrderDetailRoom.deleteOrderDetailRoom(id);

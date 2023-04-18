@@ -12,7 +12,7 @@ namespace DAL_Hotel
 
         public static DTO_OrderDetailRoom toOrderDetailRoomDTOMap(OrderDetailRoom room)
         {
-            return new DTO_OrderDetailRoom((int)room.dayAt, (int)room.roomID, (int)room.orderID);
+            return new DTO_OrderDetailRoom(room.id ,(int)room.dayAt, (int)room.roomID, (int)room.orderID);
         }
 
         public List<DTO_OrderDetailRoom> getOrderDetailRoomsByOrderId(int id)
@@ -40,6 +40,26 @@ namespace DAL_Hotel
 
                 HotelDB context = new HotelDB();
                 context.OrderDetailRooms.Add(orderDetail);
+                context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool updateOrderDetailRoom(DTO_OrderDetailRoom od)
+        {
+            try
+            {
+                HotelDB context = new HotelDB();
+
+                var orderDetail = context.OrderDetailRooms.FirstOrDefault(odr => odr.id == od.Room_id);
+
+                orderDetail.orderID = od.Room_order_id;
+                orderDetail.roomID = od.Room_room_id;
+                orderDetail.dayAt = od.Room_day_at;
+
                 context.SaveChanges();
                 return true;
             }

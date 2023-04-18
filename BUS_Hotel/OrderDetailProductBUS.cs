@@ -17,10 +17,19 @@ namespace BUS_Hotel
         {
             return dalOrderDetailProduct.getOrderDetailProductsByOrderId(id);
         }
+        public List<DTO_OrderDetailProduct> getOrderDetailProductsByRoom(int idRoom, int idOdr)
+        {
+            return dalOrderDetailProduct.getOrderDetailProductsByRoom(idRoom, idOdr);
+        }
 
         public bool addOrderDetailProduct(DTO_OrderDetailProduct order_detail_product)
         {
             return dalOrderDetailProduct.addOrderDetailProduct(order_detail_product);
+        }
+
+        public bool updateOrderDetailProduct(DTO_OrderDetailProduct order_detail_product)
+        {
+            return dalOrderDetailProduct.updateOrderDetailProduct(order_detail_product);
         }
         public bool deleteOrderDetailProductsByOrderId(int id)
         {

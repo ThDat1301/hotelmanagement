@@ -142,6 +142,10 @@
             // 
             // gvDanhSach
             // 
+            this.gvDanhSach.Appearance.Preview.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.gvDanhSach.Appearance.Preview.Options.UseFont = true;
+            this.gvDanhSach.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvDanhSach.Appearance.Row.Options.UseFont = true;
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Employee_id,
             this.Employee_name,
@@ -157,6 +161,8 @@
             // 
             // Employee_id
             // 
+            this.Employee_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Employee_id.AppearanceHeader.Options.UseFont = true;
             this.Employee_id.Caption = "Mã Nhân Viên";
             this.Employee_id.FieldName = "Employee_id";
             this.Employee_id.MinWidth = 25;
@@ -167,6 +173,8 @@
             // 
             // Employee_name
             // 
+            this.Employee_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Employee_name.AppearanceHeader.Options.UseFont = true;
             this.Employee_name.Caption = "Tên Nhân Viên";
             this.Employee_name.FieldName = "Employee_name";
             this.Employee_name.MinWidth = 25;
@@ -177,6 +185,8 @@
             // 
             // Employee_gender
             // 
+            this.Employee_gender.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Employee_gender.AppearanceHeader.Options.UseFont = true;
             this.Employee_gender.Caption = "Giới tính";
             this.Employee_gender.FieldName = "Employee_gender";
             this.Employee_gender.MinWidth = 25;
@@ -187,6 +197,8 @@
             // 
             // Employee_phone
             // 
+            this.Employee_phone.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Employee_phone.AppearanceHeader.Options.UseFont = true;
             this.Employee_phone.Caption = "Điện thoại";
             this.Employee_phone.FieldName = "Employee_phone";
             this.Employee_phone.MinWidth = 25;
@@ -197,6 +209,8 @@
             // 
             // Employee_email
             // 
+            this.Employee_email.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Employee_email.AppearanceHeader.Options.UseFont = true;
             this.Employee_email.Caption = "Email";
             this.Employee_email.FieldName = "Employee_email";
             this.Employee_email.MinWidth = 25;
@@ -207,6 +221,8 @@
             // 
             // Employee_username
             // 
+            this.Employee_username.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Employee_username.AppearanceHeader.Options.UseFont = true;
             this.Employee_username.Caption = "Tài khoản";
             this.Employee_username.FieldName = "Employee_username";
             this.Employee_username.MinWidth = 25;
@@ -217,6 +233,8 @@
             // 
             // Employee_password
             // 
+            this.Employee_password.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Employee_password.AppearanceHeader.Options.UseFont = true;
             this.Employee_password.Caption = "Mật khẩu";
             this.Employee_password.FieldName = "Employee_password";
             this.Employee_password.MinWidth = 25;
@@ -242,43 +260,43 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 384);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(856, 201);
+            this.groupControl1.Size = new System.Drawing.Size(856, 202);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Thông tin";
             // 
             // txtEmloyeePassword
             // 
-            this.txtEmloyeePassword.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtEmloyeePassword.Location = new System.Drawing.Point(153, 158);
+            this.txtEmloyeePassword.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtEmloyeePassword.Location = new System.Drawing.Point(166, 151);
             this.txtEmloyeePassword.Name = "txtEmloyeePassword";
-            this.txtEmloyeePassword.Size = new System.Drawing.Size(267, 24);
+            this.txtEmloyeePassword.Size = new System.Drawing.Size(267, 30);
             this.txtEmloyeePassword.TabIndex = 20;
             // 
             // txtEmloyeeUserName
             // 
-            this.txtEmloyeeUserName.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtEmloyeeUserName.Location = new System.Drawing.Point(153, 121);
+            this.txtEmloyeeUserName.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtEmloyeeUserName.Location = new System.Drawing.Point(166, 114);
             this.txtEmloyeeUserName.Name = "txtEmloyeeUserName";
-            this.txtEmloyeeUserName.Size = new System.Drawing.Size(267, 24);
+            this.txtEmloyeeUserName.Size = new System.Drawing.Size(267, 30);
             this.txtEmloyeeUserName.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label5.Location = new System.Drawing.Point(26, 157);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label5.Location = new System.Drawing.Point(26, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 21);
+            this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 18;
             this.label5.Text = "Mật khẩu:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label6.Location = new System.Drawing.Point(26, 124);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label6.Location = new System.Drawing.Point(26, 117);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 21);
+            this.label6.Size = new System.Drawing.Size(99, 23);
             this.label6.TabIndex = 17;
             this.label6.Text = "Tài khoản:";
             // 
@@ -286,7 +304,7 @@
             // 
             this.panel1.Controls.Add(this.rdNu);
             this.panel1.Controls.Add(this.rdNam);
-            this.panel1.Location = new System.Drawing.Point(574, 78);
+            this.panel1.Location = new System.Drawing.Point(577, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(136, 35);
             this.panel1.TabIndex = 15;
@@ -294,10 +312,10 @@
             // rdNu
             // 
             this.rdNu.AutoSize = true;
-            this.rdNu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdNu.Font = new System.Drawing.Font("Tahoma", 11F);
             this.rdNu.Location = new System.Drawing.Point(74, 4);
             this.rdNu.Name = "rdNu";
-            this.rdNu.Size = new System.Drawing.Size(52, 25);
+            this.rdNu.Size = new System.Drawing.Size(56, 27);
             this.rdNu.TabIndex = 14;
             this.rdNu.TabStop = true;
             this.rdNu.Text = "Nữ";
@@ -306,10 +324,10 @@
             // rdNam
             // 
             this.rdNam.AutoSize = true;
-            this.rdNam.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdNam.Font = new System.Drawing.Font("Tahoma", 11F);
             this.rdNam.Location = new System.Drawing.Point(3, 4);
             this.rdNam.Name = "rdNam";
-            this.rdNam.Size = new System.Drawing.Size(65, 25);
+            this.rdNam.Size = new System.Drawing.Size(70, 27);
             this.rdNam.TabIndex = 13;
             this.rdNam.TabStop = true;
             this.rdNam.Text = "Nam";
@@ -317,65 +335,65 @@
             // 
             // txtEmployeePhone
             // 
-            this.txtEmployeePhone.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtEmployeePhone.Location = new System.Drawing.Point(574, 41);
+            this.txtEmployeePhone.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtEmployeePhone.Location = new System.Drawing.Point(577, 41);
             this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(267, 24);
+            this.txtEmployeePhone.Size = new System.Drawing.Size(267, 30);
             this.txtEmployeePhone.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11F);
             this.label4.Location = new System.Drawing.Point(476, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 21);
+            this.label4.Size = new System.Drawing.Size(86, 23);
             this.label4.TabIndex = 9;
             this.label4.Text = "Giới tính:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11F);
             this.label2.Location = new System.Drawing.Point(26, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 21);
+            this.label2.Size = new System.Drawing.Size(62, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "Email:";
             // 
             // txtEmployeeEmail
             // 
-            this.txtEmployeeEmail.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtEmployeeEmail.Location = new System.Drawing.Point(153, 78);
+            this.txtEmployeeEmail.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtEmployeeEmail.Location = new System.Drawing.Point(166, 78);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
-            this.txtEmployeeEmail.Size = new System.Drawing.Size(267, 24);
+            this.txtEmployeeEmail.Size = new System.Drawing.Size(267, 30);
             this.txtEmployeeEmail.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11F);
             this.label1.Location = new System.Drawing.Point(476, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 21);
+            this.label1.Size = new System.Drawing.Size(102, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Điện thoại:";
             // 
             // txtEmployeeName
             // 
-            this.txtEmployeeName.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.txtEmployeeName.Location = new System.Drawing.Point(153, 41);
+            this.txtEmployeeName.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtEmployeeName.Location = new System.Drawing.Point(166, 41);
             this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(267, 24);
+            this.txtEmployeeName.Size = new System.Drawing.Size(267, 30);
             this.txtEmployeeName.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11F);
             this.label3.Location = new System.Drawing.Point(26, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 21);
+            this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên nhân viên:";
             // 
@@ -383,14 +401,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 585);
+            this.ClientSize = new System.Drawing.Size(856, 586);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEmployee";
+            this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.frmEmployee_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

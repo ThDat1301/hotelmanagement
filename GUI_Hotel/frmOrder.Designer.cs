@@ -204,6 +204,8 @@
             // 
             // tabDanhSach
             // 
+            this.tabDanhSach.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.tabDanhSach.Appearance.Options.UseFont = true;
             this.tabDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabDanhSach.Location = new System.Drawing.Point(0, 47);
             this.tabDanhSach.Margin = new System.Windows.Forms.Padding(4);
@@ -251,20 +253,22 @@
             // dpTo
             // 
             this.dpTo.CustomFormat = "dd/MM/yyyy";
-            this.dpTo.Location = new System.Drawing.Point(460, 15);
+            this.dpTo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dpTo.Location = new System.Drawing.Point(767, 16);
             this.dpTo.Margin = new System.Windows.Forms.Padding(4);
             this.dpTo.Name = "dpTo";
-            this.dpTo.Size = new System.Drawing.Size(142, 23);
+            this.dpTo.Size = new System.Drawing.Size(211, 30);
             this.dpTo.TabIndex = 1;
             this.dpTo.ValueChanged += new System.EventHandler(this.dpTo_ValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(391, 22);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label2.Location = new System.Drawing.Point(668, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Đến ngày";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,20 +276,22 @@
             // dpFrom
             // 
             this.dpFrom.CustomFormat = "dd/MM/yyyy";
-            this.dpFrom.Location = new System.Drawing.Point(214, 15);
+            this.dpFrom.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.dpFrom.Location = new System.Drawing.Point(360, 16);
             this.dpFrom.Margin = new System.Windows.Forms.Padding(4);
             this.dpFrom.Name = "dpFrom";
-            this.dpFrom.Size = new System.Drawing.Size(142, 23);
+            this.dpFrom.Size = new System.Drawing.Size(211, 30);
             this.dpFrom.TabIndex = 1;
             this.dpFrom.ValueChanged += new System.EventHandler(this.dpFrom_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 22);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.label1.Location = new System.Drawing.Point(272, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.Size = new System.Drawing.Size(80, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Từ ngày";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,6 +311,8 @@
             // 
             // gvDanhSach
             // 
+            this.gvDanhSach.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvDanhSach.Appearance.Row.Options.UseFont = true;
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Order_id,
             this.Order_checkin_date,
@@ -324,6 +332,8 @@
             // 
             // Order_id
             // 
+            this.Order_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_id.AppearanceCell.Options.UseFont = true;
             this.Order_id.Caption = "Mã đặt phòng";
             this.Order_id.FieldName = "Order_id";
             this.Order_id.MinWidth = 23;
@@ -334,6 +344,8 @@
             // 
             // Order_checkin_date
             // 
+            this.Order_checkin_date.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_checkin_date.AppearanceCell.Options.UseFont = true;
             this.Order_checkin_date.Caption = "Ngày đặt phòng";
             this.Order_checkin_date.FieldName = "Order_checkin_date";
             this.Order_checkin_date.MinWidth = 24;
@@ -344,6 +356,8 @@
             // 
             // Order_checkout_date
             // 
+            this.Order_checkout_date.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_checkout_date.AppearanceCell.Options.UseFont = true;
             this.Order_checkout_date.Caption = "Ngày trả phòng";
             this.Order_checkout_date.FieldName = "Order_checkout_date";
             this.Order_checkout_date.MinWidth = 24;
@@ -354,6 +368,8 @@
             // 
             // Order_total_amount
             // 
+            this.Order_total_amount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_total_amount.AppearanceCell.Options.UseFont = true;
             this.Order_total_amount.Caption = "Tổng tiền";
             this.Order_total_amount.FieldName = "Order_total_amount";
             this.Order_total_amount.MinWidth = 24;
@@ -364,6 +380,8 @@
             // 
             // Order_num_of_cus
             // 
+            this.Order_num_of_cus.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_num_of_cus.AppearanceCell.Options.UseFont = true;
             this.Order_num_of_cus.Caption = "Số lượng khách";
             this.Order_num_of_cus.FieldName = "Order_num_of_cus";
             this.Order_num_of_cus.MinWidth = 24;
@@ -374,6 +392,8 @@
             // 
             // Order_status
             // 
+            this.Order_status.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_status.AppearanceCell.Options.UseFont = true;
             this.Order_status.Caption = "Trạng thái";
             this.Order_status.FieldName = "Order_status";
             this.Order_status.MinWidth = 24;
@@ -382,6 +402,8 @@
             // 
             // Order_is_group
             // 
+            this.Order_is_group.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_is_group.AppearanceCell.Options.UseFont = true;
             this.Order_is_group.Caption = "Đặt theo đoàn";
             this.Order_is_group.FieldName = "Order_is_group";
             this.Order_is_group.MinWidth = 24;
@@ -390,6 +412,8 @@
             // 
             // Order_note
             // 
+            this.Order_note.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_note.AppearanceCell.Options.UseFont = true;
             this.Order_note.Caption = "Ghi chú";
             this.Order_note.FieldName = "Order_note";
             this.Order_note.MinWidth = 24;
@@ -400,6 +424,8 @@
             // 
             // Order_customer_id
             // 
+            this.Order_customer_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_customer_id.AppearanceCell.Options.UseFont = true;
             this.Order_customer_id.Caption = "Mã khách hàng";
             this.Order_customer_id.FieldName = "Order_customer_id";
             this.Order_customer_id.MinWidth = 24;
@@ -408,6 +434,8 @@
             // 
             // Order_employee_id
             // 
+            this.Order_employee_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Order_employee_id.AppearanceCell.Options.UseFont = true;
             this.Order_employee_id.Caption = "Mã nhân viên";
             this.Order_employee_id.FieldName = "Order_employee_id";
             this.Order_employee_id.MinWidth = 24;
@@ -442,6 +470,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.gcPhong);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(4, 2);
@@ -469,6 +499,8 @@
             // 
             // gvPhong
             // 
+            this.gvPhong.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvPhong.Appearance.Row.Options.UseFont = true;
             this.gvPhong.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Room_id,
             this.Room_num,
@@ -485,6 +517,8 @@
             // 
             // Room_id
             // 
+            this.Room_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Room_id.AppearanceCell.Options.UseFont = true;
             this.Room_id.Caption = "ID";
             this.Room_id.FieldName = "id";
             this.Room_id.MinWidth = 24;
@@ -493,6 +527,8 @@
             // 
             // Room_num
             // 
+            this.Room_num.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Room_num.AppearanceCell.Options.UseFont = true;
             this.Room_num.Caption = "Số phòng ";
             this.Room_num.FieldName = "num";
             this.Room_num.MinWidth = 24;
@@ -503,6 +539,8 @@
             // 
             // Floor_id
             // 
+            this.Floor_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Floor_id.AppearanceCell.Options.UseFont = true;
             this.Floor_id.Caption = "ID";
             this.Floor_id.FieldName = "id";
             this.Floor_id.MinWidth = 24;
@@ -511,6 +549,8 @@
             // 
             // Floor_name
             // 
+            this.Floor_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Floor_name.AppearanceCell.Options.UseFont = true;
             this.Floor_name.Caption = "Tầng";
             this.Floor_name.FieldName = "name";
             this.Floor_name.MinWidth = 24;
@@ -521,6 +561,8 @@
             // 
             // TypeRoom_price
             // 
+            this.TypeRoom_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_price.AppearanceCell.Options.UseFont = true;
             this.TypeRoom_price.Caption = "Đơn giá";
             this.TypeRoom_price.FieldName = "price";
             this.TypeRoom_price.MinWidth = 23;
@@ -531,6 +573,8 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.gcSanPham);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(975, 2);
@@ -556,6 +600,8 @@
             // 
             // gvSanPham
             // 
+            this.gvSanPham.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvSanPham.Appearance.Row.Options.UseFont = true;
             this.gvSanPham.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Product_id,
             this.Product_name,
@@ -566,6 +612,8 @@
             // 
             // Product_id
             // 
+            this.Product_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_id.AppearanceCell.Options.UseFont = true;
             this.Product_id.Caption = "Mã SP-DV";
             this.Product_id.FieldName = "Product_id";
             this.Product_id.MinWidth = 24;
@@ -576,6 +624,8 @@
             // 
             // Product_name
             // 
+            this.Product_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_name.AppearanceCell.Options.UseFont = true;
             this.Product_name.Caption = "Tên SP - DV";
             this.Product_name.FieldName = "Product_name";
             this.Product_name.MinWidth = 24;
@@ -586,6 +636,8 @@
             // 
             // Product_price
             // 
+            this.Product_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_price.AppearanceCell.Options.UseFont = true;
             this.Product_price.Caption = "Đơn giá";
             this.Product_price.FieldName = "Product_price";
             this.Product_price.MinWidth = 24;
@@ -637,7 +689,7 @@
             this.lbCancel.AutoSize = true;
             this.lbCancel.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCancel.ForeColor = System.Drawing.Color.Red;
-            this.lbCancel.Location = new System.Drawing.Point(518, 6);
+            this.lbCancel.Location = new System.Drawing.Point(542, 12);
             this.lbCancel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCancel.Name = "lbCancel";
             this.lbCancel.Size = new System.Drawing.Size(32, 33);
@@ -646,28 +698,31 @@
             // 
             // txtNumCus
             // 
-            this.txtNumCus.Location = new System.Drawing.Point(376, 84);
+            this.txtNumCus.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtNumCus.Location = new System.Drawing.Point(362, 84);
             this.txtNumCus.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCus.MaxLength = 3;
             this.txtNumCus.Name = "txtNumCus";
-            this.txtNumCus.Size = new System.Drawing.Size(72, 23);
+            this.txtNumCus.Size = new System.Drawing.Size(72, 26);
             this.txtNumCus.TabIndex = 6;
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(127, 119);
+            this.txtNote.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.txtNote.Location = new System.Drawing.Point(113, 119);
             this.txtNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(419, 23);
+            this.txtNote.Size = new System.Drawing.Size(421, 26);
             this.txtNote.TabIndex = 6;
             // 
             // chkIsGroup
             // 
             this.chkIsGroup.AutoSize = true;
-            this.chkIsGroup.Location = new System.Drawing.Point(457, 87);
+            this.chkIsGroup.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.chkIsGroup.Location = new System.Drawing.Point(455, 87);
             this.chkIsGroup.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsGroup.Name = "chkIsGroup";
-            this.chkIsGroup.Size = new System.Drawing.Size(90, 20);
+            this.chkIsGroup.Size = new System.Drawing.Size(102, 22);
             this.chkIsGroup.TabIndex = 5;
             this.chkIsGroup.Text = "Theo đoàn";
             this.chkIsGroup.UseVisualStyleBackColor = true;
@@ -675,28 +730,31 @@
             // dpCheckout
             // 
             this.dpCheckout.CustomFormat = "dd/MM/yyyy";
-            this.dpCheckout.Location = new System.Drawing.Point(376, 44);
+            this.dpCheckout.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.dpCheckout.Location = new System.Drawing.Point(369, 48);
             this.dpCheckout.Margin = new System.Windows.Forms.Padding(4);
             this.dpCheckout.Name = "dpCheckout";
-            this.dpCheckout.Size = new System.Drawing.Size(156, 23);
+            this.dpCheckout.Size = new System.Drawing.Size(165, 26);
             this.dpCheckout.TabIndex = 4;
             // 
             // dpCheckin
             // 
             this.dpCheckin.CustomFormat = "dd/MM/yyyy";
-            this.dpCheckin.Location = new System.Drawing.Point(127, 47);
+            this.dpCheckin.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.dpCheckin.Location = new System.Drawing.Point(113, 47);
             this.dpCheckin.Margin = new System.Windows.Forms.Padding(4);
             this.dpCheckin.Name = "dpCheckin";
-            this.dpCheckin.Size = new System.Drawing.Size(156, 23);
+            this.dpCheckin.Size = new System.Drawing.Size(156, 26);
             this.dpCheckin.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(310, 54);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label5.Location = new System.Drawing.Point(296, 54);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 16);
+            this.label5.Size = new System.Drawing.Size(65, 18);
             this.label5.TabIndex = 3;
             this.label5.Text = "Ngày trả";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -704,10 +762,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(310, 87);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label8.Location = new System.Drawing.Point(296, 87);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 16);
+            this.label8.Size = new System.Drawing.Size(67, 18);
             this.label8.TabIndex = 3;
             this.label8.Text = "Số khách";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -715,10 +774,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 119);
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label7.Location = new System.Drawing.Point(14, 119);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 16);
+            this.label7.Size = new System.Drawing.Size(56, 18);
             this.label7.TabIndex = 3;
             this.label7.Text = "Ghi chú";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -726,10 +786,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 89);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label6.Location = new System.Drawing.Point(14, 89);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 16);
+            this.label6.Size = new System.Drawing.Size(75, 18);
             this.label6.TabIndex = 3;
             this.label6.Text = "Trạng thái";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -737,10 +798,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 54);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label4.Location = new System.Drawing.Point(14, 54);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 16);
+            this.label4.Size = new System.Drawing.Size(69, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ngày đặt";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -749,7 +811,7 @@
             // 
             this.btnAddCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.ImageOptions.Image")));
             this.btnAddCustomer.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnAddCustomer.Location = new System.Drawing.Point(355, 6);
+            this.btnAddCustomer.Location = new System.Drawing.Point(503, 7);
             this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(31, 28);
@@ -758,34 +820,40 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(127, 85);
+            this.cbStatus.Location = new System.Drawing.Point(113, 85);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(154, 24);
+            this.cbStatus.Size = new System.Drawing.Size(154, 26);
             this.cbStatus.TabIndex = 1;
             // 
             // cbCustomer
             // 
+            this.cbCustomer.Font = new System.Drawing.Font("Tahoma", 9F);
             this.cbCustomer.FormattingEnabled = true;
-            this.cbCustomer.Location = new System.Drawing.Point(127, 7);
+            this.cbCustomer.Location = new System.Drawing.Point(113, 7);
             this.cbCustomer.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbCustomer.Name = "cbCustomer";
-            this.cbCustomer.Size = new System.Drawing.Size(222, 24);
+            this.cbCustomer.Size = new System.Drawing.Size(382, 26);
             this.cbCustomer.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 12);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label3.Location = new System.Drawing.Point(14, 12);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
+            this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Khách hàng";
             // 
             // btnSave
             // 
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Location = new System.Drawing.Point(460, 656);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
@@ -796,6 +864,8 @@
             // 
             // groupControl5
             // 
+            this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.groupControl5.AppearanceCaption.Options.UseFont = true;
             this.groupControl5.Controls.Add(this.txtTotalAmount);
             this.groupControl5.Controls.Add(this.lb);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -830,6 +900,8 @@
             // 
             // groupControl4
             // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.Controls.Add(this.gcSanPhamDat);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl4.Location = new System.Drawing.Point(0, 304);
@@ -854,6 +926,8 @@
             // 
             // gvSanPhamDat
             // 
+            this.gvSanPhamDat.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvSanPhamDat.Appearance.Row.Options.UseFont = true;
             this.gvSanPhamDat.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Book_room_name,
             this.Book_product_id,
@@ -870,6 +944,8 @@
             // 
             // Book_room_name
             // 
+            this.Book_room_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_name.AppearanceCell.Options.UseFont = true;
             this.Book_room_name.Caption = "Phòng";
             this.Book_room_name.FieldName = "roomNum";
             this.Book_room_name.MinWidth = 23;
@@ -881,6 +957,8 @@
             // 
             // Book_product_id
             // 
+            this.Book_product_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_product_id.AppearanceCell.Options.UseFont = true;
             this.Book_product_id.Caption = "Mã SP-DV";
             this.Book_product_id.FieldName = "Product_room_id";
             this.Book_product_id.MinWidth = 23;
@@ -889,6 +967,8 @@
             // 
             // Book_product_name
             // 
+            this.Book_product_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_product_name.AppearanceCell.Options.UseFont = true;
             this.Book_product_name.Caption = "Tên SP-DV";
             this.Book_product_name.FieldName = "productName";
             this.Book_product_name.MinWidth = 23;
@@ -900,6 +980,8 @@
             // 
             // prod_qty
             // 
+            this.prod_qty.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.prod_qty.AppearanceCell.Options.UseFont = true;
             this.prod_qty.Caption = "Số lượng";
             this.prod_qty.FieldName = "productQty";
             this.prod_qty.MinWidth = 23;
@@ -910,6 +992,8 @@
             // 
             // prod_price
             // 
+            this.prod_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.prod_price.AppearanceCell.Options.UseFont = true;
             this.prod_price.Caption = "Đơn giá";
             this.prod_price.FieldName = "productPrice";
             this.prod_price.MinWidth = 23;
@@ -921,6 +1005,8 @@
             // 
             // Book_total_amount
             // 
+            this.Book_total_amount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_total_amount.AppearanceCell.Options.UseFont = true;
             this.Book_total_amount.Caption = "Thành tiền";
             this.Book_total_amount.FieldName = "productTotalAmount";
             this.Book_total_amount.MinWidth = 23;
@@ -934,6 +1020,8 @@
             // 
             // Book_room_prod_id
             // 
+            this.Book_room_prod_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_prod_id.AppearanceCell.Options.UseFont = true;
             this.Book_room_prod_id.Caption = "Mã phòng";
             this.Book_room_prod_id.FieldName = "Product_room_id";
             this.Book_room_prod_id.MinWidth = 23;
@@ -942,6 +1030,8 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.Controls.Add(this.gcPhongDat);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
@@ -969,6 +1059,8 @@
             // 
             // gvPhongDat
             // 
+            this.gvPhongDat.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.gvPhongDat.Appearance.Row.Options.UseFont = true;
             this.gvPhongDat.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.Book_room_id,
             this.Book_room_num,
@@ -985,6 +1077,8 @@
             // 
             // Book_room_id
             // 
+            this.Book_room_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_id.AppearanceCell.Options.UseFont = true;
             this.Book_room_id.Caption = "Mã phòng";
             this.Book_room_id.FieldName = "id";
             this.Book_room_id.MinWidth = 23;
@@ -993,6 +1087,8 @@
             // 
             // Book_room_num
             // 
+            this.Book_room_num.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_num.AppearanceCell.Options.UseFont = true;
             this.Book_room_num.Caption = "Số phòng";
             this.Book_room_num.FieldName = "num";
             this.Book_room_num.MinWidth = 23;
@@ -1003,6 +1099,8 @@
             // 
             // Book_floor_id
             // 
+            this.Book_floor_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_floor_id.AppearanceCell.Options.UseFont = true;
             this.Book_floor_id.Caption = "Mã tầng";
             this.Book_floor_id.FieldName = "id";
             this.Book_floor_id.MinWidth = 23;
@@ -1011,6 +1109,8 @@
             // 
             // Book_floor_name
             // 
+            this.Book_floor_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_floor_name.AppearanceCell.Options.UseFont = true;
             this.Book_floor_name.Caption = "Tầng";
             this.Book_floor_name.FieldName = "name";
             this.Book_floor_name.MinWidth = 23;
@@ -1021,6 +1121,8 @@
             // 
             // Book_typeroom_price
             // 
+            this.Book_typeroom_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_typeroom_price.AppearanceCell.Options.UseFont = true;
             this.Book_typeroom_price.Caption = "Đơn giá";
             this.Book_typeroom_price.FieldName = "price";
             this.Book_typeroom_price.MinWidth = 23;
