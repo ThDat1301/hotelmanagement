@@ -13,17 +13,23 @@ using DevExpress.Utils;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
 using DAL_Hotel;
 using DevExpress.XtraBars;
+using DTO_Hotel;
 
 namespace GUI_Hotel
 {
    
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
-
+        DTO_Employee employee;
         GalleryItem item = null;
         public Form1()
         {
             InitializeComponent();
+        }
+        public Form1(DTO_Employee e)
+        {
+            InitializeComponent();
+            this.employee = e;
         }
 
         RoomBUS busRoom = new RoomBUS();
@@ -76,11 +82,6 @@ namespace GUI_Hotel
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            /*DialogResult rs = MessageBox.Show("Bạn có thực sự muốn thoát ?", "Xác nhận thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (rs == DialogResult.OK)
-            {
-                Application.Exit();
-            }*/
             Application.Exit();
         }
 
@@ -120,6 +121,7 @@ namespace GUI_Hotel
         private void Form1_Load(object sender, EventArgs e)
         {
             showRoom();
+            lbUser.Text = employee.Employee_name;
         }
 
         private void popupMenu1_Popup(object sender, EventArgs e)
@@ -192,6 +194,13 @@ namespace GUI_Hotel
                 }
                 else MessageBox.Show("Phòng không khả dụng!");
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmLogin frmLg = new frmLogin();
+            this.Hide();
+            frmLg.ShowDialog();
         }
     }
 }
