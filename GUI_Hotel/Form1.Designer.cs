@@ -36,7 +36,9 @@
             this.btnReport = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnExit = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.lbUser = new System.Windows.Forms.Label();
             this.navMain = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navItemTypeRoom = new DevExpress.XtraNavBar.NavBarItem();
@@ -81,7 +83,8 @@
             this.toolStripSeparator1,
             this.btnReport,
             this.toolStripSeparator2,
-            this.btnExit});
+            this.btnExit,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1194, 60);
@@ -128,6 +131,16 @@
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::GUI_Hotel.Properties.Resources.logout;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(84, 57);
+            this.toolStripButton1.Text = "Đăng xuất";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,6 +150,7 @@
             // 
             // splitContainerControl1.Panel1
             // 
+            this.splitContainerControl1.Panel1.Controls.Add(this.lbUser);
             this.splitContainerControl1.Panel1.Controls.Add(this.navMain);
             // 
             // splitContainerControl1.Panel2
@@ -146,6 +160,16 @@
             this.splitContainerControl1.SplitterPosition = 271;
             this.splitContainerControl1.TabIndex = 1;
             this.splitContainerControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerControl1_Paint);
+            // 
+            // lbUser
+            // 
+            this.lbUser.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbUser.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.Location = new System.Drawing.Point(0, 427);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(271, 42);
+            this.lbUser.TabIndex = 1;
+            this.lbUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // navMain
             // 
@@ -449,6 +473,8 @@
         private DevExpress.XtraNavBar.NavBarItem navItemCustomer;
         private DevExpress.XtraNavBar.NavBarItem navItemOrder;
         private DevExpress.XtraNavBar.NavBarItem navItemProduct;
+        private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

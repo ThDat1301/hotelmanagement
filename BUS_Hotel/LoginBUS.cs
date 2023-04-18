@@ -1,4 +1,5 @@
 ﻿using DAL_Hotel;
+using DTO_Hotel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,10 @@ namespace BUS_Hotel
         public bool login(string username, string password) 
         {
             return lg.login(username, password);
+        }
+        public DTO_Employee getUser(string username, string password)
+        {
+            return lg.getUser(username, password);
         }
     }
 }

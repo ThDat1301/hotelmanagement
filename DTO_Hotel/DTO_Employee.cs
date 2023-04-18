@@ -16,6 +16,7 @@ namespace DTO_Hotel
         private string _Employee_username;
         private string _Employee_password;
 
+        public DTO_Employee() { }
         public DTO_Employee(int id) { }
 
         public DTO_Employee(int employee_id, string employee_name, bool employee_gender, string employee_phone, string employee_email, string employee_username, string employee_password) 
