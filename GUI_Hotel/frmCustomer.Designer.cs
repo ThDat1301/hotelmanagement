@@ -150,6 +150,8 @@
             // 
             this.Customer_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Customer_id.AppearanceCell.Options.UseFont = true;
+            this.Customer_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Customer_id.AppearanceHeader.Options.UseFont = true;
             this.Customer_id.Caption = "Mã Khách Hàng";
             this.Customer_id.FieldName = "Customer_id";
             this.Customer_id.MinWidth = 24;
@@ -162,6 +164,8 @@
             // 
             this.Customer_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Customer_name.AppearanceCell.Options.UseFont = true;
+            this.Customer_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Customer_name.AppearanceHeader.Options.UseFont = true;
             this.Customer_name.Caption = "Tên Khách Hàng";
             this.Customer_name.FieldName = "Customer_name";
             this.Customer_name.MinWidth = 24;
@@ -174,6 +178,8 @@
             // 
             this.Customer_gender.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Customer_gender.AppearanceCell.Options.UseFont = true;
+            this.Customer_gender.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Customer_gender.AppearanceHeader.Options.UseFont = true;
             this.Customer_gender.Caption = "Giới tính";
             this.Customer_gender.FieldName = "Customer_gender";
             this.Customer_gender.MinWidth = 24;
@@ -186,6 +192,8 @@
             // 
             this.Customer_phone.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Customer_phone.AppearanceCell.Options.UseFont = true;
+            this.Customer_phone.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Customer_phone.AppearanceHeader.Options.UseFont = true;
             this.Customer_phone.Caption = "Điện thoại";
             this.Customer_phone.FieldName = "Customer_phone";
             this.Customer_phone.MinWidth = 24;
@@ -198,6 +206,8 @@
             // 
             this.Customer_address.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Customer_address.AppearanceCell.Options.UseFont = true;
+            this.Customer_address.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Customer_address.AppearanceHeader.Options.UseFont = true;
             this.Customer_address.Caption = "Địa chỉ";
             this.Customer_address.FieldName = "Customer_address";
             this.Customer_address.MinWidth = 24;
@@ -210,6 +220,8 @@
             // 
             this.Customer_personalID.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Customer_personalID.AppearanceCell.Options.UseFont = true;
+            this.Customer_personalID.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Customer_personalID.AppearanceHeader.Options.UseFont = true;
             this.Customer_personalID.Caption = "Căn cước công dân";
             this.Customer_personalID.FieldName = "Customer_personalID";
             this.Customer_personalID.MinWidth = 24;

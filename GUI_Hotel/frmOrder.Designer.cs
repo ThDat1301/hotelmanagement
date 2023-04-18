@@ -519,6 +519,8 @@
             // 
             this.Room_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Room_id.AppearanceCell.Options.UseFont = true;
+            this.Room_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Room_id.AppearanceHeader.Options.UseFont = true;
             this.Room_id.Caption = "ID";
             this.Room_id.FieldName = "id";
             this.Room_id.MinWidth = 24;
@@ -529,6 +531,8 @@
             // 
             this.Room_num.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Room_num.AppearanceCell.Options.UseFont = true;
+            this.Room_num.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Room_num.AppearanceHeader.Options.UseFont = true;
             this.Room_num.Caption = "Số phòng ";
             this.Room_num.FieldName = "num";
             this.Room_num.MinWidth = 24;
@@ -541,6 +545,8 @@
             // 
             this.Floor_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Floor_id.AppearanceCell.Options.UseFont = true;
+            this.Floor_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Floor_id.AppearanceHeader.Options.UseFont = true;
             this.Floor_id.Caption = "ID";
             this.Floor_id.FieldName = "id";
             this.Floor_id.MinWidth = 24;
@@ -551,6 +557,8 @@
             // 
             this.Floor_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Floor_name.AppearanceCell.Options.UseFont = true;
+            this.Floor_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Floor_name.AppearanceHeader.Options.UseFont = true;
             this.Floor_name.Caption = "Tầng";
             this.Floor_name.FieldName = "name";
             this.Floor_name.MinWidth = 24;
@@ -563,6 +571,8 @@
             // 
             this.TypeRoom_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.TypeRoom_price.AppearanceCell.Options.UseFont = true;
+            this.TypeRoom_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.TypeRoom_price.AppearanceHeader.Options.UseFont = true;
             this.TypeRoom_price.Caption = "Đơn giá";
             this.TypeRoom_price.FieldName = "price";
             this.TypeRoom_price.MinWidth = 23;
@@ -614,6 +624,8 @@
             // 
             this.Product_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Product_id.AppearanceCell.Options.UseFont = true;
+            this.Product_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_id.AppearanceHeader.Options.UseFont = true;
             this.Product_id.Caption = "Mã SP-DV";
             this.Product_id.FieldName = "Product_id";
             this.Product_id.MinWidth = 24;
@@ -626,6 +638,8 @@
             // 
             this.Product_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Product_name.AppearanceCell.Options.UseFont = true;
+            this.Product_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_name.AppearanceHeader.Options.UseFont = true;
             this.Product_name.Caption = "Tên SP - DV";
             this.Product_name.FieldName = "Product_name";
             this.Product_name.MinWidth = 24;
@@ -638,6 +652,8 @@
             // 
             this.Product_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Product_price.AppearanceCell.Options.UseFont = true;
+            this.Product_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_price.AppearanceHeader.Options.UseFont = true;
             this.Product_price.Caption = "Đơn giá";
             this.Product_price.FieldName = "Product_price";
             this.Product_price.MinWidth = 24;
@@ -946,6 +962,8 @@
             // 
             this.Book_room_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_room_name.AppearanceCell.Options.UseFont = true;
+            this.Book_room_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_name.AppearanceHeader.Options.UseFont = true;
             this.Book_room_name.Caption = "Phòng";
             this.Book_room_name.FieldName = "roomNum";
             this.Book_room_name.MinWidth = 23;
@@ -959,6 +977,8 @@
             // 
             this.Book_product_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_product_id.AppearanceCell.Options.UseFont = true;
+            this.Book_product_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_product_id.AppearanceHeader.Options.UseFont = true;
             this.Book_product_id.Caption = "Mã SP-DV";
             this.Book_product_id.FieldName = "Product_room_id";
             this.Book_product_id.MinWidth = 23;
@@ -969,6 +989,8 @@
             // 
             this.Book_product_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_product_name.AppearanceCell.Options.UseFont = true;
+            this.Book_product_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_product_name.AppearanceHeader.Options.UseFont = true;
             this.Book_product_name.Caption = "Tên SP-DV";
             this.Book_product_name.FieldName = "productName";
             this.Book_product_name.MinWidth = 23;
@@ -982,6 +1004,8 @@
             // 
             this.prod_qty.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.prod_qty.AppearanceCell.Options.UseFont = true;
+            this.prod_qty.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.prod_qty.AppearanceHeader.Options.UseFont = true;
             this.prod_qty.Caption = "Số lượng";
             this.prod_qty.FieldName = "productQty";
             this.prod_qty.MinWidth = 23;
@@ -994,6 +1018,8 @@
             // 
             this.prod_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.prod_price.AppearanceCell.Options.UseFont = true;
+            this.prod_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.prod_price.AppearanceHeader.Options.UseFont = true;
             this.prod_price.Caption = "Đơn giá";
             this.prod_price.FieldName = "productPrice";
             this.prod_price.MinWidth = 23;
@@ -1007,6 +1033,8 @@
             // 
             this.Book_total_amount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_total_amount.AppearanceCell.Options.UseFont = true;
+            this.Book_total_amount.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_total_amount.AppearanceHeader.Options.UseFont = true;
             this.Book_total_amount.Caption = "Thành tiền";
             this.Book_total_amount.FieldName = "productTotalAmount";
             this.Book_total_amount.MinWidth = 23;
@@ -1022,6 +1050,8 @@
             // 
             this.Book_room_prod_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_room_prod_id.AppearanceCell.Options.UseFont = true;
+            this.Book_room_prod_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_prod_id.AppearanceHeader.Options.UseFont = true;
             this.Book_room_prod_id.Caption = "Mã phòng";
             this.Book_room_prod_id.FieldName = "Product_room_id";
             this.Book_room_prod_id.MinWidth = 23;
@@ -1079,6 +1109,8 @@
             // 
             this.Book_room_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_room_id.AppearanceCell.Options.UseFont = true;
+            this.Book_room_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_id.AppearanceHeader.Options.UseFont = true;
             this.Book_room_id.Caption = "Mã phòng";
             this.Book_room_id.FieldName = "id";
             this.Book_room_id.MinWidth = 23;
@@ -1089,6 +1121,8 @@
             // 
             this.Book_room_num.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_room_num.AppearanceCell.Options.UseFont = true;
+            this.Book_room_num.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_num.AppearanceHeader.Options.UseFont = true;
             this.Book_room_num.Caption = "Số phòng";
             this.Book_room_num.FieldName = "num";
             this.Book_room_num.MinWidth = 23;
@@ -1101,6 +1135,8 @@
             // 
             this.Book_floor_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_floor_id.AppearanceCell.Options.UseFont = true;
+            this.Book_floor_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_floor_id.AppearanceHeader.Options.UseFont = true;
             this.Book_floor_id.Caption = "Mã tầng";
             this.Book_floor_id.FieldName = "id";
             this.Book_floor_id.MinWidth = 23;
@@ -1111,6 +1147,8 @@
             // 
             this.Book_floor_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_floor_name.AppearanceCell.Options.UseFont = true;
+            this.Book_floor_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_floor_name.AppearanceHeader.Options.UseFont = true;
             this.Book_floor_name.Caption = "Tầng";
             this.Book_floor_name.FieldName = "name";
             this.Book_floor_name.MinWidth = 23;
@@ -1123,6 +1161,8 @@
             // 
             this.Book_typeroom_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_typeroom_price.AppearanceCell.Options.UseFont = true;
+            this.Book_typeroom_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_typeroom_price.AppearanceHeader.Options.UseFont = true;
             this.Book_typeroom_price.Caption = "Đơn giá";
             this.Book_typeroom_price.FieldName = "price";
             this.Book_typeroom_price.MinWidth = 23;

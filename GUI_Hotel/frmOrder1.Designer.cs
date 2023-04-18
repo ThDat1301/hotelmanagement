@@ -237,6 +237,8 @@
             // 
             this.Book_room_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_room_name.AppearanceCell.Options.UseFont = true;
+            this.Book_room_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_name.AppearanceHeader.Options.UseFont = true;
             this.Book_room_name.Caption = "Phòng";
             this.Book_room_name.FieldName = "roomNum";
             this.Book_room_name.MinWidth = 23;
@@ -250,6 +252,8 @@
             // 
             this.Book_product_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_product_id.AppearanceCell.Options.UseFont = true;
+            this.Book_product_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_product_id.AppearanceHeader.Options.UseFont = true;
             this.Book_product_id.Caption = "Mã SP-DV";
             this.Book_product_id.FieldName = "Product_room_id";
             this.Book_product_id.MinWidth = 23;
@@ -260,6 +264,8 @@
             // 
             this.Book_product_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_product_name.AppearanceCell.Options.UseFont = true;
+            this.Book_product_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_product_name.AppearanceHeader.Options.UseFont = true;
             this.Book_product_name.Caption = "Tên SP-DV";
             this.Book_product_name.FieldName = "productName";
             this.Book_product_name.MinWidth = 23;
@@ -273,6 +279,8 @@
             // 
             this.prod_qty.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.prod_qty.AppearanceCell.Options.UseFont = true;
+            this.prod_qty.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.prod_qty.AppearanceHeader.Options.UseFont = true;
             this.prod_qty.Caption = "Số lượng";
             this.prod_qty.FieldName = "productQty";
             this.prod_qty.MinWidth = 23;
@@ -285,6 +293,8 @@
             // 
             this.prod_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.prod_price.AppearanceCell.Options.UseFont = true;
+            this.prod_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.prod_price.AppearanceHeader.Options.UseFont = true;
             this.prod_price.Caption = "Đơn giá";
             this.prod_price.FieldName = "productPrice";
             this.prod_price.MinWidth = 23;
@@ -298,6 +308,8 @@
             // 
             this.Book_total_amount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_total_amount.AppearanceCell.Options.UseFont = true;
+            this.Book_total_amount.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_total_amount.AppearanceHeader.Options.UseFont = true;
             this.Book_total_amount.Caption = "Thành tiền";
             this.Book_total_amount.FieldName = "productTotalAmount";
             this.Book_total_amount.MinWidth = 23;
@@ -313,6 +325,8 @@
             // 
             this.Book_room_prod_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Book_room_prod_id.AppearanceCell.Options.UseFont = true;
+            this.Book_room_prod_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Book_room_prod_id.AppearanceHeader.Options.UseFont = true;
             this.Book_room_prod_id.Caption = "Mã phòng";
             this.Book_room_prod_id.FieldName = "Product_room_id";
             this.Book_room_prod_id.MinWidth = 23;
@@ -576,6 +590,8 @@
             // 
             this.Product_id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Product_id.AppearanceCell.Options.UseFont = true;
+            this.Product_id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_id.AppearanceHeader.Options.UseFont = true;
             this.Product_id.Caption = "Mã SP-DV";
             this.Product_id.FieldName = "Product_id";
             this.Product_id.MinWidth = 24;
@@ -588,6 +604,8 @@
             // 
             this.Product_name.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Product_name.AppearanceCell.Options.UseFont = true;
+            this.Product_name.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_name.AppearanceHeader.Options.UseFont = true;
             this.Product_name.Caption = "Tên SP - DV";
             this.Product_name.FieldName = "Product_name";
             this.Product_name.MinWidth = 24;
@@ -600,6 +618,8 @@
             // 
             this.Product_price.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F);
             this.Product_price.AppearanceCell.Options.UseFont = true;
+            this.Product_price.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.Product_price.AppearanceHeader.Options.UseFont = true;
             this.Product_price.Caption = "Đơn giá";
             this.Product_price.FieldName = "Product_price";
             this.Product_price.MinWidth = 24;
