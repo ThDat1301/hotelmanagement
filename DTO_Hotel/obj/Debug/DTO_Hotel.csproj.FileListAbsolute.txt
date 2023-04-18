@@ -22,3 +22,15 @@ C:\work-space\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CoreCompileIn
 C:\work-space\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CopyComplete
 C:\work-space\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.dll
 C:\work-space\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.pdb
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.dll.config
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.dll
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.pdb
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.dll
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.dll
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.xml
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.xml
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.AssemblyReference.cache
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CoreCompileInputs.cache
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CopyComplete
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.dll
+D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.pdb

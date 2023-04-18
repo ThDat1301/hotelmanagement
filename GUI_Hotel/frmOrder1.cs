@@ -40,7 +40,11 @@ namespace GUI_Hotel
 
         private void bthThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult rs = MessageBox.Show("Bạn có thực sự muốn thoát ?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void frmOrder1_Load(object sender, EventArgs e)

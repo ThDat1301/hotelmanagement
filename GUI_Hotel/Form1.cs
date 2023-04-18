@@ -12,6 +12,7 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.Utils;
 using DevExpress.XtraBars.Ribbon.ViewInfo;
 using DAL_Hotel;
+using DevExpress.XtraBars;
 
 namespace GUI_Hotel
 {
@@ -75,6 +76,11 @@ namespace GUI_Hotel
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            /*DialogResult rs = MessageBox.Show("Bạn có thực sự muốn thoát ?", "Xác nhận thoát", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (rs == DialogResult.OK)
+            {
+                Application.Exit();
+            }*/
             Application.Exit();
         }
 
@@ -121,9 +127,11 @@ namespace GUI_Hotel
             Point point = gControl.PointToClient(Control.MousePosition);
             RibbonHitInfo hitInfo = gControl.CalcHitInfo(point);
             if (hitInfo.InGalleryItem || hitInfo.HitTest == RibbonHitTest.GalleryImage)
-                item = hitInfo.GalleryItem; 
+            {
+                
+                item = hitInfo.GalleryItem;
+            }    
         }
-
         private void btnMakeOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int idRoom = int.Parse(item.Value.ToString());
@@ -135,11 +143,6 @@ namespace GUI_Hotel
                 f.ShowDialog();
             }
             else MessageBox.Show("Phòng không khả dụng!");
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
 
         private void splitContainerControl1_Paint(object sender, PaintEventArgs e)
@@ -170,6 +173,25 @@ namespace GUI_Hotel
                 f.ShowDialog();
             }
             else MessageBox.Show("Phòng chưa được đặt!");
+        }
+
+        private void gControl_DoubleClick(object sender, EventArgs e)
+        {
+            Point point = gControl.PointToClient(Control.MousePosition);
+            RibbonHitInfo hitInfo = gControl.CalcHitInfo(point);
+            if (hitInfo.InGalleryItem || hitInfo.HitTest == RibbonHitTest.GalleryImage)
+            {
+                GalleryItem item = hitInfo.GalleryItem;
+                int idRoom = int.Parse(item.Value.ToString());
+                if (!busRoom.getRoomById(idRoom).Room_status)
+                {
+                    frmOrder1 f = new frmOrder1();
+                    f.idPhong = idRoom;
+                    f.isAdd = true;
+                    f.ShowDialog();
+                }
+                else MessageBox.Show("Phòng không khả dụng!");
+            }
         }
     }
 }

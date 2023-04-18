@@ -78,6 +78,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="LoginDAL.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>HotelDB.tt</DependentUpon>
     </Compile>

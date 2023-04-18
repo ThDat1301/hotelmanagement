@@ -156,7 +156,11 @@ namespace GUI_Hotel
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult rs = MessageBox.Show("Bạn có thực sự muốn thoát ?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void gvDanhSach_DoubleClick(object sender, EventArgs e)
