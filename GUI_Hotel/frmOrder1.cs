@@ -211,7 +211,7 @@ namespace GUI_Hotel
 
                     DTO_OrderDetailRoom odr = new DTO_OrderDetailRoom(roomDetailDayAt, roomDetailRoomId, roomDetailOrderId);
                     busOdr.addOrderDetailRoom(odr);
-                    busRoom.changeStatusRoomById(roomDetailRoomId, true);
+                    busRoom.changeStatusRoomById(roomDetailRoomId, false);
 
                     Form1 form1 = (Form1)Application.OpenForms["Form1"];
                     form1.showRoom();
@@ -262,13 +262,13 @@ namespace GUI_Hotel
 
                     DTO_OrderDetailRoom odr = new DTO_OrderDetailRoom(roomDetailDayAt, roomDetailRoomId, roomDetailOrderId);
                     busOdr.addOrderDetailRoom(odr);
-                    busRoom.changeStatusRoomById(roomDetailRoomId, true);
+                    busRoom.changeStatusRoomById(roomDetailRoomId, false);
 
                     if ((bool)cbStatus.SelectedValue)
                     {
-                        busRoom.changeStatusRoomById(roomDetailRoomId, false);
+                        busRoom.changeStatusRoomById(roomDetailRoomId, true);
                     }
-                    else busRoom.changeStatusRoomById(roomDetailRoomId, true);
+                    else busRoom.changeStatusRoomById(roomDetailRoomId, false);
 
                     Form1 form1 = (Form1)Application.OpenForms["Form1"];
                     form1.showRoom();

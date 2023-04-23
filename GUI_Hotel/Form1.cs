@@ -82,7 +82,12 @@ namespace GUI_Hotel
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult rs = MessageBox.Show("Bạn có thực sự muốn thoát ?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                /*Application.Exit();*/
+                this.Close();
+            }
         }
 
         FloorBUS busFloor = new FloorBUS();
@@ -101,7 +106,6 @@ namespace GUI_Hotel
                 var galleryItem = new GalleryItemGroup();
                 galleryItem.Caption = f.Floor_name;
                 galleryItem.CaptionAlignment = GalleryItemGroupCaptionAlignment.Stretch;
-                /* var listRoom = RoomBUS.getRoomByFloor(f.Floor_id);*/
                 var listRoom = roomBUS.getRoomByFloor(f.Floor_id);
                 foreach (var r in listRoom)
                 {
@@ -109,8 +113,8 @@ namespace GUI_Hotel
                     gcItem.Caption = r.Room_num;
                     gcItem.Value = r.Room_id;
                     if (r.Room_status)
-                        gcItem.ImageOptions.Image = imageList1.Images[1];
-                    else gcItem.ImageOptions.Image = imageList1.Images[0];
+                        gcItem.ImageOptions.Image = imageList1.Images[0];
+                    else gcItem.ImageOptions.Image = imageList1.Images[1];
                     galleryItem.Items.Add(gcItem);
                 }
                 gControl.Gallery.Groups.Add(galleryItem);
@@ -137,7 +141,7 @@ namespace GUI_Hotel
         private void btnMakeOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int idRoom = int.Parse(item.Value.ToString());
-            if (!busRoom.getRoomById(idRoom).Room_status)
+            if (busRoom.getRoomById(idRoom).Room_status)
             {
                 frmOrder1 f = new frmOrder1();
                 f.idPhong = idRoom;
@@ -185,7 +189,7 @@ namespace GUI_Hotel
             {
                 GalleryItem item = hitInfo.GalleryItem;
                 int idRoom = int.Parse(item.Value.ToString());
-                if (!busRoom.getRoomById(idRoom).Room_status)
+                if (busRoom.getRoomById(idRoom).Room_status)
                 {
                     frmOrder1 f = new frmOrder1();
                     f.idPhong = idRoom;
@@ -201,6 +205,12 @@ namespace GUI_Hotel
             frmLogin frmLg = new frmLogin();
             this.Hide();
             frmLg.ShowDialog();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason != CloseReason.FormOwnerClosing)
+                this.Owner.Close();
         }
     }
 }
