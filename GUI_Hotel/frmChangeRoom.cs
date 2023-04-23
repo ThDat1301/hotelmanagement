@@ -72,8 +72,8 @@ namespace GUI_Hotel
                     MessageBox.Show("Chuyển phòng thất bại!");
                     return;
                 }
-                busRoom.changeStatusRoomById(roomId, false);
-                busRoom.changeStatusRoomById(nextRoom.Room_id, true);
+                busRoom.changeStatusRoomById(roomId, true);
+                busRoom.changeStatusRoomById(nextRoom.Room_id, false);
 
                 Form1 form1 = (Form1)Application.OpenForms["Form1"];
                 form1.showRoom();

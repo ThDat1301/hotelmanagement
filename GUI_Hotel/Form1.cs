@@ -159,7 +159,7 @@ namespace GUI_Hotel
         private void btnUpdateOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int idRoom = int.Parse(item.Value.ToString());
-            if (busRoom.getRoomById(idRoom).Room_status)
+            if (!busRoom.getRoomById(idRoom).Room_status)
             {
                 frmOrder1 f = new frmOrder1();
                 f.idPhong = idRoom;
@@ -172,7 +172,7 @@ namespace GUI_Hotel
         private void btnChangeRoom_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int idRoom = int.Parse(item.Value.ToString());
-            if (busRoom.getRoomById(idRoom).Room_status)
+            if (!busRoom.getRoomById(idRoom).Room_status)
             {
                 frmChangeRoom f = new frmChangeRoom();
                 f.roomId = idRoom;

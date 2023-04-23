@@ -34,3 +34,15 @@ D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CoreCompileInpu
 D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CopyComplete
 D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.dll
 D:\HK2_Nam3\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.pdb
+C:\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.dll.config
+C:\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.dll
+C:\hotelmanagement\DTO_Hotel\bin\Debug\DTO_Hotel.pdb
+C:\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.dll
+C:\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.dll
+C:\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.xml
+C:\hotelmanagement\DTO_Hotel\bin\Debug\EntityFramework.SqlServer.xml
+C:\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.AssemblyReference.cache
+C:\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CoreCompileInputs.cache
+C:\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.csproj.CopyComplete
+C:\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.dll
+C:\hotelmanagement\DTO_Hotel\obj\Debug\DTO_Hotel.pdb

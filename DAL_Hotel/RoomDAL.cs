@@ -41,7 +41,7 @@ namespace DAL_Hotel
             using (var db = new HotelDB())
             {
                 
-                var tb = from room in db.Rooms where room.status == false select room;
+                var tb = from room in db.Rooms where room.status == true select room;
 
                 foreach (var i in tb)
                 {

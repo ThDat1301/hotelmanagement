@@ -44,7 +44,7 @@ namespace GUI_Hotel
         public frmOrder()
         {
             InitializeComponent();
-            string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=0";
+            string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=1";
             DataTable tb = Functions.getData(sql);
             gcPhong.DataSource = tb;
             gcPhongDat.DataSource = tb.Clone();
@@ -174,7 +174,7 @@ namespace GUI_Hotel
                 tabDanhSach.SelectedTabPage = pageOrders;
                 loadOrder();
                 reset();
-                string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=0";
+                string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=1";
                 DataTable tb = Functions.getData(sql);
                 gcPhong.DataSource = tb;
                 gvPhong.ExpandAllGroups();
@@ -254,7 +254,7 @@ namespace GUI_Hotel
                 loadOrder();
                 reset();
 
-                string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=0";
+                string sql = "SELECT r.id, r.num, f.id, f.name, tr.price FROM Room r, TypeRoom tr, Floor f WHERE r.floorId = f.id AND r.typeRoomId = tr.id AND r.status=1";
                 DataTable tb = Functions.getData(sql);
                 gcPhong.DataSource = tb;
                 gvPhong.ExpandAllGroups();
