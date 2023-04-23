@@ -54,11 +54,10 @@ namespace GUI_Hotel
             {
                 DateTime checkoutDate = order.Order_checkout_date.Date;
                 DateTime checkinDate = order.Order_checkin_date.Date;
-
                 DateTime From = dtpStart.Value.Date;
                 DateTime To = dtpEnd.Value.Date;
 
-                if ((To - From).TotalDays > 7 && (To - From).TotalDays < 28)
+                if ((To - From).TotalDays > 7 && (To - From).TotalDays < 28 && order.Order_status == true)
                 {
                     int weekNumber = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(checkinDate, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
                     if (weekTotal.ContainsKey(weekNumber))
@@ -67,7 +66,7 @@ namespace GUI_Hotel
                     }
                     else weekTotal[weekNumber] = order.Order_total_amount;
                 } 
-                else if ((To - From).TotalDays >= 28)
+                else if ((To - From).TotalDays >= 28 && order.Order_status == true)
                 {
                     int monthNumer = checkoutDate.Month;
                     if (monthTotal.ContainsKey(monthNumer))
@@ -76,10 +75,10 @@ namespace GUI_Hotel
                     }
                     else monthTotal[monthNumer] = order.Order_total_amount;
                 } 
-                else if ((To - From).TotalDays >= 28 && (To.Year != From.Year))
+                else if ((To - From).TotalDays >= 28 && (To.Year != From.Year) )
                 {
                     MessageBox.Show("Vui lòng chọn ngày checkin và ngày checkout cùng năm");
-                } else 
+                } else if (order.Order_status == true)
                 {
                     if (dailyTotal.ContainsKey(checkoutDate))
                     {
@@ -123,26 +122,6 @@ namespace GUI_Hotel
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void bthThoat_Click(object sender, EventArgs e)
         {
             DialogResult rs = MessageBox.Show("Bạn có thực sự muốn thoát ?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -164,42 +143,5 @@ namespace GUI_Hotel
             }
         }
 
-
-
-        // Tạo một DataTable để lưu trữ dữ liệu thống kê:
-        /* DataTable dt = new DataTable();
-         dt.Columns.Add("Ngày", typeof(DateTime));
-         dt.Columns.Add("Doanh thu", typeof(float));
-
-         // Duyệt từng dòng gridControl và tính tổng tiền của từng ngày
-         foreach (var row in gcDanhSach.DataSource)
-         {
-             DateTime date = (DateTime)row["checkoutDate"];
-             float totalAmount = (float)row["totalAmount"];
-
-             // Tìm kiếm xem đã có ngày trong DataTable chưa, nếu có thì cộng tổng tiền vào, nếu chưa thì thêm mới một dòng vào DataTable
-             DataRow[] foundRows = dt.Select($"Ngày = #{date.ToString("yyyy-MM-dd")}#");
-             if (foundRows.Length > 0)
-             {
-                 foundRows[0]["Doanh thu"] = (float)foundRows[0]["Doanh thu"] + totalAmount;
-             }
-             else 
-             {
-                 DataRow newRow = dt.NewRow();
-                 newRow["Ngày"] = date;
-                 newRow["Doanh thu"] = totalAmount;
-                 dt.Rows.Add(newRow);
-             }
-         }
-
-         // Vẽ biểu đồ
-         chart1.Series.Clear();
-         Series series = new Series("Doanh thu", ViewType.Bar);
-         series.ArgumentDataMember = "Ngày";
-         series.ValueDataMembers.AddRange(new string[] { "Doanh thu" });
-         chart1.Series.Add(series);
-         chart1.DataSource = dt;
-         *//*chart1.RefreshData();*//*
-         chart1.DataBind();*/
     }
 }
