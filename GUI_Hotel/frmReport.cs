@@ -4,6 +4,7 @@ using DTO_Hotel;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -46,13 +47,47 @@ namespace GUI_Hotel
             }
 
             Dictionary<DateTime, double> dailyTotal = new Dictionary<DateTime, double>();
+            Dictionary<int, double> weekTotal = new Dictionary<int, double>();
+            Dictionary<int, double> monthTotal = new Dictionary<int, double>();
+
             foreach (DTO_Order order in bus_order.getOrders(dtpStart.Value.AddDays(-1), dtpEnd.Value))
             {
                 DateTime checkoutDate = order.Order_checkout_date.Date;
-                if(dailyTotal.ContainsKey(checkoutDate))
-                    dailyTotal[checkoutDate] += order.Order_total_amount;
-                else
-                    dailyTotal[checkoutDate] = order.Order_total_amount;
+                DateTime checkinDate = order.Order_checkin_date.Date;
+
+                DateTime From = dtpStart.Value.Date;
+                DateTime To = dtpEnd.Value.Date;
+
+                if ((To - From).TotalDays > 7 && (To - From).TotalDays < 28)
+                {
+                    int weekNumber = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(checkinDate, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
+                    if (weekTotal.ContainsKey(weekNumber))
+                    {
+                        weekTotal[weekNumber] += order.Order_total_amount;
+                    }
+                    else weekTotal[weekNumber] = order.Order_total_amount;
+                } 
+                else if ((To - From).TotalDays >= 28)
+                {
+                    int monthNumer = checkoutDate.Month;
+                    if (monthTotal.ContainsKey(monthNumer))
+                    {
+                        monthTotal[monthNumer] += order.Order_total_amount;
+                    }
+                    else monthTotal[monthNumer] = order.Order_total_amount;
+                } 
+                else if ((To - From).TotalDays >= 28 && (To.Year != From.Year))
+                {
+                    MessageBox.Show("Vui lòng chọn ngày checkin và ngày checkout cùng năm");
+                } else 
+                {
+                    if (dailyTotal.ContainsKey(checkoutDate))
+                    {
+                        dailyTotal[checkoutDate] += order.Order_total_amount;
+                    }
+                    else dailyTotal[checkoutDate] = order.Order_total_amount;
+                }
+
             }
 
             chart1.Series.Clear();
@@ -60,13 +95,32 @@ namespace GUI_Hotel
             series.ChartType = SeriesChartType.Column;
             chart1.Series.Add(series);
 
-            // Truyền dữ liệu vào biểu đồ
-            foreach (DateTime date in dailyTotal.Keys)
+            // Truyền dữ liệu vào biểu đồ           
+            if (monthTotal.Count > 0)
             {
-                double totalAmount = dailyTotal[date];
-                series.Points.AddXY(date, totalAmount);
-            }
+                foreach (int monthNumber in monthTotal.Keys)
+                {
+                    double totalAmount = monthTotal[monthNumber];
+                    series.Points.AddXY(CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(monthNumber), totalAmount);
+                }
 
+            } else if (weekTotal.Count > 0)
+            {
+                int count = 1;
+                foreach (int weekNumber in weekTotal.Keys)
+                {
+                    count++;
+                    double totalAmount = weekTotal[weekNumber];
+                    series.Points.AddXY("week " + count, totalAmount);
+                }
+            } else
+            {
+                foreach (DateTime date in dailyTotal.Keys)
+                {
+                    double totalAmount = dailyTotal[date];
+                    series.Points.AddXY(date, totalAmount);
+                }
+            }
         }
 
 
