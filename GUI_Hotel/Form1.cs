@@ -20,7 +20,7 @@ namespace GUI_Hotel
    
     public partial class Form1 : DevExpress.XtraEditors.XtraForm
     {
-        DTO_Employee employee;
+        public static DTO_Employee employee;
         GalleryItem item = null;
         public Form1()
         {
@@ -29,7 +29,7 @@ namespace GUI_Hotel
         public Form1(DTO_Employee e)
         {
             InitializeComponent();
-            this.employee = e;
+            employee = e;
         }
 
         RoomBUS busRoom = new RoomBUS();

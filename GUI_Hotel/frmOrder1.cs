@@ -195,7 +195,7 @@ namespace GUI_Hotel
                 bool status = Convert.ToBoolean(cbStatus.SelectedValue.ToString());
                 string note = txtNote.Text;
                 int customerId = int.Parse(searchCus.EditValue.ToString());
-                int employeeId = 1;
+                int employeeId = Form1.employee.Employee_id;
 
                 try
                 {
@@ -245,7 +245,7 @@ namespace GUI_Hotel
                     bool status = Convert.ToBoolean(cbStatus.SelectedValue.ToString());
                     string note = txtNote.Text;
                     int customerId = int.Parse(searchCus.EditValue.ToString());
-                    int employeeId = 1;
+                    int employeeId = Form1.employee.Employee_id;
 
 
                     DTO_Order order = new DTO_Order(idOrder, checkinDate, checkoutDate, totalAmount, numCus, status, false, note, customerId, employeeId);
