@@ -308,11 +308,10 @@
             this.checkBoxStatus.Location = new System.Drawing.Point(141, 376);
             this.checkBoxStatus.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxStatus.Name = "checkBoxStatus";
-            this.checkBoxStatus.Size = new System.Drawing.Size(172, 27);
+            this.checkBoxStatus.Size = new System.Drawing.Size(114, 27);
             this.checkBoxStatus.TabIndex = 10;
-            this.checkBoxStatus.Text = "Không khả dụng";
+            this.checkBoxStatus.Text = "Khả dụng";
             this.checkBoxStatus.UseVisualStyleBackColor = true;
-            this.checkBoxStatus.CheckedChanged += new System.EventHandler(this.checkBoxStatus_CheckedChanged);
             // 
             // frmRoom
             // 

@@ -40,8 +40,8 @@ namespace BUS_Hotel
             List<OrderStatus> list = new List<OrderStatus>();
             OrderStatus[] collection = new OrderStatus[]
             {
-                new OrderStatus(false, "Chưa hoàn tất"),
-                new OrderStatus(true, "Đã Hoàn tất")
+                new OrderStatus(false, "Chưa thanh toán"),
+                new OrderStatus(true, "Đã thanh toán")
             };
             list.AddRange(collection); 
             return list;

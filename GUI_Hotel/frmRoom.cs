@@ -189,13 +189,5 @@ namespace GUI_Hotel
         {
 
         }
-        private void checkBoxStatus_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        /*private void frmRoom_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            frm1.showRoom();
-        }*/
     }
 }

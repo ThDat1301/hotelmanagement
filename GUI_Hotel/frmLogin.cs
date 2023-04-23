@@ -31,7 +31,8 @@ namespace GUI_Hotel
             DialogResult rs = MessageBox.Show("Bạn có thực sự muốn thoát ?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(rs == DialogResult.Yes)
             {
-                Application.Exit();
+                /*Application.Exit();*/
+                this.Close();
             }    
         }
 
@@ -49,12 +50,13 @@ namespace GUI_Hotel
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (busLogin.login(txtUsername.Text.Trim(), txtPassword.Text.Trim()))
+            if (busLogin.login(txtUsername.Text.Trim(), txtPassword.Text))
             {
                 DTO_Employee employee = busLogin.getUser(txtUsername.Text.Trim(), txtPassword.Text.Trim());
                 Form1 form1 = new Form1(employee);
-                form1.ShowDialog();
+                form1.Owner = this;
                 this.Hide();
+                form1.ShowDialog();
             }
             else
             {
