@@ -14,8 +14,8 @@ namespace GUI_Hotel
         static SqlConnection conn = new SqlConnection();
         public static void getConn()
         {
-            //conn.ConnectionString = "Server=DESKTOP-B01JAC6\\MSSQLSERVER1;Database=HotelDB;User Id=sa;Password=1;";
-            conn.ConnectionString = "Server=THDAT\\THDAT_SERVER;Database=HotelDB;User Id=sa;Password=01312101220;";
+            conn.ConnectionString = "Server=DESKTOP-B01JAC6\\MSSQLSERVER1;Database=HotelDB;User Id=sa;Password=1;";
+           /* conn.ConnectionString = "Server=THDAT\\THDAT_SERVER;Database=HotelDB;User Id=sa;Password=01312101220;";*/
 
             try
             {

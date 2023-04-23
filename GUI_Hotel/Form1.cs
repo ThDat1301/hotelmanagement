@@ -77,7 +77,8 @@ namespace GUI_Hotel
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            frmReport frmReport = new frmReport();
+            frmReport.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
