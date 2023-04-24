@@ -175,7 +175,6 @@ namespace GUI_Hotel
                 point.AxisLabel = c.productQty.ToString();
                 point.LabelForeColor = System.Drawing.Color.White;
                 point.LegendText = c.productName.ToString();
-                point.CustomProperties = "PieLabelStyle=Inside, PieLineColor=Black";
                 chart2.Series["Series2"].Points.Add(point);
                 
             }
