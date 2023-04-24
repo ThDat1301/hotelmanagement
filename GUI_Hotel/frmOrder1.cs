@@ -177,9 +177,10 @@ namespace GUI_Hotel
         {
             gvSanPhamDat.UpdateCurrentRow(); 
         }
-
+        Form1 f1 = new Form1();
         private void btnSave_Click(object sender, EventArgs e)
         {
+            f1.showRoom();
             if (isAdd)
             {
                 if (searchCus.EditValue == null || searchCus.EditValue.ToString() == "")

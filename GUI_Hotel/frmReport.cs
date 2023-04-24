@@ -4,6 +4,7 @@ using DTO_Hotel;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -20,6 +21,9 @@ namespace GUI_Hotel
             InitializeComponent();
         }
         OrderBUS bus_order = new OrderBUS();
+        OrderDetailProductBUS bus_od_product = new OrderDetailProductBUS();
+        ProductBUS bus_product = new ProductBUS();
+
         private void frmReport_Load(object sender, EventArgs e)
         {
             dtpEnd.Value = DateTime.Now;
@@ -143,5 +147,38 @@ namespace GUI_Hotel
             }
         }
 
+        private void gvDanhSach_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            Font font = new Font("Microsoft YaHei UI", 16);
+            string id = gvDanhSach.GetRowCellValue(e.FocusedRowHandle, "Order_id").ToString();
+            if(id == null)
+            {
+                id = "-1";
+            }
+            List<ProductCart> cart = new List<ProductCart>();
+            foreach (var item in bus_od_product.getOrderDetailProductsByOrderId(int.Parse(id)))
+            {
+                ProductCart c = new ProductCart();
+                c.productName = bus_product.getProductById(item.Product_product_id).Product_name;
+                c.productQty = item.Product_quantity;      
+                cart.Add(c);
+            }
+
+            chart2.Series.Clear();
+            System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series("Series2");
+            series.ChartType = SeriesChartType.Pie;
+            chart2.Series.Add(series);
+            foreach (ProductCart c in cart)
+            {
+                DataPoint point = new DataPoint();
+                point.SetValueY(c.productQty);
+                point.AxisLabel = c.productQty.ToString();
+                point.LabelForeColor = System.Drawing.Color.White;
+                point.LegendText = c.productName.ToString();
+                point.CustomProperties = "PieLabelStyle=Inside, PieLineColor=Black";
+                chart2.Series["Series2"].Points.Add(point);
+                
+            }
+        }
     }
 }

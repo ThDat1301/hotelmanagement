@@ -561,6 +561,11 @@ namespace GUI_Hotel
             loadOrder();
         }
 
+        private void gcSanPhamDat_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void gvDanhSach_MouseDown(object sender, MouseEventArgs e)
         {
             if (gvDanhSach.GetFocusedRowCellValue("Order_id") != null)

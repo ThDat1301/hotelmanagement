@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL_Hotel
 {
@@ -27,8 +28,7 @@ namespace DAL_Hotel
                 }
             }
             return list;
-        }
-
+        }      
         public List<DTO_OrderDetailProduct> getOrderDetailProductsByRoom(int idRoom, int idOdr)
         {
             List<DTO_OrderDetailProduct> list = new List<DTO_OrderDetailProduct>();
