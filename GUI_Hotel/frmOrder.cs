@@ -18,6 +18,8 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base.ViewInfo;
 using DevExpress.XtraEditors.Filtering;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using DevExpress.XtraExport.Helpers;
+using DevExpress.XtraVerticalGrid;
 
 namespace GUI_Hotel
 {
@@ -38,6 +40,7 @@ namespace GUI_Hotel
         OrderBUS bus_order = new OrderBUS();
         OrderDetailProductBUS bus_od_product = new OrderDetailProductBUS();
         OrderDetailRoomBUS bus_od_room = new OrderDetailRoomBUS();
+        CustomerBUS bus_cus = new CustomerBUS();
 
         List<ProductCart> listProductCart;
 
@@ -479,7 +482,24 @@ namespace GUI_Hotel
 
         private void loadOrder()
         {
-            gcDanhSach.DataSource = bus_order.getOrders(dpFrom.Value, dpTo.Value.AddDays(1));
+            List<DTO_CustomOrder> list = new List<DTO_CustomOrder>();
+            List<DTO_Order> lstO = bus_order.getOrders(dpFrom.Value, dpTo.Value.AddDays(1));
+            foreach (var item in lstO) {
+                DTO_CustomOrder o = new DTO_CustomOrder();
+                o.Order_id = item.Order_id;
+                o.Order_checkin_date = item.Order_checkin_date;
+                o.Order_checkout_date = item.Order_checkout_date;
+                o.Order_total_amount = item.Order_total_amount;
+                o.Order_num_of_cus = item.Order_num_of_cus;
+                o.Order_status = item.Order_status;
+                o.Order_is_group = item.Order_is_group;
+                o.Order_customer_id = item.Order_customer_id;
+                o.Order_employee_id = item.Order_employee_id;
+                o.Order_name_cus = bus_cus.getCusById(item.Order_customer_id).Customer_name;
+                list.Add(o);
+            }
+            gcDanhSach.DataSource = list;
+
         }
 
         private void loadOrderDetailProduct()

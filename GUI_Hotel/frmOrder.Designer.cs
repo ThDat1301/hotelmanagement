@@ -53,6 +53,7 @@
             this.Order_note = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Order_customer_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Order_employee_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Order_name_cus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pageOrderDetails = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -197,7 +198,7 @@
             this.tabDanhSach.Appearance.Options.UseFont = true;
             this.tabDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabDanhSach.Location = new System.Drawing.Point(0, 47);
-            this.tabDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.tabDanhSach.Name = "tabDanhSach";
             this.tabDanhSach.SelectedTabPage = this.pageOrders;
             this.tabDanhSach.Size = new System.Drawing.Size(1298, 898);
@@ -210,7 +211,7 @@
             // pageOrders
             // 
             this.pageOrders.Controls.Add(this.splitContainerControl1);
-            this.pageOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageOrders.Margin = new System.Windows.Forms.Padding(4);
             this.pageOrders.Name = "pageOrders";
             this.pageOrders.Size = new System.Drawing.Size(1296, 868);
             this.pageOrders.Text = "Danh sách";
@@ -220,7 +221,7 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             // 
             // splitContainerControl1.Panel1
@@ -245,7 +246,7 @@
             this.dpTo.Font = new System.Drawing.Font("Tahoma", 11F);
             this.dpTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dpTo.Location = new System.Drawing.Point(766, 16);
-            this.dpTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpTo.Margin = new System.Windows.Forms.Padding(4);
             this.dpTo.Name = "dpTo";
             this.dpTo.Size = new System.Drawing.Size(210, 30);
             this.dpTo.TabIndex = 1;
@@ -270,7 +271,7 @@
             this.dpFrom.Font = new System.Drawing.Font("Tahoma", 11F);
             this.dpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dpFrom.Location = new System.Drawing.Point(360, 16);
-            this.dpFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpFrom.Margin = new System.Windows.Forms.Padding(4);
             this.dpFrom.Name = "dpFrom";
             this.dpFrom.Size = new System.Drawing.Size(210, 30);
             this.dpFrom.TabIndex = 1;
@@ -292,10 +293,10 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Location = new System.Drawing.Point(0, 0);
             this.gcDanhSach.MainView = this.gvDanhSach;
-            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Name = "gcDanhSach";
             this.gcDanhSach.Size = new System.Drawing.Size(1296, 796);
             this.gcDanhSach.TabIndex = 0;
@@ -316,7 +317,8 @@
             this.Order_is_group,
             this.Order_note,
             this.Order_customer_id,
-            this.Order_employee_id});
+            this.Order_employee_id,
+            this.Order_name_cus});
             this.gvDanhSach.DetailHeight = 431;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
@@ -401,6 +403,8 @@
             this.Order_is_group.FieldName = "Order_is_group";
             this.Order_is_group.MinWidth = 24;
             this.Order_is_group.Name = "Order_is_group";
+            this.Order_is_group.Visible = true;
+            this.Order_is_group.VisibleIndex = 6;
             this.Order_is_group.Width = 87;
             // 
             // Order_note
@@ -435,12 +439,22 @@
             this.Order_employee_id.Name = "Order_employee_id";
             this.Order_employee_id.Width = 87;
             // 
+            // Order_name_cus
+            // 
+            this.Order_name_cus.Caption = "Tên khách hàng";
+            this.Order_name_cus.FieldName = "Order_name_cus";
+            this.Order_name_cus.MinWidth = 25;
+            this.Order_name_cus.Name = "Order_name_cus";
+            this.Order_name_cus.Visible = true;
+            this.Order_name_cus.VisibleIndex = 7;
+            this.Order_name_cus.Width = 94;
+            // 
             // pageOrderDetails
             // 
             this.pageOrderDetails.Controls.Add(this.tableLayoutPanel1);
-            this.pageOrderDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pageOrderDetails.Margin = new System.Windows.Forms.Padding(4);
             this.pageOrderDetails.Name = "pageOrderDetails";
-            this.pageOrderDetails.Size = new System.Drawing.Size(1296, 864);
+            this.pageOrderDetails.Size = new System.Drawing.Size(1296, 868);
             this.pageOrderDetails.Text = "Chi tiết";
             // 
             // tableLayoutPanel1
@@ -458,7 +472,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1296, 864);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1296, 868);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupControl1
@@ -470,7 +484,7 @@
             this.groupControl1.Location = new System.Drawing.Point(4, 2);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(380, 860);
+            this.groupControl1.Size = new System.Drawing.Size(380, 864);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách phòng trống";
             // 
@@ -483,7 +497,7 @@
             this.gcPhong.MainView = this.gvPhong;
             this.gcPhong.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gcPhong.Name = "gcPhong";
-            this.gcPhong.Size = new System.Drawing.Size(376, 830);
+            this.gcPhong.Size = new System.Drawing.Size(376, 834);
             this.gcPhong.TabIndex = 0;
             this.gcPhong.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPhong});
@@ -583,7 +597,7 @@
             this.groupControl2.Location = new System.Drawing.Point(975, 2);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(317, 860);
+            this.groupControl2.Size = new System.Drawing.Size(317, 864);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Sản phẩm - Dịch vụ";
             // 
@@ -595,7 +609,7 @@
             this.gcSanPham.MainView = this.gvSanPham;
             this.gcSanPham.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gcSanPham.Name = "gcSanPham";
-            this.gcSanPham.Size = new System.Drawing.Size(313, 830);
+            this.gcSanPham.Size = new System.Drawing.Size(313, 834);
             this.gcSanPham.TabIndex = 0;
             this.gcSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPham});
@@ -689,7 +703,7 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl4);
             this.splitContainerControl2.Panel2.Controls.Add(this.groupControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(575, 860);
+            this.splitContainerControl2.Size = new System.Drawing.Size(575, 864);
             this.splitContainerControl2.SplitterPosition = 155;
             this.splitContainerControl2.TabIndex = 2;
             // 
@@ -709,7 +723,7 @@
             // 
             this.txtNumCus.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtNumCus.Location = new System.Drawing.Point(362, 84);
-            this.txtNumCus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumCus.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCus.MaxLength = 3;
             this.txtNumCus.Name = "txtNumCus";
             this.txtNumCus.Size = new System.Drawing.Size(72, 26);
@@ -719,7 +733,7 @@
             // 
             this.txtNote.Font = new System.Drawing.Font("Tahoma", 9F);
             this.txtNote.Location = new System.Drawing.Point(113, 119);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(4);
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(420, 26);
             this.txtNote.TabIndex = 6;
@@ -729,7 +743,7 @@
             this.chkIsGroup.AutoSize = true;
             this.chkIsGroup.Font = new System.Drawing.Font("Tahoma", 9F);
             this.chkIsGroup.Location = new System.Drawing.Point(455, 87);
-            this.chkIsGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkIsGroup.Margin = new System.Windows.Forms.Padding(4);
             this.chkIsGroup.Name = "chkIsGroup";
             this.chkIsGroup.Size = new System.Drawing.Size(102, 22);
             this.chkIsGroup.TabIndex = 5;
@@ -741,7 +755,7 @@
             this.dpCheckout.CustomFormat = "dd/MM/yyyy";
             this.dpCheckout.Font = new System.Drawing.Font("Tahoma", 9F);
             this.dpCheckout.Location = new System.Drawing.Point(369, 48);
-            this.dpCheckout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpCheckout.Margin = new System.Windows.Forms.Padding(4);
             this.dpCheckout.Name = "dpCheckout";
             this.dpCheckout.Size = new System.Drawing.Size(165, 26);
             this.dpCheckout.TabIndex = 4;
@@ -751,7 +765,7 @@
             this.dpCheckin.CustomFormat = "dd/MM/yyyy";
             this.dpCheckin.Font = new System.Drawing.Font("Tahoma", 9F);
             this.dpCheckin.Location = new System.Drawing.Point(113, 47);
-            this.dpCheckin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpCheckin.Margin = new System.Windows.Forms.Padding(4);
             this.dpCheckin.Name = "dpCheckin";
             this.dpCheckin.Size = new System.Drawing.Size(156, 26);
             this.dpCheckin.TabIndex = 4;
@@ -864,7 +878,7 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Location = new System.Drawing.Point(460, 656);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 28);
             this.btnSave.TabIndex = 3;
@@ -879,7 +893,7 @@
             this.groupControl5.Controls.Add(this.lb);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl5.Location = new System.Drawing.Point(0, 562);
-            this.groupControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(575, 86);
             this.groupControl5.TabIndex = 2;
@@ -889,7 +903,7 @@
             // 
             this.txtTotalAmount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalAmount.Location = new System.Drawing.Point(164, 42);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.ReadOnly = true;
             this.txtTotalAmount.Size = new System.Drawing.Size(367, 32);
@@ -914,7 +928,7 @@
             this.groupControl4.Controls.Add(this.gcSanPhamDat);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl4.Location = new System.Drawing.Point(0, 304);
-            this.groupControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(575, 258);
             this.groupControl4.TabIndex = 1;
@@ -923,10 +937,10 @@
             // gcSanPhamDat
             // 
             this.gcSanPhamDat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcSanPhamDat.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcSanPhamDat.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gcSanPhamDat.Location = new System.Drawing.Point(2, 28);
             this.gcSanPhamDat.MainView = this.gvSanPhamDat;
-            this.gcSanPhamDat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcSanPhamDat.Margin = new System.Windows.Forms.Padding(4);
             this.gcSanPhamDat.Name = "gcSanPhamDat";
             this.gcSanPhamDat.Size = new System.Drawing.Size(571, 228);
             this.gcSanPhamDat.TabIndex = 0;
@@ -1059,7 +1073,7 @@
             this.groupControl3.Controls.Add(this.gcPhongDat);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(575, 304);
             this.groupControl3.TabIndex = 0;
@@ -1069,13 +1083,13 @@
             // 
             this.gcPhongDat.AllowDrop = true;
             this.gcPhongDat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPhongDat.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcPhongDat.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.gcPhongDat.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
             this.gcPhongDat.Location = new System.Drawing.Point(2, 28);
             this.gcPhongDat.MainView = this.gvPhongDat;
-            this.gcPhongDat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcPhongDat.Margin = new System.Windows.Forms.Padding(4);
             this.gcPhongDat.Name = "gcPhongDat";
             this.gcPhongDat.Size = new System.Drawing.Size(571, 274);
             this.gcPhongDat.TabIndex = 0;
@@ -1183,7 +1197,7 @@
             this.ClientSize = new System.Drawing.Size(1298, 945);
             this.Controls.Add(this.tabDanhSach);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đặt phòng theo đoàn";
@@ -1315,5 +1329,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn prod_qty;
         private DevExpress.XtraGrid.Columns.GridColumn prod_price;
         private DevExpress.XtraGrid.Columns.GridColumn Book_orderDetail_quantity;
+        private DevExpress.XtraGrid.Columns.GridColumn Order_name_cus;
     }
 }

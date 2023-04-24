@@ -23,6 +23,7 @@ namespace GUI_Hotel
         OrderBUS bus_order = new OrderBUS();
         OrderDetailProductBUS bus_od_product = new OrderDetailProductBUS();
         ProductBUS bus_product = new ProductBUS();
+        CustomerBUS bus_cus = new CustomerBUS();
 
         private void frmReport_Load(object sender, EventArgs e)
         {
@@ -32,7 +33,24 @@ namespace GUI_Hotel
         }
         void loadData()
         {
-            gcDanhSach.DataSource = bus_order.getPaidOrders(dtpStart.Value.AddDays(-1), dtpEnd.Value);
+            List<DTO_Order> lstO = bus_order.getPaidOrders(dtpStart.Value.AddDays(-1), dtpEnd.Value);
+            List<DTO_CustomOrder> list = new List<DTO_CustomOrder>();
+            foreach (var item in lstO)
+            {
+                DTO_CustomOrder o = new DTO_CustomOrder();
+                o.Order_id = item.Order_id;
+                o.Order_checkin_date = item.Order_checkin_date;
+                o.Order_checkout_date = item.Order_checkout_date;
+                o.Order_total_amount = item.Order_total_amount;
+                o.Order_num_of_cus = item.Order_num_of_cus;
+                o.Order_status = item.Order_status;
+                o.Order_is_group = item.Order_is_group;
+                o.Order_customer_id = item.Order_customer_id;
+                o.Order_employee_id = item.Order_employee_id;
+                o.Order_name_cus = bus_cus.getCusById(item.Order_customer_id).Customer_name;
+                list.Add(o);
+            }
+            gcDanhSach.DataSource = list;
         }
 
         private void btnStatistical_Click(object sender, EventArgs e)

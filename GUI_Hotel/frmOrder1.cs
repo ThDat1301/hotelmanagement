@@ -284,6 +284,8 @@ namespace GUI_Hotel
                         busOdp.addOrderDetailProduct(od);
 
                     }
+                    MessageBox.Show("Cập nhật đơn đặt phòng thành công!");
+
                 }
                 catch (Exception ex)
                 {

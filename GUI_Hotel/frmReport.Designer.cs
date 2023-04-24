@@ -59,6 +59,7 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnExport = new System.Windows.Forms.Button();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Order_name_cus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
@@ -74,7 +75,7 @@
             this.bthThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1275, 42);
+            this.toolStrip1.Size = new System.Drawing.Size(1488, 47);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -83,7 +84,7 @@
             this.bthThoat.Image = global::GUI_Hotel.Properties.Resources.exit;
             this.bthThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bthThoat.Name = "bthThoat";
-            this.bthThoat.Size = new System.Drawing.Size(41, 39);
+            this.bthThoat.Size = new System.Drawing.Size(51, 44);
             this.bthThoat.Text = "Thoát";
             this.bthThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.bthThoat.Click += new System.EventHandler(this.bthThoat_Click);
@@ -91,10 +92,12 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gcDanhSach.Location = new System.Drawing.Point(0, 485);
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.Location = new System.Drawing.Point(0, 597);
             this.gcDanhSach.MainView = this.gvDanhSach;
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(1275, 208);
+            this.gcDanhSach.Size = new System.Drawing.Size(1488, 256);
             this.gcDanhSach.TabIndex = 4;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -113,7 +116,9 @@
             this.Order_is_group,
             this.Order_note,
             this.Order_customer_id,
-            this.Order_employee_id});
+            this.Order_employee_id,
+            this.Order_name_cus});
+            this.gvDanhSach.DetailHeight = 431;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
             this.gvDanhSach.OptionsBehavior.Editable = false;
@@ -125,9 +130,11 @@
             this.Order_id.AppearanceCell.Options.UseFont = true;
             this.Order_id.Caption = "Mã đặt phòng";
             this.Order_id.FieldName = "Order_id";
+            this.Order_id.MinWidth = 23;
             this.Order_id.Name = "Order_id";
             this.Order_id.Visible = true;
             this.Order_id.VisibleIndex = 0;
+            this.Order_id.Width = 87;
             // 
             // Order_checkin_date
             // 
@@ -135,10 +142,11 @@
             this.Order_checkin_date.AppearanceCell.Options.UseFont = true;
             this.Order_checkin_date.Caption = "Ngày đặt phòng";
             this.Order_checkin_date.FieldName = "Order_checkin_date";
-            this.Order_checkin_date.MinWidth = 21;
+            this.Order_checkin_date.MinWidth = 24;
             this.Order_checkin_date.Name = "Order_checkin_date";
             this.Order_checkin_date.Visible = true;
             this.Order_checkin_date.VisibleIndex = 1;
+            this.Order_checkin_date.Width = 87;
             // 
             // Order_checkout_date
             // 
@@ -146,10 +154,11 @@
             this.Order_checkout_date.AppearanceCell.Options.UseFont = true;
             this.Order_checkout_date.Caption = "Ngày trả phòng";
             this.Order_checkout_date.FieldName = "Order_checkout_date";
-            this.Order_checkout_date.MinWidth = 21;
+            this.Order_checkout_date.MinWidth = 24;
             this.Order_checkout_date.Name = "Order_checkout_date";
             this.Order_checkout_date.Visible = true;
             this.Order_checkout_date.VisibleIndex = 2;
+            this.Order_checkout_date.Width = 87;
             // 
             // Order_total_amount
             // 
@@ -157,10 +166,11 @@
             this.Order_total_amount.AppearanceCell.Options.UseFont = true;
             this.Order_total_amount.Caption = "Tổng tiền";
             this.Order_total_amount.FieldName = "Order_total_amount";
-            this.Order_total_amount.MinWidth = 21;
+            this.Order_total_amount.MinWidth = 24;
             this.Order_total_amount.Name = "Order_total_amount";
             this.Order_total_amount.Visible = true;
             this.Order_total_amount.VisibleIndex = 3;
+            this.Order_total_amount.Width = 87;
             // 
             // Order_num_of_cus
             // 
@@ -168,10 +178,11 @@
             this.Order_num_of_cus.AppearanceCell.Options.UseFont = true;
             this.Order_num_of_cus.Caption = "Số lượng khách";
             this.Order_num_of_cus.FieldName = "Order_num_of_cus";
-            this.Order_num_of_cus.MinWidth = 21;
+            this.Order_num_of_cus.MinWidth = 24;
             this.Order_num_of_cus.Name = "Order_num_of_cus";
             this.Order_num_of_cus.Visible = true;
             this.Order_num_of_cus.VisibleIndex = 4;
+            this.Order_num_of_cus.Width = 87;
             // 
             // Order_status
             // 
@@ -179,8 +190,9 @@
             this.Order_status.AppearanceCell.Options.UseFont = true;
             this.Order_status.Caption = "Trạng thái";
             this.Order_status.FieldName = "Order_status";
-            this.Order_status.MinWidth = 21;
+            this.Order_status.MinWidth = 24;
             this.Order_status.Name = "Order_status";
+            this.Order_status.Width = 87;
             // 
             // Order_is_group
             // 
@@ -188,8 +200,9 @@
             this.Order_is_group.AppearanceCell.Options.UseFont = true;
             this.Order_is_group.Caption = "Đặt theo đoàn";
             this.Order_is_group.FieldName = "Order_is_group";
-            this.Order_is_group.MinWidth = 21;
+            this.Order_is_group.MinWidth = 24;
             this.Order_is_group.Name = "Order_is_group";
+            this.Order_is_group.Width = 87;
             // 
             // Order_note
             // 
@@ -197,10 +210,11 @@
             this.Order_note.AppearanceCell.Options.UseFont = true;
             this.Order_note.Caption = "Ghi chú";
             this.Order_note.FieldName = "Order_note";
-            this.Order_note.MinWidth = 21;
+            this.Order_note.MinWidth = 24;
             this.Order_note.Name = "Order_note";
             this.Order_note.Visible = true;
             this.Order_note.VisibleIndex = 5;
+            this.Order_note.Width = 87;
             // 
             // Order_customer_id
             // 
@@ -208,8 +222,9 @@
             this.Order_customer_id.AppearanceCell.Options.UseFont = true;
             this.Order_customer_id.Caption = "Mã khách hàng";
             this.Order_customer_id.FieldName = "Order_customer_id";
-            this.Order_customer_id.MinWidth = 21;
+            this.Order_customer_id.MinWidth = 24;
             this.Order_customer_id.Name = "Order_customer_id";
+            this.Order_customer_id.Width = 87;
             // 
             // Order_employee_id
             // 
@@ -217,17 +232,19 @@
             this.Order_employee_id.AppearanceCell.Options.UseFont = true;
             this.Order_employee_id.Caption = "Mã nhân viên";
             this.Order_employee_id.FieldName = "Order_employee_id";
-            this.Order_employee_id.MinWidth = 21;
+            this.Order_employee_id.MinWidth = 24;
             this.Order_employee_id.Name = "Order_employee_id";
+            this.Order_employee_id.Width = 87;
             // 
             // dtpStart
             // 
             this.dtpStart.CalendarFont = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStart.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStart.Location = new System.Drawing.Point(59, 30);
+            this.dtpStart.Location = new System.Drawing.Point(69, 37);
+            this.dtpStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(147, 26);
+            this.dtpStart.Size = new System.Drawing.Size(171, 30);
             this.dtpStart.TabIndex = 5;
             this.dtpStart.Value = new System.DateTime(2023, 4, 1, 0, 0, 0, 0);
             // 
@@ -235,9 +252,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 36);
+            this.label1.Location = new System.Drawing.Point(7, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 18);
+            this.label1.Size = new System.Drawing.Size(60, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "From:";
             // 
@@ -245,9 +263,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(226, 36);
+            this.label2.Location = new System.Drawing.Point(264, 44);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 18);
+            this.label2.Size = new System.Drawing.Size(38, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "To:";
             // 
@@ -256,9 +275,10 @@
             this.dtpEnd.CalendarFont = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEnd.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEnd.Location = new System.Drawing.Point(263, 30);
+            this.dtpEnd.Location = new System.Drawing.Point(307, 37);
+            this.dtpEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(147, 26);
+            this.dtpEnd.Size = new System.Drawing.Size(171, 30);
             this.dtpEnd.TabIndex = 7;
             this.dtpEnd.Value = new System.DateTime(2023, 4, 22, 15, 56, 12, 0);
             // 
@@ -269,9 +289,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpEnd);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 45);
+            this.groupBox1.Location = new System.Drawing.Point(14, 55);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 73);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(505, 90);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "chọn thời gian ";
@@ -279,9 +301,10 @@
             // btnStatistical
             // 
             this.btnStatistical.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistical.Location = new System.Drawing.Point(463, 68);
+            this.btnStatistical.Location = new System.Drawing.Point(540, 84);
+            this.btnStatistical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStatistical.Name = "btnStatistical";
-            this.btnStatistical.Size = new System.Drawing.Size(113, 37);
+            this.btnStatistical.Size = new System.Drawing.Size(132, 46);
             this.btnStatistical.TabIndex = 9;
             this.btnStatistical.Text = "Thống kê";
             this.btnStatistical.UseVisualStyleBackColor = true;
@@ -295,13 +318,14 @@
             legend1.BackColor = System.Drawing.Color.White;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 124);
+            this.chart1.Location = new System.Drawing.Point(14, 153);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Total Amount";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(819, 355);
+            this.chart1.Size = new System.Drawing.Size(955, 437);
             this.chart1.TabIndex = 13;
             this.chart1.Text = "chart1";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -313,9 +337,10 @@
             // btnExport
             // 
             this.btnExport.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(582, 68);
+            this.btnExport.Location = new System.Drawing.Point(679, 84);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(138, 37);
+            this.btnExport.Size = new System.Drawing.Size(161, 46);
             this.btnExport.TabIndex = 14;
             this.btnExport.Text = "Export to image";
             this.btnExport.UseVisualStyleBackColor = true;
@@ -329,7 +354,8 @@
             legend2.IsTextAutoFit = false;
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(837, 124);
+            this.chart2.Location = new System.Drawing.Point(976, 153);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -339,7 +365,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series2";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(426, 355);
+            this.chart2.Size = new System.Drawing.Size(497, 437);
             this.chart2.TabIndex = 15;
             this.chart2.Text = "chart2";
             title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -347,11 +373,21 @@
             title2.Text = "Sản phẩm";
             this.chart2.Titles.Add(title2);
             // 
+            // Order_name_cus
+            // 
+            this.Order_name_cus.Caption = "Tên khách hàng";
+            this.Order_name_cus.FieldName = "Order_name_cus";
+            this.Order_name_cus.MinWidth = 25;
+            this.Order_name_cus.Name = "Order_name_cus";
+            this.Order_name_cus.Visible = true;
+            this.Order_name_cus.VisibleIndex = 6;
+            this.Order_name_cus.Width = 87;
+            // 
             // frmReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 693);
+            this.ClientSize = new System.Drawing.Size(1488, 853);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnStatistical);
@@ -359,6 +395,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo";
@@ -401,5 +438,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private DevExpress.XtraGrid.Columns.GridColumn Order_name_cus;
     }
 }
