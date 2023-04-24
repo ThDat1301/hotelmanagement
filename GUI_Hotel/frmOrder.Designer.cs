@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrder));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.btnSua = new System.Windows.Forms.ToolStripButton();
-            this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.bthThoat = new System.Windows.Forms.ToolStripButton();
             this.tabDanhSach = new DevExpress.XtraTab.XtraTabControl();
             this.pageOrders = new DevExpress.XtraTab.XtraTabPage();
@@ -154,7 +154,6 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnThem,
             this.btnSua,
-            this.btnXoa,
             this.bthThoat});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -181,16 +180,6 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Image = global::GUI_Hotel.Properties.Resources.delete;
-            this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(31, 39);
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // bthThoat
             // 
@@ -900,6 +889,7 @@
             this.gcSanPhamDat.TabIndex = 0;
             this.gcSanPhamDat.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSanPhamDat});
+            this.gcSanPhamDat.Click += new System.EventHandler(this.gcSanPhamDat_Click);
             // 
             // gvSanPhamDat
             // 
@@ -1020,6 +1010,9 @@
             // 
             this.gcPhongDat.AllowDrop = true;
             this.gcPhongDat.Dock = System.Windows.Forms.DockStyle.Fill;
+            gridLevelNode2.RelationName = "Level1";
+            this.gcPhongDat.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode2});
             this.gcPhongDat.Location = new System.Drawing.Point(2, 23);
             this.gcPhongDat.MainView = this.gvPhongDat;
             this.gcPhongDat.Name = "gcPhongDat";
@@ -1174,7 +1167,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripButton btnSua;
-        private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton bthThoat;
         private DevExpress.XtraTab.XtraTabControl tabDanhSach;
         private DevExpress.XtraTab.XtraTabPage pageOrders;
