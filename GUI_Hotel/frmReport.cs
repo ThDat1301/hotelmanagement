@@ -32,7 +32,7 @@ namespace GUI_Hotel
         }
         void loadData()
         {
-            gcDanhSach.DataSource = bus_order.getOrders(dtpStart.Value.AddDays(-1), dtpEnd.Value);
+            gcDanhSach.DataSource = bus_order.getPaidOrders(dtpStart.Value.AddDays(-1), dtpEnd.Value);
         }
 
         private void btnStatistical_Click(object sender, EventArgs e)

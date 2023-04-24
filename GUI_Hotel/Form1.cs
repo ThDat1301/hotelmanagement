@@ -93,6 +93,8 @@ namespace GUI_Hotel
 
         FloorBUS busFloor = new FloorBUS();
         RoomBUS roomBUS = new RoomBUS();
+        OrderDetailRoomBUS odrBUS = new OrderDetailRoomBUS();
+        OrderBUS oBUS = new OrderBUS();
         public void showRoom()
         {
             gControl.Gallery.Groups.Clear();
@@ -160,8 +162,15 @@ namespace GUI_Hotel
         private void btnUpdateOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int idRoom = int.Parse(item.Value.ToString());
+            int idOrder = odrBUS.getOdrByIdRoom(idRoom).Room_order_id;
+            
             if (!busRoom.getRoomById(idRoom).Room_status)
             {
+                if (oBUS.getOrderById(idOrder).Order_is_group == true)
+                {
+                    MessageBox.Show("Vui lòng vào chức năng quản lý đặt phòng để cập nhật!");
+                    return;
+                }
                 frmOrder1 f = new frmOrder1();
                 f.idPhong = idRoom;
                 f.isAdd = false;
@@ -172,9 +181,17 @@ namespace GUI_Hotel
 
         private void btnChangeRoom_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             int idRoom = int.Parse(item.Value.ToString());
+            int idOrder = odrBUS.getOdrByIdRoom(idRoom).Room_order_id;
+
             if (!busRoom.getRoomById(idRoom).Room_status)
             {
+                if (oBUS.getOrderById(idOrder).Order_is_group == true)
+                {
+                    MessageBox.Show("Chưa hỗ trợ chức năng chuyển phòng cho đặt phòng theo đoàn");
+                    return;
+                }
                 frmChangeRoom f = new frmChangeRoom();
                 f.roomId = idRoom;
                 f.ShowDialog();

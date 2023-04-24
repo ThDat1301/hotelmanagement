@@ -364,7 +364,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTypeRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLoaiPhong";
+            this.Text = "Quản lý loại phòng";
             this.Load += new System.EventHandler(this.frmTypeRoom_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

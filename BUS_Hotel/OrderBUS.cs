@@ -25,9 +25,15 @@ namespace BUS_Hotel
         { 
             return dalOrder.getOrders(frm, to);
         }
+        public List<DTO_Order> getPaidOrders(DateTime frm, DateTime to)
+        {
+            return dalOrder.getPaidOrders(frm, to);
+
+        }
         public bool updateOrder(DTO_Order o)
         {
             return dalOrder.updateOrder(o);
         }
+        
     }
 }

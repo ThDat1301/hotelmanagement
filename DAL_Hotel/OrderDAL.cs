@@ -30,6 +30,22 @@ namespace DAL_Hotel
             return listOrder;
         }
 
+        public List<DTO_Order> getPaidOrders(DateTime frm, DateTime to)
+        {
+            List<DTO_Order> listOrder = new List<DTO_Order>();
+            using (var db = new HotelDB())
+            {
+                var order = from o in db.Orders where (o.checkinDate >= frm && o.checkoutDate < to) && o.status == true select o;
+
+                foreach (var od in order)
+                {
+                    DTO_Order o = OrderDAL.toOrderDTOMap(od);
+                    listOrder.Add(o);
+                }
+            }
+            return listOrder;
+        }
+
         public DTO_Order getOrderById(int id)
         {
             using (var db = new HotelDB())
