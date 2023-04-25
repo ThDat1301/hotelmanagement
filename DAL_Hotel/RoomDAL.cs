@@ -10,6 +10,7 @@ namespace DAL_Hotel
 {
     public class RoomDAL
     {
+        
         public List<DTO_Room> getRoom()
         {
             List<DTO_Room> list = new List<DTO_Room>();
@@ -158,6 +159,20 @@ namespace DAL_Hotel
                 }
                 catch { return false; }
                 
+            }
+        }
+
+        public List<DTO_Room> getRoomByOrderId(int id)
+        {
+            List<DTO_Room> listRooms = new List<DTO_Room>();
+            using (var db = new HotelDB())
+            {
+                var room = from r in db.OrderDetailRooms where r.orderID == id select r.roomID;
+                foreach( var r in room)
+                {
+                    listRooms.Add(getRoomById((int)r));
+                }
+                return listRooms;
             }
         }
 

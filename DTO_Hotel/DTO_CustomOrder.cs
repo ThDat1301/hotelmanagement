@@ -20,5 +20,6 @@ namespace DTO_Hotel
         public string Order_note { get; set; }
         public int Order_customer_id { get; set; }
         public int Order_employee_id { get; set; }
+        public string Order_rooms { get; set; }
     }
 }

@@ -54,6 +54,7 @@
             this.Order_customer_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Order_employee_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Order_name_cus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Order_rooms = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pageOrderDetails = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -318,7 +319,8 @@
             this.Order_note,
             this.Order_customer_id,
             this.Order_employee_id,
-            this.Order_name_cus});
+            this.Order_name_cus,
+            this.Order_rooms});
             this.gvDanhSach.DetailHeight = 431;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
@@ -393,6 +395,8 @@
             this.Order_status.FieldName = "Order_status";
             this.Order_status.MinWidth = 24;
             this.Order_status.Name = "Order_status";
+            this.Order_status.Visible = true;
+            this.Order_status.VisibleIndex = 9;
             this.Order_status.Width = 87;
             // 
             // Order_is_group
@@ -448,6 +452,16 @@
             this.Order_name_cus.Visible = true;
             this.Order_name_cus.VisibleIndex = 7;
             this.Order_name_cus.Width = 94;
+            // 
+            // Order_rooms
+            // 
+            this.Order_rooms.Caption = "Phòng đặt";
+            this.Order_rooms.FieldName = "Order_rooms";
+            this.Order_rooms.MinWidth = 25;
+            this.Order_rooms.Name = "Order_rooms";
+            this.Order_rooms.Visible = true;
+            this.Order_rooms.VisibleIndex = 8;
+            this.Order_rooms.Width = 94;
             // 
             // pageOrderDetails
             // 
@@ -1330,5 +1344,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn prod_price;
         private DevExpress.XtraGrid.Columns.GridColumn Book_orderDetail_quantity;
         private DevExpress.XtraGrid.Columns.GridColumn Order_name_cus;
+        private DevExpress.XtraGrid.Columns.GridColumn Order_rooms;
     }
 }

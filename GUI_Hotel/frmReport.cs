@@ -24,6 +24,7 @@ namespace GUI_Hotel
         OrderDetailProductBUS bus_od_product = new OrderDetailProductBUS();
         ProductBUS bus_product = new ProductBUS();
         CustomerBUS bus_cus = new CustomerBUS();
+        RoomBUS bus_room = new RoomBUS();
 
         private void frmReport_Load(object sender, EventArgs e)
         {
@@ -35,6 +36,7 @@ namespace GUI_Hotel
         {
             List<DTO_Order> lstO = bus_order.getPaidOrders(dtpStart.Value.AddDays(-1), dtpEnd.Value);
             List<DTO_CustomOrder> list = new List<DTO_CustomOrder>();
+            string roomNum = "";
             foreach (var item in lstO)
             {
                 DTO_CustomOrder o = new DTO_CustomOrder();
@@ -48,6 +50,14 @@ namespace GUI_Hotel
                 o.Order_customer_id = item.Order_customer_id;
                 o.Order_employee_id = item.Order_employee_id;
                 o.Order_name_cus = bus_cus.getCusById(item.Order_customer_id).Customer_name;
+                List<DTO_Room> listRoom = bus_room.getRoomByOrderId(item.Order_id);
+                foreach (var r in listRoom)
+                {
+                    roomNum += r.Room_num + " ";
+                }
+                o.Order_rooms = roomNum;
+                list.Add(o);
+                roomNum = "";
                 list.Add(o);
             }
             gcDanhSach.DataSource = list;

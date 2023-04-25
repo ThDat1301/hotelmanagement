@@ -54,5 +54,9 @@ namespace BUS_Hotel
         {
             return dalRoom.changeStatusRoomById(id, status);
         }
+        public List<DTO_Room> getRoomByOrderId(int id)
+        {
+            return dalRoom.getRoomByOrderId(id);
+        }
     }
 }

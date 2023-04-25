@@ -50,6 +50,7 @@
             this.Order_note = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Order_customer_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Order_employee_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Order_name_cus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnExport = new System.Windows.Forms.Button();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Order_name_cus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Order_rooms = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
@@ -92,10 +93,10 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Location = new System.Drawing.Point(0, 597);
             this.gcDanhSach.MainView = this.gvDanhSach;
-            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Name = "gcDanhSach";
             this.gcDanhSach.Size = new System.Drawing.Size(1488, 256);
             this.gcDanhSach.TabIndex = 4;
@@ -117,7 +118,8 @@
             this.Order_note,
             this.Order_customer_id,
             this.Order_employee_id,
-            this.Order_name_cus});
+            this.Order_name_cus,
+            this.Order_rooms});
             this.gvDanhSach.DetailHeight = 431;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
@@ -236,13 +238,23 @@
             this.Order_employee_id.Name = "Order_employee_id";
             this.Order_employee_id.Width = 87;
             // 
+            // Order_name_cus
+            // 
+            this.Order_name_cus.Caption = "Tên khách hàng";
+            this.Order_name_cus.FieldName = "Order_name_cus";
+            this.Order_name_cus.MinWidth = 25;
+            this.Order_name_cus.Name = "Order_name_cus";
+            this.Order_name_cus.Visible = true;
+            this.Order_name_cus.VisibleIndex = 6;
+            this.Order_name_cus.Width = 87;
+            // 
             // dtpStart
             // 
             this.dtpStart.CalendarFont = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStart.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpStart.Location = new System.Drawing.Point(69, 37);
-            this.dtpStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpStart.Margin = new System.Windows.Forms.Padding(4);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(171, 30);
             this.dtpStart.TabIndex = 5;
@@ -276,7 +288,7 @@
             this.dtpEnd.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEnd.Location = new System.Drawing.Point(307, 37);
-            this.dtpEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(171, 30);
             this.dtpEnd.TabIndex = 7;
@@ -290,9 +302,9 @@
             this.groupBox1.Controls.Add(this.dtpEnd);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(14, 55);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(505, 90);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
@@ -302,7 +314,7 @@
             // 
             this.btnStatistical.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistical.Location = new System.Drawing.Point(540, 84);
-            this.btnStatistical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStatistical.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatistical.Name = "btnStatistical";
             this.btnStatistical.Size = new System.Drawing.Size(132, 46);
             this.btnStatistical.TabIndex = 9;
@@ -319,7 +331,7 @@
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(14, 153);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -338,7 +350,7 @@
             // 
             this.btnExport.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.Location = new System.Drawing.Point(679, 84);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(4);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(161, 46);
             this.btnExport.TabIndex = 14;
@@ -355,7 +367,7 @@
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(976, 153);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -373,15 +385,15 @@
             title2.Text = "Sản phẩm";
             this.chart2.Titles.Add(title2);
             // 
-            // Order_name_cus
+            // Order_rooms
             // 
-            this.Order_name_cus.Caption = "Tên khách hàng";
-            this.Order_name_cus.FieldName = "Order_name_cus";
-            this.Order_name_cus.MinWidth = 25;
-            this.Order_name_cus.Name = "Order_name_cus";
-            this.Order_name_cus.Visible = true;
-            this.Order_name_cus.VisibleIndex = 6;
-            this.Order_name_cus.Width = 87;
+            this.Order_rooms.Caption = "Phòng đặt";
+            this.Order_rooms.FieldName = "Order_rooms";
+            this.Order_rooms.MinWidth = 25;
+            this.Order_rooms.Name = "Order_rooms";
+            this.Order_rooms.Visible = true;
+            this.Order_rooms.VisibleIndex = 7;
+            this.Order_rooms.Width = 94;
             // 
             // frmReport
             // 
@@ -395,7 +407,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo cáo";
@@ -439,5 +451,6 @@
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private DevExpress.XtraGrid.Columns.GridColumn Order_name_cus;
+        private DevExpress.XtraGrid.Columns.GridColumn Order_rooms;
     }
 }

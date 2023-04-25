@@ -94,7 +94,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.searchRoom.Properties.NullText = "";
             this.searchRoom.Properties.PopupView = this.searchLookUpEdit1View;
-            this.searchRoom.Size = new System.Drawing.Size(381, 24);
+            this.searchRoom.Size = new System.Drawing.Size(381, 28);
             this.searchRoom.TabIndex = 2;
             // 
             // searchLookUpEdit1View
@@ -130,7 +130,7 @@
             this.lbCurrRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lbCurrRoom.Location = new System.Drawing.Point(270, 46);
             this.lbCurrRoom.Name = "lbCurrRoom";
-            this.lbCurrRoom.Size = new System.Drawing.Size(65, 24);
+            this.lbCurrRoom.Size = new System.Drawing.Size(83, 30);
             this.lbCurrRoom.TabIndex = 1;
             this.lbCurrRoom.Text = "Phòng";
             // 
@@ -141,7 +141,7 @@
             this.label2.Location = new System.Drawing.Point(85, 112);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 18);
+            this.label2.Size = new System.Drawing.Size(163, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Phòng chuyển đến:";
             // 
@@ -152,19 +152,21 @@
             this.label1.Location = new System.Drawing.Point(85, 53);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 18);
+            this.label1.Size = new System.Drawing.Size(138, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phòng hiện tại:";
             // 
             // frmChangeRoom
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 234);
             this.Controls.Add(this.groupControl1);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmChangeRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chuyển phòng";
