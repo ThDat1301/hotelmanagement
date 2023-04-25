@@ -96,6 +96,8 @@ namespace GUI_Hotel
                     else MessageBox.Show("Thêm không thành công!");
                 }
             }
+            else MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+             
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -132,8 +134,7 @@ namespace GUI_Hotel
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (txtCustomerName.Text.Trim() != "" && txtCustomerPhone.Text.Trim() != "" && txtCustomerAddress.Text.Trim() != "" && txtCustomerPersonalID.Text.Trim() != "")
-            {
+            
                 //Can hoi
                 int id = int.Parse(gvDanhSach.GetRowCellValue(gvDanhSach.FocusedRowHandle, "Customer_id").ToString());
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá không?", "Xác nhận xoá sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -147,11 +148,8 @@ namespace GUI_Hotel
                     }
                     else MessageBox.Show("Xoá không thành công!");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
-            }
+            
+           
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

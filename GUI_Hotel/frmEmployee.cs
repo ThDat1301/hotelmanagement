@@ -137,26 +137,22 @@ namespace GUI_Hotel
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (txtEmployeeName.Text.Trim() != "" && txtEmployeePhone.Text.Trim() != "" && txtEmployeeEmail.Text.Trim() != "")
+      
+            int id = int.Parse(gvDanhSach.GetRowCellValue(gvDanhSach.FocusedRowHandle, "Employee_id").ToString());
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá không?", "Xác nhận xoá sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                int id = int.Parse(gvDanhSach.GetRowCellValue(gvDanhSach.FocusedRowHandle, "Employee_id").ToString());
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá không?", "Xác nhận xoá sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                if (busEmployee.deleteEmployee(id))
                 {
-                    if (busEmployee.deleteEmployee(id))
-                    {
-                        loadData();
-                        clearTextBox();
-                        MessageBox.Show("Xoá thành công!");
-                    }
-                    else MessageBox.Show("Xoá không thành công!");
+                    loadData();
+                    clearTextBox();
+                    MessageBox.Show("Xoá thành công!");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                else MessageBox.Show("Xoá không thành công!");
             }
         }
+            
+        
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
