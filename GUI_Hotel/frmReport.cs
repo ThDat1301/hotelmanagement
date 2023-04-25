@@ -58,7 +58,6 @@ namespace GUI_Hotel
                 o.Order_rooms = roomNum;
                 list.Add(o);
                 roomNum = "";
-                list.Add(o);
             }
             gcDanhSach.DataSource = list;
         }

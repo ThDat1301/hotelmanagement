@@ -74,7 +74,7 @@ namespace DAL_Hotel
             try
             {
                 var context = new HotelDB();
-                var o = context.OrderDetailRooms.OrderByDescending(r => r.dayAt).FirstOrDefault(r => r.roomID == idRoom);
+                var o = context.OrderDetailRooms.OrderByDescending(r => r.orderID).FirstOrDefault(r => r.roomID == idRoom);
                 return OrderDetailRoomDAL.toOrderDetailRoomDTOMap(o);            }
             catch
             {
