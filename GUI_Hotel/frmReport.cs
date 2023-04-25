@@ -173,15 +173,37 @@ namespace GUI_Hotel
                 chart1.SaveImage(path, ChartImageFormat.Png);
             }
         }
-
+        string id = null;
         private void gvDanhSach_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             Font font = new Font("Microsoft YaHei UI", 16);
-            string id = gvDanhSach.GetRowCellValue(e.FocusedRowHandle, "Order_id").ToString();
-            if(id == null)
+            try
+            {
+                id = gvDanhSach.GetRowCellValue(e.FocusedRowHandle, "Order_id").ToString();
+            } catch
             {
                 id = "-1";
             }
+            //try
+            //{
+            //    var order_id = gvDanhSach.GetRowCellValue(e.FocusedRowHandle, "Order_id");
+            //    if (order_id != null)
+            //    {
+            //        id = order_id.ToString();
+            //    }
+            //    else
+            //    {
+            //        id = "-1";
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    // Xử lý ngoại lệ nếu cần
+            //}
+            //if(id == null)
+            //{
+            //    id = "-1";
+            //}
             List<ProductCart> cart = new List<ProductCart>();
             foreach (var item in bus_od_product.getOrderDetailProductsByOrderId(int.Parse(id)))
             {

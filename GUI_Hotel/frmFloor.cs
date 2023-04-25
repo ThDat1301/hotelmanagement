@@ -29,6 +29,8 @@ namespace GUI_Hotel
         void loadData()
         {
             gcDanhSach.DataSource = busFloor.getFloor();
+            Form1 form1 = (Form1)Application.OpenForms["Form1"];
+            form1.showRoom();
         }
         bool compareName()
         {
@@ -60,6 +62,7 @@ namespace GUI_Hotel
                                 loadData();
                                 txtFloorName.Clear();
                                 txtFloorName.Focus();
+                                
                             }
                             else MessageBox.Show("Thêm không thành công");
                         }
@@ -91,8 +94,10 @@ namespace GUI_Hotel
                         {
                             MessageBox.Show("Sửa thành công");
                             loadData();
+                            
                             txtFloorName.Clear();
                             txtFloorName.Focus();
+
                         }
                         else MessageBox.Show("Sửa không thành công");
                     }
