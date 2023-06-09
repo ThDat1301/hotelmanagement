@@ -1,1 +1,1 @@
-# hotelmanagement
+Hotel Management Application
